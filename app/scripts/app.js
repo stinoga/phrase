@@ -4,7 +4,9 @@
 angular.module('phraseApp', [
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  // TODO: replace this with a better storage on your phone
+  'LocalStorageModule'
 ])
   .config(function ($routeProvider) {
     $routeProvider
