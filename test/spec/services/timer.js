@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: Timer', function () {
+describe('Service: timer', function () {
 
   // load the service's module
   beforeEach(module('phraseApp'));
 
   // instantiate service
-  var Timer;
-  beforeEach(inject(function (_Timer_) {
-    Timer = _Timer_;
+  var timer;
+  beforeEach(inject(function (_timer_) {
+    timer = _timer_;
   }));
 
   it('should do something', function () {
-    expect(!!Timer).toBe(true);
+    expect(!!timer).toBe(true);
   });
 
 });

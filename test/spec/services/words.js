@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: Words', function () {
+describe('Service: words', function () {
 
   // load the service's module
   beforeEach(module('phraseApp'));
 
   // instantiate service
-  var Words;
-  beforeEach(inject(function (_Words_) {
-    Words = _Words_;
+  var words;
+  beforeEach(inject(function (_words_) {
+    words = _words_;
   }));
 
   it('should do something', function () {
-    expect(!!Words).toBe(true);
+    expect(!!words).toBe(true);
   });
 
 });
