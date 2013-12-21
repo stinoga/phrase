@@ -37,11 +37,8 @@ copy.dist.files.src: [
  
 [ ~/Sites/phrase ]
 ➜ bower uninstall json3 --save
-
-[ ~/Sites/phrase ]
 ➜ bower uninstall es5-shim --save
-
-[ ~/Sites/phrase ]
 ➜ bower install angular-phonegap --save
+➜ bower install angular-local-storage --save
 
 
