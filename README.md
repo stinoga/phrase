@@ -50,3 +50,12 @@ compass: {
     require: ['breakpoint']
   }
 }
+
+##Gitignore
+www
+
+# phonegap stuff
+.cordova/
+platforms
+merges
+plugins

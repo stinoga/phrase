@@ -3,3 +3,10 @@ dist
 .tmp
 .sass-cache
 app/bower_components
+www
+
+# phonegap stuff
+.cordova/
+platforms
+merges
+plugins
