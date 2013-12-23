@@ -43,4 +43,10 @@ copy.dist.files.src: [
 ➜ gem install compass
 ➜ gem install breakpoint
 
+##Breakpoint setup
 
+compass: {
+  options: {
+    require: ['breakpoint']
+  }
+}

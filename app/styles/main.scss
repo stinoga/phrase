@@ -7,29 +7,29 @@
 // Site Variables
 @import "lib/variables";
 
-// // Setup our custom awesome type
-// @import "lib/type";
+// Setup our custom awesome type
+@import "lib/type";
 
-// // Icons
-// // @import "lib/icons";
+// Icons
+// @import "lib/icons";
 
-// // Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
-// @import "base";
+// Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+@import "base";
 
-// // Layout and state styling global to the site =================================
+// Layout and state styling global to the site =================================
 
-// // Layout styles divide the page into sections. Layouts hold one or more modules together.
+// Layout styles divide the page into sections. Layouts hold one or more modules together.
 
-// // State styles are ways to describe how our modules or layouts will look when in a particular state. These are usually applied with javascript
-// @import "layout";
+// State styles are ways to describe how our modules or layouts will look when in a particular state. These are usually applied with javascript
+@import "layout";
 
-// // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
-// // TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
-// @import "modules/buttons",
-//         "modules/header",
-//         "modules/play",
-//         "modules/score",
-//         "modules/settings",
-//         "modules/end",
-//         "modules/footer",
-//         "modules/notifications";
+// Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
+// TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
+@import "modules/buttons",
+        "modules/header",
+        "modules/play",
+        "modules/score",
+        "modules/settings",
+        "modules/end",
+        "modules/footer",
+        "modules/notifications";

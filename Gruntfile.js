@@ -157,6 +157,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
+        require: ['breakpoint'],
         sassDir: '<%= yeoman.app %>/styles',
         cssDir: '.tmp/styles',
         generatedImagesDir: '.tmp/images/generated',
@@ -169,7 +170,7 @@ module.exports = function (grunt) {
         httpFontsPath: '/styles/fonts',
         relativeAssets: false,
         assetCacheBuster: false,
-        raw: "Sass::Script::Number.precision = 10\n"
+        raw: 'Sass::Script::Number.precision = 10\n'
       },
       dist: {
         options: {

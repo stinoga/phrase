@@ -2,11 +2,28 @@
 
 angular.module('phraseApp')
   .directive('navIcon', function () {
-    return {
-      template: '<div></div>',
-      restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the navIcon directive');
+
+    var navState = function (scope, element) {
+
+      var menuBtn = angular.element(element.children()[0]),
+          navigation = document.getElementsByTagName('nav')[0],
+          opened = true;
+
+      // Toggle the closed/opened state
+      function toggle() {
+        opened = !opened;
+        navigation.className = (opened ? 'mainNav ng-scope closed' : 'mainNav ng-scope active');
       }
+
+      // menu button click
+      menuBtn.bind('click', toggle);
+
     };
+    return {
+      template: '<a href="" ng-click="navState()" class="menuBtn">Menu</a>',
+      restrict: 'E',
+      link: navState,
+      scope: {}
+    };
+
   });
