@@ -1,0 +1,48 @@
+// LAYOUT ======================================================================
+
+// Clear Fix
+.cf {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Main layout
+
+.main {
+  padding-bottom: 1.5rem;
+}
+
+.content {
+  padding: 0 1.5rem;
+
+  @include breakpoint($bp-900) {
+    max-width: 1650px;
+    margin: 0 auto;
+  }
+}
+
+// alignment ===================================================================
+
+// Floats
+.l-left {
+  float: left;
+}
+.l-right {
+  float: right;
+}
+
+// state =======================================================================
+
+.hidden {
+  max-height: 0;
+}
+
+.fade {
+  opacity: 0.5;
+}

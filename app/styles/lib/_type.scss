@@ -1,0 +1,35 @@
+// TYPE mixins =================================================================
+
+@mixin heading {
+  margin-bottom: 0.35em;
+  line-height: 3.9rem;
+  color: $c-text;
+}
+
+@mixin heading-1 {
+  background: $c-text;
+  display: inline-block;
+  margin: 0 .5rem 1rem 0;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 2rem;
+  float: left;
+  font-size: 1.5rem;
+  line-height: 3.9rem;
+
+  a {
+    color: $c-header;
+    padding: 0 1.5rem;
+  }
+}
+
+@mixin heading-2 {
+  @include heading;
+  display: inline
+}
+
+@mixin heading-3 {
+  @include heading;
+  font-size: 1.4em;
+}

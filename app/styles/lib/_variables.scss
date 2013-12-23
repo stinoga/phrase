@@ -1,0 +1,29 @@
+@import 'compass', 'breakpoint';
+
+// VARIABLES ===================================================================
+
+// Colors
+$c-text: #3E3E3E;
+$c-header: #fff;
+$c-text-subtle: lighten($c-text, 30%);
+
+$c-link: #00B7FF;
+$c-link-hover: darken($c-link, 15%);
+
+$c-highlight: #E44A2F;
+$c-highlight-hover: darken($c-highlight, 15%);
+
+$c-background: #FBFBFB;
+
+// Fonts
+$t-base: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$size-base: 1rem;
+
+// media queries
+$breakpoint-to-ems: true;
+
+$bp-600: 37.5em;
+$bp-900: (min-width 56.25em) (min-height 48.0625em);
+$bp-1024: 61em;
+$bp-1200: 75em;
+$bp-1650: 103.125em;

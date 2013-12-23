@@ -1,1 +1,9 @@
-<p>This is the score view.</p>
+<div class="content">
+  <section ng-repeat="team in teams" class="scoring cf">
+    <h3 ng-bind-template="T{{team.id}}" class="team"></h3>
+    <div class="bar_wrap">
+      <div id="plus{{team.id}}" ng-click="saveScore(team.id, true)" class="plus">+</div>
+      <div id="bar{{team.id}}" ng-click="saveScore(team.id)" style="width: {{(team.score / 7) * 100}}%" ng-bind-template="{{team.score}}" class="bar score{{team.score}}"></div>
+    </div>
+  </section><a href="#/play" class="btn spacer">Next Round</a>
+</div>

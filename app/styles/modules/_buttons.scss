@@ -1,0 +1,15 @@
+a.btn {
+  background-color: $c-text;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 2rem;
+  display: block;
+  color: $c-header;
+  margin-bottom: 1.5rem;
+
+  &:active,
+  &:focus {
+    background-color: lighten($c-text, 10%);
+  }
+}

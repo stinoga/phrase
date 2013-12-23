@@ -1,0 +1,86 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font: 1rem/1.4 $t-base;
+
+  @include breakpoint($bp-600) {
+    font-size: 125%;
+  }
+
+  @include breakpoint($bp-900) {
+    font-size: 145%;
+  }
+
+  @include breakpoint($bp-1024) {
+    font-size: 160%;
+  }
+
+  @include breakpoint($bp-1200) {
+    font-size: 165%;
+  }
+
+  @include breakpoint($bp-1650) {
+    font-size: 175%;
+  }
+}
+
+body {
+  margin: 0;
+  background: $c-background;
+  color: $c-text;
+}
+
+h1 {
+  @include heading-1;
+
+  &:after {
+    border: .5rem solid transparent;
+    border-top-color: $c-text;
+    content: '';
+    margin-left: -1rem;
+    position: absolute;
+    top: 99%;
+    left: 35%;
+    width: 0;
+    height: 0;
+  }
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $c-link;
+  text-decoration: none;
+
+  &:focus,
+  &:active {
+    color: $c-link-hover;
+  };
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Selection colors TODO
+
+::selection {
+  background: $c-link;
+  color: invert($c-link);
+  text-shadow: none;
+}

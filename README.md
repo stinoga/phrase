@@ -40,5 +40,7 @@ copy.dist.files.src: [
 ➜ bower uninstall es5-shim --save
 ➜ bower install angular-phonegap --save
 ➜ bower install angular-local-storage --save
+➜ gem install compass
+➜ gem install breakpoint
 
 

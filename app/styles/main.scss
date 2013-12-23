@@ -1,87 +1,35 @@
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+// IMPORTING STYLES ============================================================
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+// Normalize the default browser styles
+@import "lib/normalize";
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-}
+// Site Variables
+@import "lib/variables";
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
+// // Setup our custom awesome type
+// @import "lib/type";
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
+// // Icons
+// // @import "lib/icons";
 
-.container-narrow > hr {
-    margin: 30px 0;
-}
+// // Base styles are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+// @import "base";
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
+// // Layout and state styling global to the site =================================
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
+// // Layout styles divide the page into sections. Layouts hold one or more modules together.
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
+// // State styles are ways to describe how our modules or layouts will look when in a particular state. These are usually applied with javascript
+// @import "layout";
 
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
-}
+// // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
+// // TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
+// @import "modules/buttons",
+//         "modules/header",
+//         "modules/play",
+//         "modules/score",
+//         "modules/settings",
+//         "modules/end",
+//         "modules/footer",
+//         "modules/notifications";

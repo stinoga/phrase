@@ -1,1 +1,12 @@
-<p>This is the settings view.</p>
+<div class="content">
+  <div class="settings">
+    <section>
+      <label for="category">Category</label>
+      <select id="category" ng-model="Category" ng-options="option for option in Categories" ng-change="saveSetting('Category')"></select>
+    </section>
+    <section>
+      <label for="timer">Timer</label>
+      <select id="timer" ng-model="Timer" ng-options="option for option in Timers" ng-change="saveSetting('Timer')"></select>
+    </section>
+  </div><a href="#/play" class="btn spacer">Play</a>
+</div>

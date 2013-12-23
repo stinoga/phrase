@@ -1,1 +1,5 @@
-<p>This is the play view.</p>
+<div class="content">
+  <div ng-hide="timer.audible == 'Audible'" ng-class="timer.urgency" ng-bind-template="{{timer.seconds}}" class="timer"></div>
+  <div ng-bind-template="{{word}}" class="word"></div>
+  <div class="next_container"><a href="" ng-click="next()" class="next btn">Next</a></div>
+</div>
