@@ -5,6 +5,7 @@ angular.module('phraseApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'PhoneGap',
   // TODO: replace this with a better storage on your phone
   'LocalStorageModule'
 ])
