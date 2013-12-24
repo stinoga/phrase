@@ -14,6 +14,7 @@ angular.module('phraseApp')
       }
     }
 
+    // Model for each team's score
     var CONFIG = [
           {
             'id': 1,
@@ -59,6 +60,7 @@ angular.module('phraseApp')
       return CONFIG;
     }
 
+    // Public API here
     return {
       get: getScore,
       set: setScore,

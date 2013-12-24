@@ -41,6 +41,7 @@ angular.module('phraseApp')
       return Object.keys(CONFIG);
     }
 
+    // Public API here
     return {
       get: getSetting,
       set: setSetting,

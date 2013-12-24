@@ -23,6 +23,7 @@ angular.module('phraseApp')
     //       ]
     //     });
 
+    // TODO: Store these constants in a config like our other factories
     var DEFAULT_DURATION = 50,
         NOOP = function() {},
         HURRY_PROGRESS = 30,
@@ -64,6 +65,7 @@ angular.module('phraseApp')
       return shouldI;
     }
 
+    // This is our constructor for the timer object
     function Timer( duration ) {
       this.started = Date.now();
       this.seconds = duration;
@@ -74,13 +76,14 @@ angular.module('phraseApp')
       this.audible = timerSetting();
     }
 
+    // Attach a new update prototype to our timer object
     Timer.prototype.update = function() {
+      // The timer is finished, so let's return rather than going forward
       if (this.done) {
         return;
       }
 
-      var lastSeconds = this.seconds,
-          millisecondsSince = Date.now() - this.started;
+      var millisecondsSince = Date.now() - this.started;
 
       this.seconds = this.duration - Math.floor(millisecondsSince / 1000);
       this.progress = 100 - Math.floor(100 * this.seconds / this.duration);
@@ -102,6 +105,7 @@ angular.module('phraseApp')
     };
 
     return function( opts ) {
+      // TODO: in the future, we may want duration as a global option
       var duration = (opts && opts.duration) || DEFAULT_DURATION,
           onDone = (opts && opts.done) || NOOP,
           onUpdate = (opts && opts.update) || NOOP;
