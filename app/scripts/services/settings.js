@@ -10,7 +10,10 @@ angular.module('phraseApp')
             'Popular',
             'Movies',
             'Search Terms',
-            'Star Wars'
+            'Star Wars',
+            'Books',
+            'The 90\'s',
+            'The 80\'s'
           ]
         },
         'Timer': {
