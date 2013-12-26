@@ -13,12 +13,12 @@ angular.module('phraseApp')
     var currentRoute = $location.path().substring(1) || 'home';
 
     // Adding the appropriate class to our main navigation
-    $scope.navClass = function (page) {
+    $scope.navClass = function ( page ) {
       // If our page var matches the current route, return active
       return page === currentRoute ? 'active' : '';
     };
 
-    $scope.logoText = function () {
+    $scope.logoText = function ( page ) {
       return currentRoute === 'home' ? 'Phrase' : 'P';
     };
 

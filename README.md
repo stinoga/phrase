@@ -1,3 +1,5 @@
+npm install -g phonegap yeoman generator-angular
+
 [ ~/Sites ]
 ➜ phonegap create phrase --name Phrase --id com.stinogle.phrase
 [phonegap] created project at /Users/joy/Sites/phrase
