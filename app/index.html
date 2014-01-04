@@ -25,7 +25,7 @@
           <li><a href="#/rules" ng-class="navClass('rules')">Rules</a></li>
         </ul>
       </nav>
-      <header class="mainHeader content cf">
+      <header ng-controller="LogoCtrl" class="mainHeader content cf">
         <logo></logo>
         <nav-icon></nav-icon>
       </header>
@@ -75,6 +75,7 @@
         <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/services/FileReader.js"></script>
         <script src="scripts/directives/logo.js"></script>
+        <script src="scripts/controllers/logo.js"></script>
         <!-- endbuild -->
 </body>
 </html>
