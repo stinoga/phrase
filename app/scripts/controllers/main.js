@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('MainCtrl', function ($scope, timer, settings) {
+  .controller('MainCtrl', function ($scope, timer, settings, FileReader) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
