@@ -61,3 +61,6 @@ www
 platforms
 merges
 plugins
+
+phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
