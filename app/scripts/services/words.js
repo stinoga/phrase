@@ -4,7 +4,7 @@ angular.module('phraseApp')
   .factory('words', function ( $http, settings ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
-        apiPath = 'http://www.pop-phrase.com/api/words/';
+        apiPath = '/data/';
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {

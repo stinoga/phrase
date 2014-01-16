@@ -274,7 +274,9 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp}',
             'fonts/*',
             // Phonegap specific
-            'config.xml'
+            'config.xml',
+            // App Models
+            'data/*'
           ]
         }, {
           expand: true,

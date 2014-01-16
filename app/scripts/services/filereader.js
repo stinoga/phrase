@@ -1,10 +1,9 @@
 'use strict';
 
 angular.module('PhoneGap').factory('FileReader', [
-  '$q',
   '$window',
   'PhoneGap',
-  function ($q, $window, PhoneGap) {
+  function ($window, PhoneGap) {
 
     return {
       onDeviceReady: function () {
@@ -13,8 +12,8 @@ angular.module('PhoneGap').factory('FileReader', [
           $window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 
           function gotFS (fileSystem) {
-            console.log('grabbing file');
-            fileSystem.root.getFile('readme.txt', null, gotFileEntry, fail);
+            console.log(fileSystem);
+            fileSystem.root.getFile('../data/words.json', null, gotFileEntry, fail);
           }
 
           function gotFileEntry (fileEntry) {
@@ -46,7 +45,7 @@ angular.module('PhoneGap').factory('FileReader', [
 
           function fail (error) {
             console.log('Houston, we have a problem.');
-            console.log(error.code);
+            console.log(error);
           }
         });
       }

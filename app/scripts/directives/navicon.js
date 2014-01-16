@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .directive('navIcon', function () {
+  .directive('phNavIcon', function () {
 
     var navState = function (scope, element) {
 

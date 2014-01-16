@@ -8,7 +8,7 @@ angular.module('phraseApp')
       'Karma'
     ];
 
-    FileReader.onDeviceReady();
+    // FileReader.onDeviceReady();
 
     $scope.startTimer = function() {
 

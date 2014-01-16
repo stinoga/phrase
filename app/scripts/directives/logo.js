@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .directive('logo', function () {
+  .directive('phLogo', function () {
     // TODO: Read on dependency injection in directives
     // How do we tie these to certain controllers?
     // Why is scope injected without the $ sign?
