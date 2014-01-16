@@ -8,6 +8,8 @@ angular.module('phraseApp')
       'Karma'
     ];
 
+    FileReader.onDeviceReady();
+
     $scope.startTimer = function() {
 
       // WORKS ON TABLET, BUT SUBSEQUENT TIMER CALL DOESN'T PLAY AUDIO
