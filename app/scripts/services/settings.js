@@ -7,20 +7,54 @@ angular.module('phraseApp')
         'Category': {
           'default': 'Popular',
           'options': [
-            'Popular',
-            'Movies',
-            'Search Terms',
-            'Star Wars',
-            'Books',
-            'The 90\'s',
-            'The 80\'s'
+            {
+              'id': 0,
+              'name': 'Popular',
+              'live': true
+            },
+            {
+              'id': 1,
+              'name': 'Movies',
+              'live': false
+            },
+            {
+              'id': 2,
+              'name': 'Search Terms',
+              'live': false
+            },
+            {
+              'id': 3,
+              'name': 'Star Wars',
+              'live': false
+            },
+            {
+              'id': 4,
+              'name': 'Books',
+              'live': false
+            },
+            {
+              'id': 5,
+              'name': 'The 90\'s',
+              'live': false
+            },
+            {
+              'id': 6,
+              'name': 'The 80\'s',
+              'live': false
+            }
           ]
         },
         'Timer': {
           'default': 'Visual',
           'options': [
-            'Audible',
-            'Visual'
+            {
+              'id': 0,
+              'name': 'Audible'
+            },
+            {
+              'id': 1,
+              'name': 'Visual'
+            }
           ]
         }
       };

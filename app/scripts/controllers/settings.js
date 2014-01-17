@@ -11,8 +11,10 @@ angular.module('phraseApp')
     $scope.Categories = settings.options('Category');
     $scope.Timers = settings.options('Timer');
 
-    $scope.Category = settings.get('Category');
-    $scope.Timer = settings.get('Timer');
+    // This will enable our correct option to be selected based on localStorage
+    // TODO: There needs to be a better way to do this
+    $scope.Category = $scope.Categories[settings.get('Category').id];
+    $scope.Timer = $scope.Timers[settings.get('Timer').id];
 
     $scope.saveSetting = function( key ) {
       settings.set(key, $scope[key]);

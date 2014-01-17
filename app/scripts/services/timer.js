@@ -4,7 +4,7 @@ angular.module('phraseApp')
   .factory('timer', function ( $timeout, $window, settings ) {
 
     function timerSetting() {
-      return settings.get('Timer');
+      return settings.get('Timer').name;
     }
 
     // TODO: Replace howl with phonegap audio

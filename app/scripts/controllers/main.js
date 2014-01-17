@@ -1,14 +1,12 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('MainCtrl', function ($scope, timer, settings, FileReader) {
+  .controller('MainCtrl', function ($scope, timer, settings) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
-    // FileReader.onDeviceReady();
 
     $scope.startTimer = function() {
 
@@ -20,7 +18,7 @@ angular.module('phraseApp')
       //       ]
       //     });
 
-      if (settings.get('Timer') === 'Audible') {
+      if (settings.get('Timer').name === 'Audible') {
         // beep.play();
       }
 

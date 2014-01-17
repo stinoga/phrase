@@ -4,11 +4,11 @@ angular.module('phraseApp')
   .factory('words', function ( $http, settings ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
-        apiPath = '/data/';
+        apiPath = 'data/';
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
-      return settings.get('Category').toLowerCase().replace(/[^a-z_]/g, '_');
+      return settings.get('Category').name.toLowerCase().replace(/[^a-z_]/g, '_');
     }
 
     // TODO: this can probably have the function attached directly to the variable
