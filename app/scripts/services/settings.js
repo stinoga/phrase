@@ -63,13 +63,28 @@ angular.module('phraseApp')
       return localStorageService.get(key) || CONFIG[key]['default'];
     }
 
+    function setCache ( cacheKey ) {
+      // Current date, date in milliseconds, one day in milliseconds, cache key
+      // Grab data from local storage and parse into integer
+      var currTime = new Date(),
+          currMili = currTime.getTime(),
+          oneDay = 86400000,
+          lowKey = cacheKey.toLowerCase().replace(/[^a-z_]/g, '_'),
+          cacheTime = parseInt(localStorageService.get(lowKey + '_date'), 10);
+
+      // If the stored date isn't within the last day, let's ping out to the API
+      if((currMili - cacheTime) > oneDay) {
+        cache.set(cacheKey);
+      }
+    }
+
     function setSetting( key, value ) {
       // Save our setting into localstorage
       localStorageService.add(key, value);
 
       // If we are going to use our remote API, store the data in localStorage
       if (value.live) {
-        cache.set(value.name);
+        setCache(value.name);
       }
     }
 
