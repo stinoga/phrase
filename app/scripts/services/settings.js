@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('settings', function ( localStorageService ) {
+  .factory('settings', function ( localStorageService, cache ) {
 
     var CONFIG = {
         'Category': {
@@ -64,7 +64,13 @@ angular.module('phraseApp')
     }
 
     function setSetting( key, value ) {
+      // Save our setting into localstorage
       localStorageService.add(key, value);
+
+      // If we are going to use our remote API, store the data in localStorage
+      if (value.live) {
+        cache.set(value.name);
+      }
     }
 
     function getOptions( key ) {
