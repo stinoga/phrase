@@ -4,7 +4,7 @@ angular.module('phraseApp')
   .factory('words', function ( $http, settings ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
-        apiPath = 'data/';
+        apiPath = (settings.get('Category').live === true) ? 'http://www.pop-phrase.com/api/words/' : 'data/';
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
@@ -64,9 +64,6 @@ angular.module('phraseApp')
       if (!unused.length) {
         // No more words! Reset for now!
         usedWords = {};
-        // TODO: Let's just reset the list here
-        // TODO: research messaging system provided with PhoneGap
-        alert('You\'ve used all the words! Please choose another category.');
       }
       var word = unused[Math.floor(Math.random() * unused.length)];
 
