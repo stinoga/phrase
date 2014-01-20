@@ -41,15 +41,17 @@ angular.module('phraseApp')
     }
 
     function fetchWords( done ) {
-      function handleWords( data, status ) {
-        // if (!status.)
-        console.log('status', status);
+      function handleWords( data ) {
         setWords(data);
         done();
       }
 
       console.log('Fetching words...');
-      $http.get(apiPath + wordListId).success(handleWords);
+      if (settings.get('Category').live === true) {
+        handleWords(settings.get(wordListId));
+      } else {
+        $http.get(apiPath + wordListId).success(handleWords);
+      }
     }
 
     function allWords( done ) {

@@ -15,7 +15,13 @@ angular.module('phraseApp')
         localStorageService.add(lowKey + '_date', currTime.getTime());
       }
 
-      $http.get('http://www.pop-phrase.com/api/words/' + lowKey).success(storeData);
+      // Grab data from our API
+      // If we find it, let's kick off our function to store it
+      $http({method: 'GET', url: 'http://www.pop-phrase.com/api/words/' + lowKey})
+        .success(storeData)
+        .error(function() {
+          alert('Words? We don\'t need no stinking words!\nLooks like your internet is down Hoss. Try one of our other categories');
+        });
     }
 
     // Public API here
