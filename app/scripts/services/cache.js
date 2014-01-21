@@ -8,7 +8,8 @@ angular.module('phraseApp')
       var lowKey = key.toLowerCase().replace(/[^a-z_]/g, '_'),
           currTime = new Date();
 
-      function storeData ( data) {
+      function storeData ( data ) {
+        console.log('caching.... ' + key);
         // Save data locally
         localStorageService.add(lowKey, data);
         // Store timestamp

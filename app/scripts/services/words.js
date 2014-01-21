@@ -5,7 +5,7 @@ angular.module('phraseApp')
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
         // TODO: set global config for API path
-        apiPath = (settings.get('Category').live === true) ? 'http://www.pop-phrase.com/api/words/' : 'data/';
+        apiPath = 'data/';
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
@@ -45,11 +45,11 @@ angular.module('phraseApp')
         setWords(data);
         done();
       }
-
-      console.log('Fetching words...');
       if (settings.get('Category').live === true) {
-        handleWords(settings.get(wordListId));
+        // Grab our cached remote API data if this is a live category
+        handleWords(settings.getCache(wordListSetting()));
       } else {
+        // If not, pull the words from our local API
         $http.get(apiPath + wordListId).success(handleWords);
       }
     }

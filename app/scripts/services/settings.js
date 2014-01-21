@@ -5,7 +5,6 @@ angular.module('phraseApp')
 
     var CONFIG = {
         'Category': {
-          'default': 'Popular',
           'options': [
             {
               'id': 0,
@@ -45,7 +44,6 @@ angular.module('phraseApp')
           ]
         },
         'Timer': {
-          'default': 'Visual',
           'options': [
             {
               'id': 0,
@@ -60,17 +58,31 @@ angular.module('phraseApp')
       };
 
     function getSetting( key ) {
-      return localStorageService.get(key) || CONFIG[key]['default'];
+      // If no setting is stored yet ...
+      if (localStorageService.get(key) === null) {
+        // Store the first item in localStorage
+        setSetting(key, CONFIG[key].options[0]);
+        // Return the first item
+        return CONFIG[key].options[0];
+      } else {
+        return localStorageService.get(key);
+      }
+    }
+
+    function getCache ( cacheKey ) {
+      return localStorageService.get(cacheKey);
     }
 
     function setCache ( cacheKey ) {
       // Current date, date in milliseconds, one day in milliseconds, cache key
-      // Grab data from local storage and parse into integer
+      // Grab data from local storage and parse into integer. If no date is
+      // stored yet, default it to zero so we store it.
       var currTime = new Date(),
           currMili = currTime.getTime(),
           oneDay = 86400000,
           lowKey = cacheKey.toLowerCase().replace(/[^a-z_]/g, '_'),
-          cacheTime = parseInt(localStorageService.get(lowKey + '_date'), 10);
+          cacheDate = localStorageService.get(lowKey + '_date') || 0,
+          cacheTime = parseInt(cacheDate, 10);
 
       // If the stored date isn't within the last day, let's ping out to the API
       if((currMili - cacheTime) > oneDay) {
@@ -81,6 +93,8 @@ angular.module('phraseApp')
     function setSetting( key, value ) {
       // Save our setting into localstorage
       localStorageService.add(key, value);
+
+      console.log('setting', key, value);
 
       // If we are going to use our remote API, store the data in localStorage
       if (value.live) {
@@ -99,6 +113,7 @@ angular.module('phraseApp')
     // Public API here
     return {
       get: getSetting,
+      getCache: getCache,
       set: setSetting,
       options: getOptions,
       all: getAll
