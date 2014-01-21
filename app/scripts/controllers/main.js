@@ -8,6 +8,11 @@ angular.module('phraseApp')
       'Karma'
     ];
 
+    // These will handle storing our default setting values if they
+    // haven't been stored in localStorage yet
+    $scope.Category = settings.get('Category').id;
+    $scope.Timer = settings.get('Timer').id;
+
     $scope.startTimer = function() {
 
       // WORKS ON TABLET, BUT SUBSEQUENT TIMER CALL DOESN'T PLAY AUDIO
