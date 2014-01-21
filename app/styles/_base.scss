@@ -63,6 +63,7 @@ p {
 a {
   color: $c-link;
   text-decoration: none;
+  -webkit-touch-callout: none;
 
   &:focus,
   &:active {

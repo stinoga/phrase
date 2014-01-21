@@ -94,8 +94,6 @@ angular.module('phraseApp')
       // Save our setting into localstorage
       localStorageService.add(key, value);
 
-      console.log('setting', key, value);
-
       // If we are going to use our remote API, store the data in localStorage
       if (value.live) {
         setCache(value.name);
