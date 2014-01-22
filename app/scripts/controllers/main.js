@@ -14,7 +14,7 @@ angular.module('phraseApp')
     $scope.Timer = settings.get('Timer').id;
 
     if (settings.get('Timer').name === 'Audible') {
-      sound.play('test');
+      sound.play('beep');
     }
 
     $scope.startTimer = function() {

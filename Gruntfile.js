@@ -276,7 +276,8 @@ module.exports = function (grunt) {
             // Phonegap specific
             'config.xml',
             // App Models
-            'data/*'
+            'data/*',
+            'audio/*'
           ]
         }, {
           expand: true,
