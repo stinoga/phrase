@@ -1,6 +1,6 @@
 # My initial setup steps
 
-```
+```Shell
 [ ~/Sites ]
 ➜ phonegap create phrase --name Phrase --id com.stinogle.phrase
 ➜ cd phrase/
@@ -31,10 +31,13 @@ copy.dist.files.src: [
 ];
 ```
 
-##Breakpoint setup
+## Breakpoint setup
 
+### config.rb
+```ruby
 compass: {
   options: {
     require: ['breakpoint']
   }
 }
+```
