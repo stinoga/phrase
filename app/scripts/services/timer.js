@@ -1,27 +1,11 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('timer', function ( $timeout, $window, settings ) {
+  .factory('timer', function ( $timeout, $window, settings, sound ) {
 
     function timerSetting() {
       return settings.get('Timer').name;
     }
-
-    // TODO: Replace howl with phonegap audio
-    // var beep = new $window.Howl({
-    //       urls: [
-    //         'audio/beep.mp3',
-    //         'audio/beep.ogg',
-    //         'audio/beep.wav'
-    //       ]
-    //     }),
-    //     buzzer = new $window.Howl({
-    //       urls: [
-    //         'audio/buzzer.mp3',
-    //         'audio/buzzer.ogg',
-    //         'audio/buzzer.wav'
-    //       ]
-    //     });
 
     // TODO: Store these constants in a config like our other factories
     var DEFAULT_DURATION = 50,
@@ -95,8 +79,7 @@ angular.module('phraseApp')
 
       if ((this.audible === 'Audible') && shouldBeep(this.progress, this._lastBeep, millisecondsSince)) {
         this._lastBeep = millisecondsSince;
-        // beep.stop();
-        // beep.play();
+        sound.play('beep');
       }
     };
 
@@ -121,7 +104,9 @@ angular.module('phraseApp')
           onDone();
 
           if (timer.audible === 'Audible') {
-            // buzzer.play();
+            console.log('DONE');
+            sound.stop();
+            sound.play('buzzer');
           }
 
         } else {

@@ -3,44 +3,23 @@
 angular.module('PhoneGap')
   .factory('sound', function ( $window, PhoneGap ) {
 
-    // var soundOk = false;
-
-    // function checkSound() {
-    //   if (soundOk) {
-    //     return;
-    //   }
-
-    //   // create empty buffer and play it
-    //   var buffer = myContext.createBuffer(1, 1, 22050),
-    //       source = myContext.createBufferSource();
-
-    //   source.buffer = buffer;
-    //   source.connect(myContext.destination);
-    //   source.noteOn(0);
-
-    //   // by checking the play state after some time, we know if we're really unlocked
-    //   setTimeout(function() {
-    //     if((source.playbackState === source.PLAYING_STATE || source.playbackState === source.FINISHED_STATE)) {
-    //       soundOk = true;
-    //     }
-    //   }, 0);
-
-    // }
-
-    // $window.addEventListener('touchstart', checkSound, false);
-    // $window.addEventListener('click', checkSound, false);
-
     // Audio player
     var myMedia = null,
-        mediaTimer = null;
+        srcCache;
 
     // Play audio
     function playAudio(src) {
       PhoneGap.ready().then(function () {
-        if (myMedia === null) {
+        // If we haven't loaded media yet, or if new a new media src comes in,
+        // let's load new media using PhoneGap
+        if (myMedia === null || srcCache !== src) {
+          console.log('new sound object');
           // Create Media object from src
           myMedia = new Media('audio/' + src + '.mp3', onSuccess, onError);
         }
+
+        srcCache = src;
+
         // Play audio
         myMedia.play();
       });
@@ -58,8 +37,6 @@ angular.module('PhoneGap')
       if (myMedia) {
         myMedia.stop();
       }
-      clearInterval(mediaTimer);
-      mediaTimer = null;
     }
 
     // onSuccess Callback
