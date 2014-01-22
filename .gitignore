@@ -6,7 +6,6 @@ app/bower_components
 www
 
 # phonegap stuff
-.cordova/
 platforms
 merges
 plugins
