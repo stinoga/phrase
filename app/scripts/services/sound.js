@@ -1,23 +1,26 @@
 'use strict';
 
 angular.module('PhoneGap')
-  .factory('sound', function ( $window, PhoneGap ) {
+  .factory('sound', function ( $window, PhoneGap, device ) {
 
     // Audio player
     var myMedia = null,
-        srcCache;
+        srcCache,
+        systemPath = $window.location.pathname,
+        // mediaPath = 'file://' + systemPath.substr( systemPath, systemPath.length - 10 ) + 'audio/';
+        mediaPath = 'audio/';
 
     // Play audio
-    function playAudio(src) {
+    function playAudio( src ) {
       PhoneGap.ready().then(function () {
         // If we haven't loaded media yet, or if new a new media src comes in,
         // let's load new media using PhoneGap
         if (myMedia === null || srcCache !== src) {
-          console.log('new sound object');
           // Create Media object from src
-          myMedia = new Media('audio/' + src + '.mp3', onSuccess, onError);
+          myMedia = new Media(mediaPath + src + '.mp3', onSuccess, onError);
         }
 
+        // Cache our file so we don't call for media again
         srcCache = src;
 
         // Play audio
@@ -41,11 +44,11 @@ angular.module('PhoneGap')
 
     // onSuccess Callback
     function onSuccess() {
-      console.log('playAudio():Audio Success');
+      // console.log('playAudio():Audio Success');
     }
 
     // onError Callback
-    function onError(error) {
+    function onError( error ) {
       alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
     }
 

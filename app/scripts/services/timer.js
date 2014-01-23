@@ -104,7 +104,7 @@ angular.module('phraseApp')
           onDone();
 
           if (timer.audible === 'Audible') {
-            console.log('DONE');
+            // Stop any sound currently running, it's buzzer time
             sound.stop();
             sound.play('buzzer');
           }

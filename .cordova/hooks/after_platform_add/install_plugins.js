@@ -6,7 +6,8 @@
 var pluginlist = [
   'org.apache.cordova.console',
   'org.apache.cordova.media',
-  'org.apache.cordova.file'
+  'org.apache.cordova.file',
+  'org.apache.cordova.device'
 ];
 
 // no need to configure below
