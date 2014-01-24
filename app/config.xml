@@ -2,10 +2,10 @@
 <widget id="com.stinogle.phrase" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Phrase</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        A Catch Phrase game, only better. The words are constantly updating with the new trends, and word lists.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="stinogle@gmail.com" href="http://stinogle.com">
+        Rob Stinogle
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
