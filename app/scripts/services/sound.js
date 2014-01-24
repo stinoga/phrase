@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('PhoneGap')
-  .factory('sound', function ( $window, PhoneGap, device ) {
+  .factory('sound', function ( $window, PhoneGap ) {
 
     // Audio player
     var myMedia = null,
         srcCache,
         systemPath = $window.location.pathname,
-        // mediaPath = 'file://' + systemPath.substr( systemPath, systemPath.length - 10 ) + 'audio/';
-        mediaPath = 'audio/';
+        mediaPath = systemPath.substr( systemPath, systemPath.length - 10 ) + 'audio/';
+        // mediaPath = 'audio/';
 
     // Play audio
     function playAudio( src ) {
@@ -17,7 +17,7 @@ angular.module('PhoneGap')
         // let's load new media using PhoneGap
         if (myMedia === null || srcCache !== src) {
           // Create Media object from src
-          myMedia = new Media(mediaPath + src + '.mp3', onSuccess, onError);
+          myMedia = new Media(decodeURI(mediaPath + src + '.mp3'), onSuccess, onError);
         }
 
         // Cache our file so we don't call for media again
