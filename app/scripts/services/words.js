@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('words', function ( $http, settings ) {
+  .factory('words', function ( $http, settings, $filter ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
         // TODO: set global config for API path
@@ -9,11 +9,13 @@ angular.module('phraseApp')
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
-      return settings.get('Category').name.toLowerCase().replace(/[^a-z_]/g, '_');
+      return $filter('slugFilter')(settings.get('Category').name);
     }
 
     // TODO: this can probably have the function attached directly to the variable
     var wordListId = wordListSetting();
+
+    console.log('wordListId' + wordListId);
 
     function onlyUnused( word ) {
       // If the word is in the usedWords array, do not return it

@@ -3,9 +3,9 @@
 // This module should cache any remote API data into localstorage
 
 angular.module('phraseApp')
-  .factory('cache', function ( $http, localStorageService ) {
+  .factory('cache', function ( $http, localStorageService, $filter ) {
     function setCache ( key ) {
-      var lowKey = key.toLowerCase().replace(/[^a-z_]/g, '_'),
+      var lowKey = $filter('slugFilter')(key),
           currTime = new Date();
 
       function storeData ( data ) {

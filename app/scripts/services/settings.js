@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('settings', function ( localStorageService, cache ) {
+  .factory('settings', function ( localStorageService, cache, $filter ) {
 
     var CONFIG = {
         'Category': {
@@ -80,7 +80,7 @@ angular.module('phraseApp')
       var currTime = new Date(),
           currMili = currTime.getTime(),
           oneDay = 86400000,
-          lowKey = cacheKey.toLowerCase().replace(/[^a-z_]/g, '_'),
+          lowKey = $filter('slugFilter')(cacheKey),
           cacheDate = localStorageService.get(lowKey + '_date') || 0,
           cacheTime = parseInt(cacheDate, 10);
 
