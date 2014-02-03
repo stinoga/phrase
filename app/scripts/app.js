@@ -6,7 +6,6 @@ angular.module('phraseApp', [
   'ngSanitize',
   'ngRoute',
   'PhoneGap',
-  // TODO: replace this with a better storage on your phone
   'LocalStorageModule'
 ])
   .config(function ($routeProvider) {
