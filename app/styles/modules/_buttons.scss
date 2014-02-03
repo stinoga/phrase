@@ -8,8 +8,7 @@ a.btn {
   color: $c-header;
   margin-bottom: 1.5rem;
 
-  &:active,
-  &:focus {
+  &.ng-click-active {
     background-color: lighten($c-text, 10%);
   }
 }

@@ -6,7 +6,8 @@ angular.module('phraseApp', [
   'ngSanitize',
   'ngRoute',
   'PhoneGap',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ngTouch'
 ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -10,7 +10,7 @@ angular.module('phraseApp')
     // };
 
     return {
-      template: '<h1><a href="#/">{{logoText}}</a></h1>',
+      template: '<h1><a ng-click href="#/">{{logoText}}</a></h1>',
       restrict: 'E'
     };
 

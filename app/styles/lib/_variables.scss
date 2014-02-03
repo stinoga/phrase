@@ -7,7 +7,7 @@ $c-text: #3E3E3E;
 $c-header: #fff;
 $c-text-subtle: lighten($c-text, 30%);
 
-$c-link: #00B7FF;
+$c-link: $c-text-subtle;
 $c-link-hover: darken($c-link, 15%);
 
 $c-highlight: #E44A2F;

@@ -54,10 +54,9 @@ nav.active {
     box-shadow: 0 .75rem 0 0 $c-text, 0 1.5rem 0 0 $c-text;
   }
 
-  &:active:before,
-  &:focus:before {
-    background: darken($c-text, 10%);
-    box-shadow: 0 .75rem 0 0 darken($c-text, 10%), 0 1.5rem 0 0 darken($c-text, 10%);
+  &.ng-click-active:before {
+    background: lighten($c-text, 10%);
+    box-shadow: 0 .75rem 0 0 lighten($c-text, 10%), 0 1.5rem 0 0 lighten($c-text, 10%);
   }
 }
 
