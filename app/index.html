@@ -20,8 +20,8 @@
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
         <ul ng-controller="NavCtrl" class="cf">
-          <li><a href="#/settings" ng-class="navClass('settings')">Settings</a></li>
-          <li><a href="#/rules" ng-class="navClass('rules')">Rules</a></li>
+          <li><a ng-click="go('/settings')" ng-class="navClass('settings')">Settings</a></li>
+          <li><a ng-click="go('/rules')" ng-class="navClass('rules')">Rules</a></li>
         </ul>
       </nav>
       <header ng-controller="LogoCtrl" class="mainHeader content cf">

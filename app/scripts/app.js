@@ -38,4 +38,11 @@ angular.module('phraseApp', [
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function ($rootScope, $location){
+    // Using this location function globally as ngTouch seems to stop
+    // href calls from working. We'll call this with ng-click.
+    $rootScope.go = function ( path ) {
+      $location.path( path );
+    };
   });

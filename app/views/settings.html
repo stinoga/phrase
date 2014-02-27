@@ -9,5 +9,5 @@
       <select id="timer" ng-model="Timer" ng-options="option.name for option in Timers" ng-change="saveSetting('Timer')"></select>
     </section>
   </div>
-  <a ng-click href="#/play" class="btn spacer">Play</a>
+  <a ng-click="go('/play')" class="btn spacer">Play</a>
 </div>
