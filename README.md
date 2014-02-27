@@ -4,6 +4,9 @@ A Phonegap Catch Phrase game. Uses local word lists as well as remote APIs for u
 ## Setup
 ```Shell
 npm install -g phonegap yeoman generator-angular
+bower install
+gem install bundler
+bundle install
 ```
 
 ## Run locally
