@@ -3,10 +3,12 @@ A Phonegap Catch Phrase game. Uses local word lists as well as remote APIs for u
 
 ## Setup
 ```Shell
-npm install -g phonegap yeoman generator-angular
-bower install
-gem install bundler
-bundle install
+$ npm install -g yeoman generator-angular phonegap cordova ios-sim && gem install bundler
+$ phonegap create phrase --name Phrase --id com.stinogle.phrase
+$/phrase npm install
+$/phrase npm install
+$/phrase bower install
+$/phrase bundle install
 ```
 
 ## Run locally
