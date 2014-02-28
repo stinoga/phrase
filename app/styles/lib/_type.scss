@@ -1,8 +1,8 @@
 // TYPE mixins =================================================================
 
 @mixin heading {
-  margin-bottom: 0.35em;
-  line-height: 3.9rem;
+  margin: .5rem 0 0.35em;
+  line-height: 2.5rem;
   color: $c-text;
 }
 
@@ -48,7 +48,7 @@
 
 @mixin heading-2 {
   @include heading;
-  display: inline
+  font-size: 2rem;
 }
 
 @mixin heading-3 {
