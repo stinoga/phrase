@@ -46,8 +46,14 @@ angular.module('phraseApp')
             // set the winnning team
             teamId.winner = 1;
 
+            // Store the game data
+            localStorageService.add('ls.last_game', CONFIG);
+
             // clear out local storage keys for all scores
+            // reset scores in config
             angular.forEach(CONFIG, function( key ) {
+              CONFIG[0].score = 0;
+              CONFIG[1].score = 0;
               localStorageService.remove('ls_score' + key.id);
             });
             $location.path('/end');
