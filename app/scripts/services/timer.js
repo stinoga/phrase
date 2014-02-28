@@ -10,9 +10,9 @@ angular.module('phraseApp')
     // TODO: Store these constants in a config like our other factories
     var DEFAULT_DURATION = 50,
         NOOP = function() {},
-        HURRY_PROGRESS = 30,
-        UHOH_PROGRESS = 60,
-        TERRIFY_PROGRESS = 90,
+        HURRY_PROGRESS = 29,
+        UHOH_PROGRESS = 57,
+        TERRIFY_PROGRESS = 85,
         NORMAL_BEEP_MS = 1000,
         HURRY_BEEP_MS = 666,
         UHOH_BEEP_MS = 250,
@@ -21,13 +21,15 @@ angular.module('phraseApp')
     function howUrgent( progress ) {
       var urgency = 'normal';
 
-      if (progress > UHOH_PROGRESS) {
+      if (progress >= TERRIFY_PROGRESS) {
+        urgency = 'terrify';
+      } else if (progress > UHOH_PROGRESS) {
         urgency = 'uhoh';
       } else if (progress > HURRY_PROGRESS) {
         urgency = 'hurry';
-      } else if (progress >= TERRIFY_PROGRESS) {
-        urgency = 'terrify';
       }
+
+      // console.log(urgency);
 
       return urgency;
     }
