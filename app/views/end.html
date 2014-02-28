@@ -1,6 +1,11 @@
 <div class="content">
-  <div class="win home cf">
+  <div class="win cf">
     <h2 ng-repeat="team in teams" ng-show="team.winner" ng-bind-template="Team{{team.id}} Wins!" class="cf"></h2>
-    <div ng-repeat="team in teams" class="gameInfo"><span ng-bind-template="Team{{team.id}}:" class="team"></span><span ng-bind-template="{{team.score}}" class="score"></span></div>
-  </div><a ng-click="go('/play')" class="btn spacer">New Game</a><p><a ng-click="go('/settings')">Settings</a></p>
+    <div ng-repeat="team in teams" class="gameInfo">
+      <span ng-bind-template="Team{{team.id}}:" class="team"></span>
+      <span ng-bind-template="{{team.score}}" class="score"></span>
+    </div>
+  </div>
+  <a ng-click="go('/play')" class="btn spacer">New Game</a>
+  <p class="l-text-center"><a ng-click="go('/settings')">Settings</a></p>
 </div>
