@@ -9,6 +9,6 @@ a.btn {
   margin-bottom: 1.5rem;
 
   &.ng-click-active {
-    background-color: lighten($c-text, 10%);
+    background-color: $c-text-subtle;
   }
 }

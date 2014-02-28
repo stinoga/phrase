@@ -36,10 +36,11 @@
     }
 
     &.ng-click-active {
-      background-color: lighten($c-text, 10%);
+      background-color: $c-text-subtle;
+      color: $c-header;
 
       &:after {
-        border-top-color: lighten($c-text, 10%);
+        border-top-color: $c-text-subtle;
       }
     }
   }
