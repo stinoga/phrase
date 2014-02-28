@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="phraseApp" ng-controller="NavCtrl" class="{{pageName}}">
+  <body ng-app="phraseApp" ng-controller="NavCtrl" class="page_{{pageName}}">
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
@@ -29,7 +29,7 @@
         <ph-nav-icon></ph-nav-icon>
       </header>
       <!-- Placeholder for views -->
-      <div id="main" class="main {{pageName}}" ng-view></div>
+      <div id="main" class="main view_{{pageName}}" ng-view></div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
