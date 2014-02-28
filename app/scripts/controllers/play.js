@@ -1,12 +1,8 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('PlayCtrl', function ($scope, $location, words, timer) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('PlayCtrl', function ($rootScope, $scope, $location, words, timer, page) {
+    $rootScope.pageName = page.get();
 
     $scope.next = function() {
       words.get(function( word ) {

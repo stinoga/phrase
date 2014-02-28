@@ -1,12 +1,8 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('EndCtrl', function ($scope, score) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('EndCtrl', function ($rootScope, $scope, score, page) {
+    $rootScope.pageName = page.get();
 
     $scope.teams = score.all();
 

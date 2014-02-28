@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="phraseApp">
+  <body ng-app="phraseApp" ng-controller="NavCtrl" class="{{pageName}}">
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
-        <ul ng-controller="NavCtrl" class="cf">
+        <ul class="cf">
           <li><a ng-click="go('/settings')" ng-class="navClass('settings')">Settings</a></li>
           <li><a ng-click="go('/rules')" ng-class="navClass('rules')">Rules</a></li>
         </ul>
@@ -29,7 +29,7 @@
         <ph-nav-icon></ph-nav-icon>
       </header>
       <!-- Placeholder for views -->
-      <div id="main" class="main" ng-view></div>
+      <div id="main" class="main {{pageName}}" ng-view></div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -79,6 +79,7 @@
         <script src="scripts/services/cache.js"></script>
         <script src="scripts/services/device.js"></script>
         <script src="scripts/filters/slugFilter.js"></script>
+        <script src="scripts/services/page.js"></script>
         <!-- endbuild -->
 </body>
 </html>
