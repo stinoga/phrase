@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('EndCtrl', function ($rootScope, $scope, score, page) {
+  .controller('EndCtrl', function ($rootScope, $scope, localStorageService, score, page) {
     $rootScope.pageName = page.get();
 
-    $scope.teams = score.all();
+    $scope.teams = localStorageService.get('last_game');
 
     console.log($scope.teams);
 

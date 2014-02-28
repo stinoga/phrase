@@ -27,11 +27,12 @@
 
 .bar_wrap {
   background-color: darken($c-background, 10%);
-  margin: 1.5rem 0;
+  margin: .5rem 0 1.5rem;
 
   @include breakpoint($bp-500) {
     float: right;
     width: 85%;
+    margin-top: 1.5rem;
   }
 }
 
@@ -43,7 +44,7 @@
   font-size: 2rem;
   line-height: 4rem;
   width: 0;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .bar.score0 {
