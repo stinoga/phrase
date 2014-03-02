@@ -29,10 +29,14 @@
   line-height: 3.7rem;
 
   &.hurry {
-    color: darken($c-highlight, 50%);
+    color: darken($c-highlight, 25%);
   }
 
   &.uhoh {
+    color: darken($c-highlight, 10%);
+  }
+
+  &.terrify {
     color: $c-highlight;
   }
 }
