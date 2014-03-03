@@ -4,7 +4,6 @@ angular.module('phraseApp')
   .factory('words', function ( $http, settings, $filter ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
-        // TODO: set global config for API path
         apiPath = 'data/';
 
     // Grab the selected category, and setup a slug for the name

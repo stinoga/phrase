@@ -24,7 +24,6 @@
 @import "layout";
 
 // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
-// TODO: We may want to call these inline via @import and a build script in the future. This will provide the ability to call this css only when needed without an additional request.
 @import "modules/buttons",
         "modules/header",
         "modules/play",

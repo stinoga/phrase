@@ -1,6 +1,5 @@
 'use strict';
 
-// TODO: remove any unused injections
 angular.module('phraseApp', [
   'ngResource',
   'ngSanitize',
