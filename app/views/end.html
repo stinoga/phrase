@@ -2,8 +2,8 @@
   <div class="win cf">
     <h2 ng-repeat="team in teams" ng-if="team.winner" ng-bind-template="Team{{team.id}} Wins!" class="cf"></h2>
     <div ng-repeat="team in teams | orderBy:'winner':true" class="gameInfo">
-      <span ng-bind-template="Team{{team.id}}:" class="team"></span>
       <span ng-bind-template="{{team.score}}" class="score"></span>
+      <span ng-bind-template="Team{{team.id}}" class="team"></span>
     </div>
   </div>
   <a ng-click="go('/play')" class="btn spacer">New Game</a>
