@@ -1,9 +1,9 @@
 <!doctype html>
-<html>
+<html ng-app="phraseApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pop Phrase</title>
+    <title>Pop Phrase{{pageName === 'home' ? '' : ': ' + pageName}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="phraseApp" ng-controller="NavCtrl" class="page_{{pageName}}">
+  <body ng-controller="NavCtrl" class="page_{{pageName}}">
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
@@ -82,6 +82,7 @@
         <script src="scripts/filters/slugFilter.js"></script>
         <script src="scripts/services/page.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/filters/sentencecase.js"></script>
         <!-- endbuild -->
 </body>
 </html>
