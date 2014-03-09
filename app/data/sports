@@ -1,177 +1,179 @@
-61
-A League of Their Own
-Aaron Rodgers
-Air Jordan
-Al Davis
-Albert Pujols
-Alex Morgan
-Alex Rodriguez
-Ali
-Anna Kournikova
-Anthony Davis
-Babe Ruth
-Barry Bonds
-Barry Sanders
-Baseball
-Basketball
-Bend it Like Beckham
-book of manning
-Brian Wilson
-Bryce Harper
-Bull Durham
-Caddyshack
-Cal Ripken
-Cam Newton
-Camden Yards
-Carl Lewis
-Chariots of Fire
-Charles Barkley
-Chicago Bears
-Chris Johnson
-Cobb
-Cool Runnings
-Dallas Cowboys
-Dan Marino
-Danica Patrick
-Deion Sanders
-Dennis Rodman
-Denver Broncos
-Derek Jeter
-Derrick Rose
-Detroit Lions
-Dick Vitale
-Don King
-Drew Brees
-Dwayne Wade
-Dwight Howard
-e60
-Eight Men Out
-Eli Manning
-Emmitt Smith
-expert picks
-Fantasy Football
-Fenway Park
-Field of Dreams
-Finding Forrester
-first take
-Fishing
-Football
-Gabby Douglas
-George Foreman
-George Steinbrenner
-Golf
-Green Bay Packers
-Harry Caray
-He Hate Me
-Hockey
-Hoosiers
-Howard Cosell
-Jackie Joyner-Kersee
-Jeremy Lin
-Jerry Maguire
-Jerry Rice
-Jim McMahon
-Jimmy Connors
-Joe Montana
-John Elway
-John McEnroe
-John Rocker
-Josh Hamilton
-Kevin Durant
-Kobe Bryant
-Lamar Odom
-Lance Armstrong
-Larry Bird
-Lawrence Taylor
-LeBron James
-Lolo Jones
-Lyle Alzado
-Magic Johnson
-Major League
-Marge Schott
-mariano rivera
-Mario Lemieux
-Mark Cuban
-Martina Navratilova
-matthew berry
-McKayla Maroney
-Miami Dolphins
-Michael Jordan
-Michael Phelps
-Mike Trout
-Mike Tyson
-Mike Tyson's Punch-Out
-Mike Wallace
-NBA Street
-New England Patriots
-New York Giants
-nfl expert picks
-nfl picks
-nfl power rankings
-Oakland Raiders
-Patrick Roy
-Pete Sampras
-Peyton Manning
-Phi Slamma Jamma
-Phil Jackson
-Pittsburgh Steelers
-PNC Park
-Prince Fielder
-Raging Bull
-Ray Allen
-Ray Lewis
-Reggie Jackson
-Remember the Titans
-return man 3
-Roger Clemens
-Rudy
-Running
-Ryan Lochte
-Sarah Burke
-Seabiscuit
-Searching for Bobby Fischer
-Serena Williams
-Shaq
-Shaquille O'Neal
-Shoeless Joe Jackson
-skip bayless
-Soccer
-Stanford band
-Steel Curtain
-stephen a smith
-Steve Nash
-Sugar Ray Leonard
-Sweetness
-Swimming
-Tecmo Super Bowl
-Ted Turner
-Tennis
-the book of manning
-The Color of Money
-The Great Bambino
-The Great One
-The Hand of God
-The Hurricane
-the immaculate reception
-The League
-The Madden Curse
-The Miracle on Ice
-The Natural
-The Rookie
-The Splendid Splinter
-The Sultan of Swat
-The Thrilla in Manila
-Tiger Woods
-Tim Tebow
-Tin Cup
-tmq
-Tom Brady
-Tony Hawk Pro Skater
-Tonya Harding
-Tyler Moore
-Victor Cruz
-Vince McMahon
-Wayne Gretzky
-We Are Marshall
-White Men Can't Jump
-Wrigley Field
+[
+  "61",
+  "A League of Their Own",
+  "Aaron Rodgers",
+  "Air Jordan",
+  "Al Davis",
+  "Albert Pujols",
+  "Alex Morgan",
+  "Alex Rodriguez",
+  "Ali",
+  "Anna Kournikova",
+  "Anthony Davis",
+  "Babe Ruth",
+  "Barry Bonds",
+  "Barry Sanders",
+  "Baseball",
+  "Basketball",
+  "Bend it Like Beckham",
+  "book of manning",
+  "Brian Wilson",
+  "Bryce Harper",
+  "Bull Durham",
+  "Caddyshack",
+  "Cal Ripken",
+  "Cam Newton",
+  "Camden Yards",
+  "Carl Lewis",
+  "Chariots of Fire",
+  "Charles Barkley",
+  "Chicago Bears",
+  "Chris Johnson",
+  "Cobb",
+  "Cool Runnings",
+  "Dallas Cowboys",
+  "Dan Marino",
+  "Danica Patrick",
+  "Deion Sanders",
+  "Dennis Rodman",
+  "Denver Broncos",
+  "Derek Jeter",
+  "Derrick Rose",
+  "Detroit Lions",
+  "Dick Vitale",
+  "Don King",
+  "Drew Brees",
+  "Dwayne Wade",
+  "Dwight Howard",
+  "e60",
+  "Eight Men Out",
+  "Eli Manning",
+  "Emmitt Smith",
+  "expert picks",
+  "Fantasy Football",
+  "Fenway Park",
+  "Field of Dreams",
+  "Finding Forrester",
+  "first take",
+  "Fishing",
+  "Football",
+  "Gabby Douglas",
+  "George Foreman",
+  "George Steinbrenner",
+  "Golf",
+  "Green Bay Packers",
+  "Harry Caray",
+  "He Hate Me",
+  "Hockey",
+  "Hoosiers",
+  "Howard Cosell",
+  "Jackie Joyner-Kersee",
+  "Jeremy Lin",
+  "Jerry Maguire",
+  "Jerry Rice",
+  "Jim McMahon",
+  "Jimmy Connors",
+  "Joe Montana",
+  "John Elway",
+  "John McEnroe",
+  "John Rocker",
+  "Josh Hamilton",
+  "Kevin Durant",
+  "Kobe Bryant",
+  "Lamar Odom",
+  "Lance Armstrong",
+  "Larry Bird",
+  "Lawrence Taylor",
+  "LeBron James",
+  "Lolo Jones",
+  "Lyle Alzado",
+  "Magic Johnson",
+  "Major League",
+  "Marge Schott",
+  "mariano rivera",
+  "Mario Lemieux",
+  "Mark Cuban",
+  "Martina Navratilova",
+  "matthew berry",
+  "McKayla Maroney",
+  "Miami Dolphins",
+  "Michael Jordan",
+  "Michael Phelps",
+  "Mike Trout",
+  "Mike Tyson",
+  "Mike Tyson's Punch-Out",
+  "Mike Wallace",
+  "NBA Street",
+  "New England Patriots",
+  "New York Giants",
+  "nfl expert picks",
+  "nfl picks",
+  "nfl power rankings",
+  "Oakland Raiders",
+  "Patrick Roy",
+  "Pete Sampras",
+  "Peyton Manning",
+  "Phi Slamma Jamma",
+  "Phil Jackson",
+  "Pittsburgh Steelers",
+  "PNC Park",
+  "Prince Fielder",
+  "Raging Bull",
+  "Ray Allen",
+  "Ray Lewis",
+  "Reggie Jackson",
+  "Remember the Titans",
+  "return man 3",
+  "Roger Clemens",
+  "Rudy",
+  "Running",
+  "Ryan Lochte",
+  "Sarah Burke",
+  "Seabiscuit",
+  "Searching for Bobby Fischer",
+  "Serena Williams",
+  "Shaq",
+  "Shaquille O'Neal",
+  "Shoeless Joe Jackson",
+  "skip bayless",
+  "Soccer",
+  "Stanford band",
+  "Steel Curtain",
+  "stephen a smith",
+  "Steve Nash",
+  "Sugar Ray Leonard",
+  "Sweetness",
+  "Swimming",
+  "Tecmo Super Bowl",
+  "Ted Turner",
+  "Tennis",
+  "the book of manning",
+  "The Color of Money",
+  "The Great Bambino",
+  "The Great One",
+  "The Hand of God",
+  "The Hurricane",
+  "the immaculate reception",
+  "The League",
+  "The Madden Curse",
+  "The Miracle on Ice",
+  "The Natural",
+  "The Rookie",
+  "The Splendid Splinter",
+  "The Sultan of Swat",
+  "The Thrilla in Manila",
+  "Tiger Woods",
+  "Tim Tebow",
+  "Tin Cup",
+  "tmq",
+  "Tom Brady",
+  "Tony Hawk Pro Skater",
+  "Tonya Harding",
+  "Tyler Moore",
+  "Victor Cruz",
+  "Vince McMahon",
+  "Wayne Gretzky",
+  "We Are Marshall",
+  "White Men Can't Jump",
+  "Wrigley Field"
+]

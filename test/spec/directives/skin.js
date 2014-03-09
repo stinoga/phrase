@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: phLogo', function () {
+describe('Directive: phSkin', function () {
 
   // load the directive's module
   beforeEach(module('phraseApp'));
@@ -13,8 +13,8 @@ describe('Directive: phLogo', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<ph-logo></ph-logo>');
+    element = angular.element('<ph-skin></ph-skin>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the logo directive');
+    expect(element.text()).toBe('this is the skin directive');
   }));
 });

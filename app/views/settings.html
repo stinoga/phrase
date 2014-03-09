@@ -2,11 +2,15 @@
   <div class="settings">
     <section>
       <label for="category">Category</label>
-      <select id="category" ng-model="Category" ng-options="option.name for option in Categories" ng-change="saveSetting('Category')"></select>
+      <select class="settings_select" id="category" ng-model="Category" ng-options="option.name for option in Categories" ng-change="saveSetting('Category')"></select>
     </section>
     <section>
       <label for="timer">Timer</label>
-      <select id="timer" ng-model="Timer" ng-options="option.name for option in Timers" ng-change="saveSetting('Timer')"></select>
+      <select class="settings_select" id="timer" ng-model="Timer" ng-options="option.name for option in Timers" ng-change="saveSetting('Timer')"></select>
+    </section>
+    <section>
+      <label for="skin">Skin</label>
+      <select class="settings_select" id="skin" ng-model="Skin" ng-options="option.name for option in Skins" ng-change="saveSetting('Skin')"></select>
     </section>
   </div>
   <a ng-click="go('/play')" class="btn spacer">Play</a>

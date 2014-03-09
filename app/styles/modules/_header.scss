@@ -12,21 +12,21 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-
-    li {
-      display: inline-block;
-    }
-
-    a {
-      color: white;
-      padding: 1rem 2rem;
-      display: block;
-    }
-
-    a.active {
-      color: $c-link;
-    }
   }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.mainNav_link {
+  color: white;
+  padding: 1rem 2rem;
+  display: block;
+}
+
+.mainNav_link.active {
+  color: $c-link;
 }
 
 nav.active {

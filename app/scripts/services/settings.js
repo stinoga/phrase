@@ -64,6 +64,34 @@ angular.module('phraseApp')
               'name': 'Visual'
             }
           ]
+        },
+        'Skin': {
+          'options': [
+            {
+              'id': 0,
+              'name': 'Phrase'
+            },
+            {
+              'id': 1,
+              'name': 'IFTTT'
+            },
+            {
+              'id': 2,
+              'name': 'Smashing'
+            },
+            {
+              'id': 3,
+              'name': 'Netflix'
+            },
+            {
+              'id': 4,
+              'name': 'Twitter'
+            },
+            {
+              'id': 5,
+              'name': 'GitHub'
+            }
+          ]
         }
       };
 

@@ -14,8 +14,6 @@ angular.module('phraseApp')
     // TODO: this can probably have the function attached directly to the variable
     var wordListId = wordListSetting();
 
-    console.log('wordListId' + wordListId);
-
     function onlyUnused( word ) {
       // If the word is in the usedWords array, do not return it
       return word && !usedWords[word];

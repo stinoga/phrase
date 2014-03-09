@@ -8,28 +8,28 @@
     margin-left: .5rem;
   }
 
-  select {
-    display: block;
-    width: 100%;
-    -webkit-appearance: none;
-    background: none;
-    color: mainColor;
-    border: none;
-    border-radius: 4rem;
-    background-color: darken($c-background, 10%);
-    padding: 0 1rem;
-    font-size: 1rem;
-    line-height: 2.5rem;
-    margin: .25rem 0 .5rem;
-    outline: none;
-
-    &:active {
-      background-color: darken($c-background, 15%);
-    }
-  }
-
   select,
   option {
     font-family: $t-base;
+  }
+}
+
+.settings_select {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  background: none;
+  color: mainColor;
+  border: none;
+  border-radius: 4rem;
+  background-color: darken($c-background, 10%);
+  padding: 0 1rem;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  margin: .25rem 0 .5rem;
+  outline: none;
+
+  &:active {
+    background-color: darken($c-background, 15%);
   }
 }

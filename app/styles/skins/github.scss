@@ -1,0 +1,70 @@
+// Colors
+$c-text: #333;
+$c-button: #6cc644;
+$c-button-hover: darken($c-button, 10%);
+$c-link: #4183c4;
+$c-link-hover: darken($c-link, 15%);
+$c-background: #fff;
+$c-header: #f3f3f3;
+
+body {
+  color: $c-text;
+  background: $c-background;
+}
+
+h1 a,
+.bar {
+  background: $c-text;
+}
+
+nav,
+.bar_wrap {
+  background: $c-header;
+}
+
+.settings_select {
+  background: $c-header;
+
+  &:active {
+    background-color: darken($c-header, 15%);
+  }
+}
+
+.menuBtn {
+  &:before {
+    background: $c-text;
+    box-shadow: 0 .75rem 0 0 $c-text, 0 1.5rem 0 0 $c-text;
+  }
+
+  &.ng-click-active:before {
+    background: $c-link;
+    box-shadow: 0 .75rem 0 0 $c-link, 0 1.5rem 0 0 $c-link;
+  }
+}
+
+h2,
+h3,
+.bar.score0 {
+  color: $c-text;
+}
+
+a {
+  color: $c-link;
+}
+
+.mainNav_link {
+  color: $c-text;
+}
+
+.mainNav_link.active {
+  color: $c-link;
+}
+
+a.btn {
+  background-color: $c-button;
+  color: $c-background;
+
+  &.ng-click-active {
+    background-color: $c-button-hover;
+  }
+}
