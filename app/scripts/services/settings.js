@@ -13,36 +13,41 @@ angular.module('phraseApp')
             },
             {
               'id': 1,
-              'name': 'Movies',
+              'name': 'Everything',
               'live': false
             },
             {
               'id': 2,
-              'name': 'Search Terms',
+              'name': 'Movies',
               'live': false
             },
             {
               'id': 3,
-              'name': 'Sports',
+              'name': 'Search Terms',
               'live': false
             },
             {
               'id': 4,
-              'name': 'Star Wars',
+              'name': 'Sports',
               'live': false
             },
             {
               'id': 5,
-              'name': 'Books',
+              'name': 'Star Wars',
               'live': false
             },
             {
               'id': 6,
-              'name': 'The 90\'s',
+              'name': 'Books',
               'live': false
             },
             {
               'id': 7,
+              'name': 'The 90\'s',
+              'live': false
+            },
+            {
+              'id': 8,
               'name': 'The 80\'s',
               'live': false
             }
