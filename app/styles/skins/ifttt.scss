@@ -1,11 +1,12 @@
 // Colors
 $c-text: #333;
-$c-button: #6cc644;
-$c-button-hover: darken($c-button, 10%);
-$c-link: #4183c4;
-$c-link-hover: darken($c-link, 15%);
+$c-button: #3CF;
+$c-button-hover: lighten($c-button, 10%);
+$c-link: #3CF;
+$c-link-hover: lighten($c-link, 10%);
 $c-background: #fff;
 $c-header: #f3f3f3;
+$c-highlight: #E04400;
 
 body {
   color: $c-text;
@@ -21,23 +22,16 @@ a {
 }
 
 h1 a {
-  background: $c-text;
+  background: $c-header;
+  color: $c-text;
 
   &:after {
-    border-top-color: $c-text;
-  }
-
-  &.ng-click-active {
-    background-color: $c-link;
-
-    &:after {
-      border-top-color: $c-link;
-    }
+    border-top-color: $c-header;
   }
 }
 
 .bar {
-  background: $c-text;
+  background: $c-highlight;
 }
 
 nav,

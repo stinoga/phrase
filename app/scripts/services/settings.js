@@ -75,20 +75,20 @@ angular.module('phraseApp')
               'id': 1,
               'name': 'IFTTT'
             },
+            // {
+            //   'id': 2,
+            //   'name': 'Smashing'
+            // },
+            // {
+            //   'id': 3,
+            //   'name': 'Netflix'
+            // },
+            // {
+            //   'id': 4,
+            //   'name': 'Twitter'
+            // },
             {
               'id': 2,
-              'name': 'Smashing'
-            },
-            {
-              'id': 3,
-              'name': 'Netflix'
-            },
-            {
-              'id': 4,
-              'name': 'Twitter'
-            },
-            {
-              'id': 5,
               'name': 'GitHub'
             }
           ]

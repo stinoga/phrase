@@ -21,7 +21,7 @@ angular.module('phraseApp')
       $http({method: 'GET', url: 'http://www.pop-phrase.com/api/words/' + lowKey})
         .success(storeData)
         .error(function() {
-          alert('Words? We don\'t need no stinking words!\nLooks like your internet is down Hoss. Try one of our other categories');
+          alert('Words? We don\'t need no stinking words!\nLooks like your internet is down Hoss. Try one of our other categories.');
         });
     }
 
