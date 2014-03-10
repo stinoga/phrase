@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('words', function ( $http, settings, $filter ) {
+  .factory('words', function ( $http, $q, settings, $filter ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
         apiPath = 'data/';
@@ -49,7 +49,32 @@ angular.module('phraseApp')
         handleWords(settings.getCache(wordListSetting()));
       } else {
         // If not, pull the words from our local API
-        $http.get(apiPath + wordListId).success(handleWords);
+        // First, let's see it it's the everything category
+        if (settings.get('Category').name === 'Everything') {
+          var apiArray = [];
+
+          angular.forEach(settings.options('Category'), function (key) {
+            if (key.name !== 'Everything' && key.name !== 'Popular') {
+              apiArray.push($http.get(apiPath + $filter('slugFilter')(key.name)));
+            }
+          });
+
+          $q.all(apiArray).then(function (responses) {
+            var wordArray = [];
+
+            // TODO: We may want to push this to the inial app load, or possibly
+            // when a user selects the everything category, as it's heavy
+            angular.forEach(responses, function (response) {
+              angular.forEach(response.data, function (responseWord) {
+                wordArray.push(responseWord);
+              });
+            });
+            handleWords(wordArray);
+          });
+        } else {
+          // If not, pull the words from our local API
+          $http.get(apiPath + wordListId).success(handleWords);
+        }
       }
     }
 
@@ -74,7 +99,7 @@ angular.module('phraseApp')
         done(word);
         sessionStorage.setItem('usedWords', JSON.stringify(usedWords));
       } else {
-        console.log('Word undefined! Why?');
+        // No more words! Reset for now!
       }
     }
 

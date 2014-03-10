@@ -4,7 +4,9 @@ angular.module('phraseApp')
   .filter('slugFilter', function () {
     return function (input) {
       if (input) {
-        return input.toLowerCase().replace(/[^a-z_]/g, '_');
+        // Filter out any non-alphanumeric characters
+        // Replace them with an underscore
+        return input.toLowerCase().replace(/[^0-9a-z_]/g, '_');
       }
     };
   });
