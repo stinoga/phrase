@@ -7,6 +7,7 @@ angular.module('phraseApp')
 
       var menuBtn = angular.element(element.children()[0]),
           navigation = document.getElementsByTagName('nav')[0],
+          header = document.getElementById('mainHeader'),
           opened = true;
 
       // If we're on the play page, toggle the nav state to off
@@ -20,6 +21,7 @@ angular.module('phraseApp')
       function toggle() {
         opened = !opened;
         navigation.className = (opened ? 'mainNav ng-scope closed' : 'mainNav ng-scope active');
+        header.className = (opened ? 'mainHeader content cf ng-scope' : 'mainHeader content cf ng-scope active');
       }
 
       // menu button click

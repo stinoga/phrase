@@ -59,3 +59,26 @@
 .ng-click-active {
   color: $c-text-subtle;
 }
+
+.ios7 {
+  .mainNav_link {
+    padding-top: 2rem;
+  }
+
+  nav.active {
+    height: 4.45rem;
+  }
+
+  .mainHeader {
+    transition: all 0.3s ease-out;
+    padding-top: 2.5rem;
+
+    &.active {
+      padding-top: 1.5rem;
+    }
+  }
+
+  .timer {
+    top: 2.5rem;
+  }
+}

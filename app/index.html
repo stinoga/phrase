@@ -16,7 +16,7 @@
     <!-- endbuild -->
     <ph-skin ng-controller="SkinCtrl"></ph-skin>
   </head>
-  <body ng-controller="NavCtrl" class="page_{{pageName}}">
+  <body ng-controller="NavCtrl" ng-class="{ios7: iosVersion}" class="page_{{pageName}}">
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
@@ -26,7 +26,7 @@
           <li><a ng-click="go('/about')" ng-class="navClass('about')" class="mainNav_link">About</a></li>
         </ul>
       </nav>
-      <header ng-controller="LogoCtrl" class="mainHeader content cf">
+      <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
         <ph-logo></ph-logo>
         <ph-nav-icon></ph-nav-icon>
       </header>

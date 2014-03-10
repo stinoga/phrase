@@ -42,10 +42,18 @@ angular.module('phraseApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location){
+  .run(function ($rootScope, $location, $window, device, PhoneGap){
     // Using this location function globally as ngTouch seems to stop
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
       $location.path( path );
     };
+
+    $rootScope.iosVersion = false;
+
+    // If we're on an ios7 device, set our iosVersion class for specific styles
+    PhoneGap.ready().then(function () {
+      $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;
+    });
+
   });
