@@ -62,6 +62,10 @@ angular.module('phraseApp')
             {
               'id': 1,
               'name': 'Visual'
+            },
+            {
+              'id': 2,
+              'name': 'Both'
             }
           ]
         },

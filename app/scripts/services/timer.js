@@ -79,7 +79,7 @@ angular.module('phraseApp')
         this.done = true;
       }
 
-      if ((this.audible === 'Audible') && shouldBeep(this.progress, this._lastBeep, millisecondsSince)) {
+      if ((this.audible !== 'Visual') && shouldBeep(this.progress, this._lastBeep, millisecondsSince)) {
         this._lastBeep = millisecondsSince;
         sound.play('beep');
       }
@@ -105,7 +105,7 @@ angular.module('phraseApp')
         if (timer.done) {
           onDone();
 
-          if (timer.audible === 'Audible') {
+          if (timer.audible !== 'Visual') {
             // Stop any sound currently running, it's buzzer time
             sound.stop();
             sound.play('buzzer');
