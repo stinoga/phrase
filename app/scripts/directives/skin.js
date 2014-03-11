@@ -2,8 +2,9 @@
 
 angular.module('phraseApp')
   .directive('phSkin', function () {
+    // Write out our skin stylesheet
     return {
-      template: '<link rel="stylesheet" href="styles/skins/{{skin}}.css">',
+      template: '<link ng-if="skin != \'phrase\'" rel="stylesheet" href="styles/skins/{{skin}}.css">',
       restrict: 'E'
     };
   });
