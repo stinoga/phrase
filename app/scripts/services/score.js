@@ -27,16 +27,20 @@ angular.module('phraseApp')
             'winner': 0
           }
         ],
-        SCORE_MAX = 7;
+        SCORE_MAX = 7,
+        SCORE_MIN = 0;
 
     function setScore( key, direction ) {
       var teamId = CONFIG[key - 1];
 
+      // Let's only set the score if we're below the max
       if (teamId.score < SCORE_MAX) {
         if (direction) {
           teamId.score++;
         } else {
-          teamId.score--;
+          if (teamId.score > SCORE_MIN) {
+            teamId.score--;
+          }
         }
         localStorageService.add('ls_score' + key, teamId.score);
         // If the score is greater than or equal to 7, then the game is over
