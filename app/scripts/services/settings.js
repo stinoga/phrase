@@ -9,7 +9,8 @@ angular.module('phraseApp')
             {
               'id': 0,
               'name': 'Popular',
-              'live': true
+              'live': true,
+              'free': true
             },
             {
               'id': 1,
@@ -19,7 +20,8 @@ angular.module('phraseApp')
             {
               'id': 2,
               'name': 'Movies',
-              'live': false
+              'live': false,
+              'free': true
             },
             {
               'id': 3,
@@ -57,11 +59,13 @@ angular.module('phraseApp')
           'options': [
             {
               'id': 0,
-              'name': 'Audible'
+              'name': 'Audible',
+              'free': true
             },
             {
               'id': 1,
-              'name': 'Visual'
+              'name': 'Visual',
+              'free': true
             },
             {
               'id': 2,
