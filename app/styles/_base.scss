@@ -3,7 +3,7 @@
 }
 
 html {
-  font: 1rem/1.4 $t-base;
+  font: .75rem/1.4 $t-base;
 
   @include breakpoint($bp-600) {
     font-size: 125%;
