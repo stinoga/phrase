@@ -6,7 +6,8 @@ angular.module('phraseApp', [
   'ngRoute',
   'PhoneGap',
   'LocalStorageModule',
-  'ngTouch'
+  'ngTouch',
+  'ngAnimate'
 ])
   .config(function ($routeProvider) {
     $routeProvider
