@@ -1,0 +1,4 @@
+<a class="mainNav_link" ng-click="go('/score')">
+  <span ng-if="!showScore">Score</span>
+  <span ng-if="showScore" ng-repeat="team in teams" class="mainNav_score{{team.id}}">{{team.score}}{{team.id === 1 ? ' - ' : ''}}</span>
+</a>

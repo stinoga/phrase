@@ -20,10 +20,11 @@
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
-        <ul class="cf">
+        <ul class="content cf">
           <li><a ng-click="go('/settings')" ng-class="navClass('settings')" class="mainNav_link">Settings</a></li>
           <li><a ng-click="go('/rules')" ng-class="navClass('rules')" class="mainNav_link">Rules</a></li>
           <li><a ng-click="go('/about')" ng-class="navClass('about')" class="mainNav_link">About</a></li>
+          <li class="score_link"><score></score></li>
         </ul>
       </nav>
       <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
@@ -87,6 +88,7 @@
         <script src="scripts/directives/skin.js"></script>
         <script src="scripts/controllers/skin.js"></script>
         <script src="scripts/services/geturl.js"></script>
+        <script src="scripts/directives/score.js"></script>
         <!-- endbuild -->
 </body>
 </html>

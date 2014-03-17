@@ -5,24 +5,34 @@ nav {
   overflow: hidden;
   transition: all 0.3s ease-out;
   background-color: $c-text;
-  text-align: center;
   height: 0;
 
-  ul {
+  ul.content {
     list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   li {
-    display: inline-block;
+    float: left;
+
+    &:first-child {
+      margin-left: -1.5rem;
+    }
+
+    &.score_link {
+      float: right;
+      margin-right: -1.5rem;
+    }
   }
 }
 
 .mainNav_link {
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   display: block;
+
+  @include breakpoint($bp-500) {
+    padding: 1rem 2rem;
+  }
 }
 
 .mainNav_link.active {
@@ -42,6 +52,7 @@ nav.active {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  margin-right: -.5rem;
 
   &:before {
     content: "";
