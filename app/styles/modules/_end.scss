@@ -4,46 +4,19 @@
   margin-top: 1rem;
 }
 
-.win {
-  h2 {
-    font-size: 2.5rem;
-    margin: -.25rem 0;
-  }
-
-  > div:first-child {
-    margin-bottom: -3rem;
-  }
-
-  @include breakpoint($bp-600) {
-    padding-right: 1rem;
-  }
+.win_header,
+.win_score {
+  text-align: center;
 }
 
-.gameInfo {
-  span {
-    vertical-align: middle;
-    margin-bottom: -1rem;
-  }
+.win_header {
+  font-size: 3rem;
+}
 
-  .team {
-    font-size: 4rem;
-
-    @include breakpoint($bp-600) {
-      font-size: 2.5rem;
-    }
-  }
-
-  .score {
-    font-size: 8rem;
-    padding-left: 1rem;
-
-    @include breakpoint($bp-600) {
-      font-size: 4rem;
-    }
-  }
+.win_score {
+  font-size: 8rem;
 
   @include breakpoint($bp-600) {
-    width: 50%;
-    float: left;
+    font-size: 4rem;
   }
 }

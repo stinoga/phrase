@@ -7,6 +7,8 @@ angular.module('phraseApp')
       scope.teams = score.all();
       scope.showScore = false;
 
+      // Watch for score changes
+      // If our score is above zero, let's show the score in the top nav
       scope.$watch(function (argument) {
         var toatalScore = parseInt(scope.teams[0].score) + parseInt(scope.teams[1].score);
         if (toatalScore > 0) {
@@ -14,7 +16,6 @@ angular.module('phraseApp')
         } else {
           scope.showScore = false;
         }
-        console.log(scope.showScore);
       });
 
     }

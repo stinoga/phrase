@@ -1,10 +1,9 @@
 <div class="content">
   <div class="win cf">
-    <h2 ng-repeat="team in teams" ng-if="team.winner" ng-bind-template="Team{{team.id}} Wins!" class="cf"></h2>
-    <div ng-repeat="team in teams | orderBy:'winner':true" class="gameInfo">
-      <span ng-bind-template="{{team.score}}" class="score"></span>
-      <span ng-bind-template="Team{{team.id}}" class="team"></span>
-    </div>
+    <h2 class="win_header" ng-repeat="team in teams" ng-if="team.winner" ng-bind-template="Team{{team.id}} Wins!"></h2>
+    <h3 class="win_score">
+      <span ng-repeat="team in teams | orderBy:'winner':true" class="win_score">{{team.score}}{{team.id === 1 ? ' - ' : ''}}</span>
+    </h3>
   </div>
   <a ng-click="go('/play')" class="btn spacer">New Game</a>
   <p class="l-text-center"><a ng-click="go('/settings')">Settings</a></p>
