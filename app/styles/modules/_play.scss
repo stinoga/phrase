@@ -23,10 +23,11 @@
 
 .timer {
   position: absolute;
-  top: -3.5rem;
+  top: -5.5rem;
   right: 1.5rem;
   font-size: 4rem;
   line-height: 3.7rem;
+  z-index: 0;
 
   &.hurry {
     color: darken($c-highlight, 25%);

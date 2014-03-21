@@ -15,8 +15,18 @@
 // Main layout
 
 .main {
+  margin-top: 1rem;
   padding-bottom: 1.5rem;
   transition: all 0.3s ease-out;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+}
+
+.container.active {
+  .main {
+    top: 9.5rem;
+  }
 }
 
 .content {
@@ -47,6 +57,10 @@
   margin-bottom: 0;
 }
 
+.l-no-margin-top {
+  margin-top: 0;
+}
+
 // state =======================================================================
 
 .hidden {
@@ -71,42 +85,54 @@
   }
 
   .mainHeader {
-    transition: all 0.3s ease-out;
+    transition: all .3s ease-out;
     padding-top: 2.5rem;
-
-    &.active {
-      padding-top: 1.5rem;
-    }
   }
 
   .timer {
-    top: 2.5rem;
+    top: -4.5rem;
+  }
+
+  .slide {
+    top: 7.05rem;
+  }
+
+  .container.active {
+    .mainHeader {
+      padding-top: 1.5rem;
+    }
+
+    .main {
+      top: 10.5rem;
+    }
   }
 }
 
 .slide {
     position: absolute;
     left: 0;
-    top: 5.05rem;
+    top: 6.05rem;
+    bottom: 0;
     width: 100%;
-    height: 100%;
 }
-.slide.ng-enter,
-.slide.ng-leave {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
+
 .slide.ng-enter {
     left: 100%;
 }
+
 .slide.ng-enter-active {
     left: 0;
 }
+
 .slide.ng-leave {
     left: 0;
 }
+
 .slide.ng-leave-active {
     left: -100%;
+    opacity: .5;
+
+    .timer {
+      display: none;
+    }
 }

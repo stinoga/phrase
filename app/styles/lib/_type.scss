@@ -11,6 +11,7 @@
   margin: 0 .5rem 1rem 0;
   position: relative;
   float: left;
+  z-index: 999;
 
   a {
     color: $c-header;
