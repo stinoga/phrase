@@ -4,6 +4,12 @@ angular.module('phraseApp')
   .controller('PlayCtrl', function ($rootScope, $scope, $location, words, timer, page) {
     $rootScope.pageName = page.get();
 
+    $scope.reset = function() {
+      words.resetWords();
+    };
+
+    $scope.reset();
+
     $scope.next = function() {
       words.get(function( word ) {
         $scope.word = word;

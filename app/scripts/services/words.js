@@ -1,17 +1,39 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('words', function ( $http, $q, settings, $filter ) {
+  .factory('words', function ( $http, $q, settings, $filter, localStorageService ) {
     var words = [],
         usedWords = JSON.parse(sessionStorage.getItem('usedWords') || 'null') || {},
+        roundWords,
+        wordCount = 0,
         apiPath = 'data/';
+
+    // Reset our list of words for this round, as well as the start time for our first word.
+    function resetRoundWords() {
+      var firstWordTime = new Date().getTime();
+
+      roundWords = [];
+      localStorageService.add('roundWords', roundWords);
+      localStorageService.add('wordStartTime', firstWordTime);
+    }
+
+    function timeDifference() {
+      var startTime = localStorageService.get('wordStartTime'),
+          endTime = new Date().getTime(),
+          difference = (endTime - startTime) / 1000,
+          differenceRounded = Math.round(difference * 100) / 100;
+
+      // Set our start time for the next word
+      localStorageService.add('wordStartTime', endTime);
+
+      return differenceRounded;
+    }
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
       return $filter('slugFilter')(settings.get('Category').name);
     }
 
-    // TODO: this can probably have the function attached directly to the variable
     var wordListId = wordListSetting();
 
     function onlyUnused( word ) {
@@ -88,6 +110,7 @@ angular.module('phraseApp')
 
     function getWord( done ) {
       var unused = words.filter(onlyUnused);
+
       if (!unused.length) {
         // No more words! Reset for now!
         usedWords = {};
@@ -95,17 +118,38 @@ angular.module('phraseApp')
       var word = unused[Math.floor(Math.random() * unused.length)];
 
       if (word) {
+        // Store our word data for later
+        var roundWord = {
+          'name': word,
+          'time': -1
+        }
+        roundWords.push(roundWord);
+
+        // If we aren't on the first word,
+        // then set the time the last word took
+        if (roundWords[wordCount - 1]) {
+          roundWords[wordCount - 1].time = timeDifference();
+        }
+
         usedWords[word] = 1;
         done(word);
+
+        // Add to used words object
         sessionStorage.setItem('usedWords', JSON.stringify(usedWords));
+        // Add to game words array. This will be for our game data.
+        localStorageService.add('roundWords', roundWords);
       } else {
         // No more words! Reset for now!
       }
+
+      // Iterate our word count
+      wordCount++;
     }
 
     return {
       all: ensureFetched(allWords),
       unused: ensureFetched(unusedWords),
-      get: ensureFetched(getWord)
+      get: ensureFetched(getWord),
+      resetWords: resetRoundWords
     };
   });
