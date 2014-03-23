@@ -121,8 +121,9 @@ angular.module('phraseApp')
         // Store our word data for later
         var roundWord = {
           'name': word,
-          'time': -1
-        }
+          'time': 999
+        };
+
         roundWords.push(roundWord);
 
         // If we aren't on the first word,
