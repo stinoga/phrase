@@ -8,10 +8,6 @@
   color: $c-header;
   margin-bottom: 1.5rem;
 
-  &.ng-click-active {
-    background-color: $c-text-subtle;
-  }
-
   &.question_inner {
     font-size: .75rem;
     line-height: 2;
@@ -19,18 +15,19 @@
     margin: 1rem 1rem 1rem 0;
   }
 
+  &.ng-click-active,
   &.invert {
     border: .25rem solid $c-text;
     background-color: $c-background;
     color: $c-text;
     line-height: 3.5rem;
+  }
 
-    &.ng-click-active {
-      border: none;
-      background-color: $c-text;
-      color: $c-header;
-      line-height: 4rem;
-    }
+  &.invert.ng-click-active {
+    border: none;
+    background-color: $c-text;
+    color: $c-header;
+    line-height: 4rem;
   }
 }
 
