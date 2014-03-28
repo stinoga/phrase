@@ -21,15 +21,6 @@ a {
   }
 }
 
-h1 a {
-  background: $c-header;
-  color: $c-text;
-
-  &:after {
-    border-top-color: $c-header;
-  }
-}
-
 .bar {
   background: $c-highlight;
 }
@@ -73,11 +64,39 @@ h3,
   color: $c-link;
 }
 
-a.btn {
+.btn {
   background-color: $c-button;
   color: $c-background;
 
   &.ng-click-active {
     background-color: $c-button-hover;
+  }
+
+  &.ng-click-active,
+  &.invert {
+    border: .25rem solid $c-button;
+    background-color: $c-background;
+    color: $c-button;
+    line-height: 3.5rem;
+  }
+
+  &.invert.ng-click-active {
+    border: none;
+    background-color: $c-button;
+    color: $c-background;
+    line-height: 4rem;
+  }
+}
+
+.stats {
+  background-color: $c-header;
+  background-image: linear-gradient(to bottom,$c-background 50%, $c-header 50%);
+}
+
+.question {
+  &.ng-click-active {
+    span {
+      background-color: $c-link-hover;
+    }
   }
 }

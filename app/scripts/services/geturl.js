@@ -3,13 +3,10 @@
 angular.module('phraseApp')
   .factory('geturl', function ( $window, PhoneGap ) {
 
-    function getUrl (url, rootUrl) {
-      var fullUrl = rootUrl ? rootUrl + url : url;
-
+    function getUrl (url) {
       PhoneGap.ready().then(function () {
-        var ref = $window.open(fullUrl, '_blank', 'location=yes');
+        var ref = $window.open(url, '_blank', 'location=yes');
       });
-      console.log(fullUrl);
     }
 
     // Public API here
