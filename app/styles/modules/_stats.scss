@@ -1,0 +1,39 @@
+.stats {
+  padding: .5rem 2.5rem .5rem 1.5rem;
+  margin: 1.5rem -1.5rem 0;
+  background-color: darken($c-background, 10%);
+  background-image: linear-gradient(to bottom,$c-background 50%, darken($c-background, 10%) 50%);
+  background-repeat: repeat-x;
+  background-size: 5.75rem 5.75rem;
+  background-position: 0 top;
+
+  @include breakpoint($bp-1650) {
+    padding: .5rem 6.5rem .5rem 5.5rem;
+    margin: 1.5rem -5.5rem 0;
+  }
+}
+
+.stats_table_name_header {
+  padding-left: 1rem;
+}
+
+.stats_table_name {
+  width: 100%;
+}
+
+.stats_table_time a {
+  width: 4.5rem;
+  display: block;
+}
+
+.stats_link {
+  display: inline-block;
+  padding: 1rem;
+  color: $c-text;
+}
+
+.glyph_icon {
+  font-size: .5rem;
+  position: relative;
+  top: -.15rem;
+}

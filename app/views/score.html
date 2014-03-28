@@ -6,7 +6,17 @@
       <div id="bar{{team.id}}" ng-click="saveScore(team.id)" style="width: {{(team.score / 7) * 100}}%" ng-bind-template="{{team.score}}" class="bar score{{team.score}}"></div>
     </div>
   </section>
-  <div class="next_container">
-    <a ng-click="go('/play')" class="btn spacer">Next Round</a>
-  </div>
+  <a ng-click="go('/play')" class="btn spacer">Next Round</a>
+  <section class="stats cf">
+    <table class="stats_table">
+      <tr>
+        <th class="l-text-left stats_table_name_header" sort order="'name'" by="order" reverse="reverse">Words</th>
+        <th class="l-text-right stats_table_time" sort order="'time'" by="order" reverse="reverse">Time</th>
+      </tr>
+      <tr ng-repeat="roundWord in roundWords | orderBy:order:reverse">
+        <td class="stats_table_name"><a class="stats_link" ng-click="openUrl(roundWord.name, 'https://www.google.com/#q=')">{{roundWord.name}}</a><a class="question" ng-click="openUrl(roundWord.name, 'https://www.google.com/#q=')"><span class="btn question_inner">?</span></a></td>
+        <td class="l-text-right">{{roundWord.time === 999 ? 'DNF' : roundWord.time + 's'}}</td>
+      </tr>
+    </table>
+  </section>
 </div>

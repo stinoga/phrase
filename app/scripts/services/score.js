@@ -30,6 +30,16 @@ angular.module('phraseApp')
         SCORE_MAX = 7,
         SCORE_MIN = 0;
 
+    function clearScore() {
+      // clear out local storage keys for all scores
+      // reset scores in config
+      angular.forEach(CONFIG, function( key ) {
+        CONFIG[0].score = 0;
+        CONFIG[1].score = 0;
+        localStorageService.remove('ls_score' + key.id);
+      });
+    }
+
     function setScore( key, direction ) {
       var teamId = CONFIG[key - 1];
 
@@ -53,13 +63,9 @@ angular.module('phraseApp')
             // Store the game data
             localStorageService.add('last_game', CONFIG);
 
-            // clear out local storage keys for all scores
-            // reset scores in config
-            angular.forEach(CONFIG, function( key ) {
-              CONFIG[0].score = 0;
-              CONFIG[1].score = 0;
-              localStorageService.remove('ls_score' + key.id);
-            });
+            // Clear scores
+            clearScore();
+
             $location.path('/end');
           }, 400);
         }
@@ -74,7 +80,8 @@ angular.module('phraseApp')
     return {
       get: getScore,
       set: setScore,
-      all: getAll
+      all: getAll,
+      clear: clearScore
     };
 
   });

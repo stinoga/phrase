@@ -1,4 +1,4 @@
-a.btn {
+.btn {
   background-color: $c-text;
   font-size: 1.5rem;
   line-height: 4rem;
@@ -8,7 +8,39 @@ a.btn {
   color: $c-header;
   margin-bottom: 1.5rem;
 
-  &.ng-click-active {
-    background-color: $c-text-subtle;
+  &.question_inner {
+    font-size: .75rem;
+    line-height: 2;
+    width: 1.5rem;
+    margin: 1rem 1rem 1rem 0;
   }
+
+  &.ng-click-active,
+  &.invert {
+    border: .25rem solid $c-text;
+    background-color: $c-background;
+    color: $c-text;
+    line-height: 3.5rem;
+  }
+
+  &.invert.ng-click-active {
+    border: none;
+    background-color: $c-text;
+    color: $c-header;
+    line-height: 4rem;
+  }
+}
+
+.question {
+  display: inline-block;
+
+  &.ng-click-active {
+    span {
+      background-color: $c-text-subtle;
+    }
+  }
+}
+
+.continue {
+  margin-left: 2%;
 }

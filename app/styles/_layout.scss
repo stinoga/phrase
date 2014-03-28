@@ -32,9 +32,8 @@
 .content {
   padding: 0 1.5rem;
 
-  @include breakpoint($bp-900) {
-    max-width: 1650px;
-    margin: 0 auto;
+  @include breakpoint($bp-1650) {
+    padding: 0 5.5rem;
   }
 }
 
@@ -53,12 +52,25 @@
   text-align: center;
 }
 
+.l-text-right {
+  text-align: right;
+}
+
+.l-text-left {
+  text-align: left;
+}
+
 .l-no-margin-bottom {
   margin-bottom: 0;
 }
 
 .l-no-margin-top {
   margin-top: 0;
+}
+
+.l-half {
+  float: left;
+  width: 49%;
 }
 
 // state =======================================================================
