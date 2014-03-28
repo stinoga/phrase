@@ -5,7 +5,7 @@
 angular.module('phraseApp')
   .factory('cache', function ( $http, localStorageService, $filter ) {
     function setCache ( key ) {
-      var lowKey = $filter('slugFilter')(key),
+      var lowKey = $filter('slugFilter')(key, '_'),
           currTime = new Date();
 
       function storeData ( data ) {

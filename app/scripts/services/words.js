@@ -31,7 +31,7 @@ angular.module('phraseApp')
 
     // Grab the selected category, and setup a slug for the name
     function wordListSetting() {
-      return $filter('slugFilter')(settings.get('Category').name);
+      return $filter('slugFilter')(settings.get('Category').name, '_');
     }
 
     var wordListId = wordListSetting();
@@ -77,7 +77,7 @@ angular.module('phraseApp')
 
           angular.forEach(settings.options('Category'), function (key) {
             if (key.name !== 'Everything' && key.name !== 'Popular') {
-              apiArray.push($http.get(apiPath + $filter('slugFilter')(key.name)));
+              apiArray.push($http.get(apiPath + $filter('slugFilter')(key.name, '_')));
             }
           });
 

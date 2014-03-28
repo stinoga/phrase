@@ -18,7 +18,7 @@ angular.module('phraseApp')
       settings.set(key, $scope[key]);
 
       if (key === 'Skin') {
-        $rootScope.skin = $filter('slugFilter')($scope[key].name);
-      };
+        $rootScope.skin = $filter('slugFilter')($scope[key].name, '_');
+      }
     };
   });

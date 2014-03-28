@@ -114,7 +114,7 @@ angular.module('phraseApp')
       var currTime = new Date(),
           currMili = currTime.getTime(),
           oneDay = 86400000,
-          lowKey = $filter('slugFilter')(cacheKey),
+          lowKey = $filter('slugFilter')(cacheKey, '_'),
           cacheDate = localStorageService.get(lowKey + '_date') || 0,
           cacheTime = parseInt(cacheDate, 10);
 
