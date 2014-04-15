@@ -24,16 +24,23 @@
     border-radius: 3rem;
     display: block;
 
+    &:before,
     &:after {
       border: .5rem solid transparent;
-      border-top-color: $c-text;
-      content: '';
-      margin-left: -1rem;
-      position: absolute;
-      top: 3.9rem;
-      left: 35%;
       width: 0;
       height: 0;
+      left: 2rem;
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      border-top-color: $c-text;
+      top: 3.85rem;
+    }
+
+    &:after {
+      top: 3.5rem;
     }
 
     &.ng-click-active {
@@ -44,7 +51,7 @@
       padding: 0 1.25rem;
 
       &:after {
-        // top: 3.85rem;
+        border-top-color: $c-background;
       }
     }
   }
