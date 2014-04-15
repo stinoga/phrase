@@ -79,11 +79,26 @@ h3,
   color: $c-link;
 }
 
-a.btn {
+.btn {
   background-color: $c-button;
   color: $c-background;
 
   &.ng-click-active {
     background-color: $c-button-hover;
+  }
+
+  &.ng-click-active,
+  &.invert {
+    border: .25rem solid $c-button;
+    background-color: $c-background;
+    color: $c-button;
+    line-height: 3.5rem;
+  }
+
+  &.invert.ng-click-active {
+    border: none;
+    background-color: $c-button;
+    color: $c-background;
+    line-height: 4rem;
   }
 }

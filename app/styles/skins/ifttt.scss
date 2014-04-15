@@ -68,10 +68,6 @@ h3,
   background-color: $c-button;
   color: $c-background;
 
-  &.ng-click-active {
-    background-color: $c-button-hover;
-  }
-
   &.ng-click-active,
   &.invert {
     border: .25rem solid $c-button;

@@ -21,7 +21,7 @@
     line-height: 3.9rem;
     text-align: center;
     vertical-align: top;
-    border-radius: 2rem;
+    border-radius: 3rem;
     display: block;
 
     &:after {
@@ -30,18 +30,21 @@
       content: '';
       margin-left: -1rem;
       position: absolute;
-      top: 99%;
+      top: 3.9rem;
       left: 35%;
       width: 0;
       height: 0;
     }
 
     &.ng-click-active {
-      background-color: $c-text-subtle;
-      color: $c-header;
+      border: .25rem solid $c-text;
+      background-color: $c-background;
+      color: $c-text;
+      line-height: 3.45rem;
+      padding: 0 1.25rem;
 
       &:after {
-        border-top-color: $c-text-subtle;
+        // top: 3.85rem;
       }
     }
   }
