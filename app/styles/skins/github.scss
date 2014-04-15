@@ -26,14 +26,6 @@ h1 a {
   &:after {
     border-top-color: $c-text;
   }
-
-  &.ng-click-active {
-    background-color: $c-link;
-
-    &:after {
-      border-top-color: $c-link;
-    }
-  }
 }
 
 .bar {
