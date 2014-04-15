@@ -9,10 +9,13 @@ angular.module('phraseApp')
         apiPath = 'data/';
 
     // Reset our list of words for this round, as well as the start time for our first word.
+    // Also reset our wordCount to zero.
     function resetRoundWords() {
       var firstWordTime = new Date().getTime();
 
+      wordCount = 0;
       roundWords = [];
+
       localStorageService.add('roundWords', roundWords);
       localStorageService.add('wordStartTime', firstWordTime);
     }
