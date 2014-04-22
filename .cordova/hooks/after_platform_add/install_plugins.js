@@ -4,10 +4,11 @@
 
 // add your plugins to this list--either the identifier, the filesystem location or the URL
 var pluginlist = [
-  'org.apache.cordova.console',
-  'org.apache.cordova.media',
-  'org.apache.cordova.file',
-  'org.apache.cordova.device'
+  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git',
+  'https://github.com/Rickgbw/cordova-plugin-media.git',
+  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git',
+  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git',
+  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git'
 ];
 
 // no need to configure below
@@ -22,5 +23,5 @@ function puts(error, stdout, stderr) {
 }
 
 pluginlist.forEach(function(plug) {
-  exec('cordova plugin add ' + plug, puts);
+  exec('phonegap local plugin add ' + plug, puts);
 });
