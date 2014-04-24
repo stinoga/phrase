@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-//this hook installs all your plugins
+// This hook installs all your plugins. Just add the remote repos to the below array.
 
-// add your plugins to this list--either the identifier, the filesystem location or the URL
 var pluginlist = [
   'https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git',
   'https://github.com/Rickgbw/cordova-plugin-media.git',
@@ -13,13 +12,11 @@ var pluginlist = [
 
 // no need to configure below
 
-var fs = require('fs'),
-    path = require('path'),
-    sys = require('sys'),
+var sys = require('sys'),
     exec = require('child_process').exec;
 
 function puts(error, stdout, stderr) {
-  sys.puts(stdout)
+  sys.puts(stdout);
 }
 
 pluginlist.forEach(function(plug) {
