@@ -25,7 +25,7 @@ angular.module('phraseApp')
             },
             {
               'id': 3,
-              'name': 'Search Terms',
+              'name': 'The Web',
               'live': false
             },
             {
