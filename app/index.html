@@ -14,9 +14,8 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <ph-skin ng-controller="SkinCtrl"></ph-skin>
   </head>
-  <body ng-controller="NavCtrl" ng-class="{ios7: iosVersion}" class="page_{{pageName}}">
+  <body ng-controller="NavCtrl" ng-class="{ios7: iosVersion}" class="page_{{pageName}} {{skin}}">
 
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
@@ -86,8 +85,6 @@
         <script src="scripts/services/page.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/filters/sentencecase.js"></script>
-        <script src="scripts/directives/skin.js"></script>
-        <script src="scripts/controllers/skin.js"></script>
         <script src="scripts/services/geturl.js"></script>
         <script src="scripts/directives/score.js"></script>
         <script src="scripts/directives/sort.js"></script>
