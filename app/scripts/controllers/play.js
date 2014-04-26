@@ -4,6 +4,11 @@ angular.module('phraseApp')
   .controller('PlayCtrl', function ($rootScope, $scope, $location, words, timer, page) {
     $rootScope.pageName = page.get();
 
+    if ($rootScope.nadaInternet) {
+      alert($rootScope.messages.nadaInternet);
+      $location.path('/settings');
+    }
+
     $scope.reset = function() {
       words.resetWords();
     };

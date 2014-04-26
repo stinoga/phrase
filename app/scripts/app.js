@@ -54,6 +54,12 @@ angular.module('phraseApp', [
     $rootScope.iosVersion = false;
     $rootScope.skin = $filter('slugFilter')(settings.get('Skin').name, '_');
 
+    // App messages
+    $rootScope.messages = {
+      nadaInternet: 'Words? We don\'t need no stinking words!\n\nLooks like your internet is down Dobbs. Try one of our other categories, or get some internets.',
+      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.'
+    };
+
     // If we're on an ios7 device, set our iosVersion class for specific styles
     PhoneGap.ready().then(function () {
       $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;

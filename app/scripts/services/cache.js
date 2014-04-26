@@ -3,7 +3,7 @@
 // This module should cache any remote API data into localstorage
 
 angular.module('phraseApp')
-  .factory('cache', function ( $http, localStorageService, $filter ) {
+  .factory('cache', function ( $rootScope, $http, localStorageService, $filter, $location ) {
     function setCache ( key ) {
       var lowKey = $filter('slugFilter')(key, '_'),
           currTime = new Date();
@@ -21,7 +21,9 @@ angular.module('phraseApp')
       $http({method: 'GET', url: 'http://www.pop-phrase.com/api/words/' + lowKey})
         .success(storeData)
         .error(function() {
-          alert('Words? We don\'t need no stinking words!\nLooks like your internet is down Hoss. Try one of our other categories.');
+          alert($rootScope.messages.nadaInternet);
+          $rootScope.nadaInternet = true;
+          $location.path('/settings');
         });
     }
 

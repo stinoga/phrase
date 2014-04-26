@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('settings', function ( localStorageService, cache, $filter ) {
+  .factory('settings', function ( $rootScope, $filter, localStorageService, cache ) {
 
     var CONFIG = {
         'Category': {
@@ -128,9 +128,12 @@ angular.module('phraseApp')
       // Save our setting into localstorage
       localStorageService.add(key, value);
 
-      // If we are going to use our remote API, store the data in localStorage
+      // If we are going to use our remote API, store the data in localStorage.
+      // If not, make sure we tell the app the internet is OK since we are using local data.
       if (value.live) {
         setCache(value.name);
+      } else {
+        $rootScope.nadaInternet = undefined;
       }
     }
 
