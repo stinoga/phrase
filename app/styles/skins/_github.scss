@@ -44,6 +44,16 @@ $c-header: #f3f3f3;
     background: $c-header;
   }
 
+  .settings_option {
+    &:nth-child(2n + 2) {
+      background-color: darken($c-header, 2%);
+    }
+
+    &.ng-click-active {
+      background-color: darken($c-header, 10%);
+    }
+  }
+
   .menuBtn {
     &:before {
       background: $c-text;

@@ -32,6 +32,7 @@
     transition: all .3s ease-out;
     border: .5rem solid transparent;
     border-top-color: $c-text;
+    pointer-events: none;
     width: 0;
     height: 0;
     content: '';

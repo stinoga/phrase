@@ -45,6 +45,16 @@ $c-highlight: #E57250;
     background: $c-header;
   }
 
+  .settings_option {
+    &:nth-child(2n + 2) {
+      background-color: darken($c-header, 2%);
+    }
+
+    &.ng-click-active {
+      background-color: darken($c-header, 10%);
+    }
+  }
+
   .stats_link {
     color: $c-text;
   }
