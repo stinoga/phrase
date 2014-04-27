@@ -2,15 +2,21 @@
   <div class="settings">
     <section>
       <label for="category">Category</label>
-      <select class="settings_select" id="category" ng-model="Category" ng-options="option.name for option in Categories" ng-change="saveSetting('Category')"></select>
+      <div class="settings_select {{activeSetting === 'Category' ? 'active' : ''}}" style="{{activeSetting === 'Category' ? selectHeight(Categories.length) : ''}}">
+        <div id="category" class="settings_option" ng-repeat="Category in Categories | movefirst: onCategory.id" ng-class="{active: onCategory == Category}" ng-click="saveSetting('Category', Category, $index)">{{Category.name}}</div>
+      </div>
     </section>
     <section>
       <label for="timer">Timer</label>
-      <select class="settings_select" id="timer" ng-model="Timer" ng-options="option.name for option in Timers" ng-change="saveSetting('Timer')"></select>
+      <div class="settings_select {{activeSetting === 'Timer' ? 'active' : ''}}" style="{{activeSetting === 'Timer' ? selectHeight(Timers.length) : ''}}">
+        <div id="timer" class="settings_option" ng-class="{active: onTimer == Timer}" ng-repeat="Timer in Timers | movefirst: onTimer.id" ng-click="saveSetting('Timer', Timer, $index)">{{Timer.name}}</div>
+      </div>
     </section>
     <section>
       <label for="skin">Skin</label>
-      <select class="settings_select" id="skin" ng-model="Skin" ng-options="option.name for option in Skins" ng-change="saveSetting('Skin')"></select>
+      <div class="settings_select {{activeSetting === 'Skin' ? 'active' : ''}}" style="{{activeSetting === 'Skin' ? selectHeight(Skins.length) : ''}}">
+        <div id="skin" class="settings_option" ng-class="{active: onSkin == Skin}" ng-repeat="Skin in Skins | movefirst: onSkin.id" ng-click="saveSetting('Skin', Skin, $index)">{{Skin.name}}</div>
+      </div>
     </section>
   </div>
   <a ng-click="go('/play')" class="btn spacer">Play</a>

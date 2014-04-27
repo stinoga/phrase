@@ -43,10 +43,6 @@ $c-highlight: #E57250;
 
   .settings_select {
     background: $c-header;
-
-    &:active {
-      background-color: darken($c-header, 15%);
-    }
   }
 
   .stats_link {

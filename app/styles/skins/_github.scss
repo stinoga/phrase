@@ -42,10 +42,6 @@ $c-header: #f3f3f3;
 
   .settings_select {
     background: $c-header;
-
-    &:active {
-      background-color: darken($c-header, 15%);
-    }
   }
 
   .menuBtn {

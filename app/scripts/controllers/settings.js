@@ -10,15 +10,34 @@ angular.module('phraseApp')
 
     // This will enable our correct option to be selected based on localStorage
     // TODO: There needs to be a better way to do this
-    $scope.Category = $scope.Categories[settings.get('Category').id];
-    $scope.Timer = $scope.Timers[settings.get('Timer').id];
-    $scope.Skin = $scope.Skins[settings.get('Skin').id];
+    $scope.onCategory = $scope.Categories[settings.get('Category').id];
+    $scope.onTimer = $scope.Timers[settings.get('Timer').id];
+    $scope.onSkin = $scope.Skins[settings.get('Skin').id];
 
-    $scope.saveSetting = function( key ) {
-      settings.set(key, $scope[key]);
-
-      if (key === 'Skin') {
-        $rootScope.skin = $filter('slugFilter')($scope[key].name, '_');
+    $scope.saveSetting = function ( key, value, index ) {
+      // If its our first element, and we aren't already open, open the select div
+      if (index === 0 && $scope.activeSetting !== key) {
+        $scope.activeSetting = key;
+      } else {
+        $scope.activeSetting = null;
       }
+
+      // Local scoped vars for each setting
+      if (key === 'Category') {
+        $scope.onCategory = value;
+        console.log($scope.onCategory);
+      } else if (key === 'Skin') {
+        $rootScope.skin = $filter('slugFilter')(value.name, '_');
+        $scope.onSkin = value;
+      } else {
+        $scope.onTimer = value;
+      }
+
+      // Save our setting
+      settings.set(key, value);
+    };
+
+    $scope.selectHeight = function (index) {
+      return 'height: ' + (2.7 * index) + 'rem';
     };
   });

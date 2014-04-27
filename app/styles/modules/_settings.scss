@@ -16,20 +16,46 @@
 
 .settings_select {
   display: block;
+  position: relative;
   width: 100%;
-  -webkit-appearance: none;
-  background: none;
   color: mainColor;
-  border: none;
-  border-radius: 4rem;
+  border-radius: 1.3rem;
   background-color: darken($c-background, 10%);
-  padding: 0 1rem;
   font-size: 1rem;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
   margin: .25rem 0 .5rem;
-  outline: none;
+  height: 2.7rem;
+  overflow: hidden;
+  transition: all .3s ease-out;
 
-  &:active {
-    background-color: darken($c-background, 15%);
+  &:before {
+    transition: all .3s ease-out;
+    border: .5rem solid transparent;
+    border-top-color: $c-text;
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 1.2rem;
+    right: 1.25rem;
+  }
+
+  &.active:before {
+    top: .7rem;
+    border-top-color: transparent;
+    border-bottom-color: $c-text;
+  }
+}
+
+.settings_option {
+  padding: 0 1.25rem;
+  cursor: pointer;
+
+  &:nth-child(2n + 2) {
+    background-color: darken($c-background, 13%);
+  }
+
+  &.ng-click-active {
+    background-color: darken($c-background, 20%);
   }
 }
