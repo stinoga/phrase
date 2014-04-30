@@ -77,15 +77,30 @@ angular.module('phraseApp')
           'options': [
             {
               'id': 0,
-              'name': 'Phrase'
+              'name': 'Phrase',
+              'colors': [
+                '#3CF',
+                '#FFF',
+                '#E57250'
+              ]
             },
             {
               'id': 1,
-              'name': 'IFTTT'
+              'name': 'Film Noir',
+              'colors': [
+                '#3E3E3E',
+                '#FBFBFB',
+                '#8B8B8B'
+              ]
             },
             {
               'id': 2,
-              'name': 'GitHub'
+              'name': 'GitHub',
+              'colors': [
+                '#6CC644',
+                '#FFF',
+                '#4183C4'
+              ]
             }
           ]
         }

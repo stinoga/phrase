@@ -3,18 +3,18 @@
 // VARIABLES ===================================================================
 
 // Colors
-$c-text: #3E3E3E;
-$c-header: #fff;
+$c-text: #333;
+$c-header: #f3f3f3;
 $c-text-subtle: lighten($c-text, 10%);
 $c-text-subtler: lighten($c-text, 30%);
 
-$c-link: $c-text-subtler;
-$c-link-hover: darken($c-link, 15%);
+$c-link: #3CF;
+$c-link-hover: lighten($c-link, 10%);
 
-$c-highlight: #E44A2F;
+$c-highlight: #E57250;
 $c-highlight-hover: darken($c-highlight, 15%);
 
-$c-background: #FBFBFB;
+$c-background: #fff;
 
 // Fonts
 $t-base: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

@@ -1,14 +1,12 @@
 // Colors
-$c-text: #333;
-$c-button: #3CF;
-$c-button-hover: lighten($c-button, 10%);
-$c-link: #3CF;
-$c-link-hover: lighten($c-link, 10%);
-$c-background: #fff;
-$c-header: #f3f3f3;
-$c-highlight: #E57250;
+$c-text: #3E3E3E;
+$c-link: lighten($c-text, 30%);
+$c-link-hover: darken($c-link, 15%);
+$c-background: #FBFBFB;
+$c-header: #E2E2E2;
+$c-highlight: #E44A2F;
 
-.ifttt {
+.film_noir {
   color: $c-text;
   background: $c-background;
 
@@ -29,29 +27,29 @@ $c-highlight: #E57250;
   }
 
   .bar {
-    background: $c-highlight;
+    background: $c-text;
 
     &.score0 {
       background: none;
     }
   }
 
-  nav,
-  .bar_wrap {
-    background: $c-header;
+  nav {
+    background: $c-text;
   }
 
+  .bar_wrap,
   .settings_select {
     background: $c-header;
   }
 
   .settings_option {
     &:nth-child(2n + 2) {
-      background-color: darken($c-header, 2%);
+      background-color: darken($c-header, 5%);
     }
 
     &.ng-click-active {
-      background-color: darken($c-header, 10%);
+      background-color: darken($c-header, 20%);
     }
   }
 
@@ -75,10 +73,11 @@ $c-highlight: #E57250;
   h3,
   .bar.score0 {
     color: $c-text;
+    background: none;
   }
 
   .mainNav_link {
-    color: $c-text;
+    color: $c-background;
   }
 
   .mainNav_link.active {
@@ -86,20 +85,20 @@ $c-highlight: #E57250;
   }
 
   .btn {
-    background-color: $c-button;
+    background-color: $c-text;
     color: $c-background;
 
     &.ng-click-active,
     &.invert {
-      border: .25rem solid $c-button;
+      border: .25rem solid $c-text;
       background-color: $c-background;
-      color: $c-button;
+      color: $c-text;
       line-height: 3.5rem;
     }
 
     &.invert.ng-click-active {
       border: none;
-      background-color: $c-button;
+      background-color: $c-text;
       color: $c-background;
       line-height: 4rem;
     }
@@ -108,6 +107,10 @@ $c-highlight: #E57250;
   .stats {
     background-color: $c-header;
     background-image: linear-gradient(to bottom,$c-background 50%, $c-header 50%);
+
+    tr:nth-child(2n + 3) {
+      background: darken($c-header, 5%);
+    }
   }
 
   .question {

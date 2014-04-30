@@ -22,7 +22,7 @@
 }
 
 .bar_wrap {
-  background-color: darken($c-background, 10%);
+  background-color: $c-header;
   margin: .5rem 0 1.5rem;
 
   @include breakpoint($bp-500) {
@@ -33,7 +33,7 @@
 }
 
 .bar {
-  background-color: $c-text;
+  background-color: $c-highlight;
   color: white;
   cursor: pointer;
   padding: 0 1.5rem;
@@ -55,12 +55,8 @@
   font-size: 3rem;
   cursor: pointer;
   padding: .1rem 1.1rem .2rem 1rem;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
 }
 
-.page_score {
-  .btn {
-    margin-top: 1.5rem;
-  }
+.page_score_btn {
+  margin-top: 1.5rem;
 }

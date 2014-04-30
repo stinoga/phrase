@@ -4,7 +4,7 @@ nav {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-out;
-  background-color: $c-text;
+  background-color: $c-header;
   height: 0;
 
   ul.content {
@@ -26,7 +26,7 @@ nav {
 }
 
 .mainNav_link {
-  color: white;
+  color: $c-text;
   padding: 1rem 1.5rem;
   display: block;
 

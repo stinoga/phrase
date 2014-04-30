@@ -14,8 +14,11 @@
     </section>
     <section>
       <label for="skin">Skin</label>
-      <div class="settings_select {{activeSetting === 'Skin' ? 'active' : ''}}" style="{{activeSetting === 'Skin' ? selectHeight(Skins.length) : ''}}">
-        <div id="skin" class="settings_option" ng-class="{active: onSkin == Skin}" ng-repeat="Skin in Skins | movefirst: onSkin.id" ng-click="saveSetting('Skin', Skin, $index)">{{Skin.name}}</div>
+      <div class="settings_select skin_settings {{activeSetting === 'Skin' ? 'active' : ''}}" style="{{activeSetting === 'Skin' ? selectHeight(Skins.length) : ''}}">
+        <div id="skin" class="settings_option" ng-class="{active: onSkin == Skin}" ng-repeat="Skin in Skins | movefirst: onSkin.id" ng-click="saveSetting('Skin', Skin, $index)">
+          <span>{{Skin.name}}</span>
+          <span ng-repeat="color in Skin.colors" class="skin_color" ng-style="{'background-color': color}"></span>
+        </div>
       </div>
     </section>
   </div>
