@@ -25,7 +25,6 @@ angular.module('phraseApp')
       // Local scoped vars for each setting
       if (key === 'Category') {
         $scope.onCategory = value;
-        console.log($scope.onCategory);
       } else if (key === 'Skin') {
         $rootScope.skin = $filter('slugFilter')(value.name, '_');
         $scope.onSkin = value;
