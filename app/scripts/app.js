@@ -54,10 +54,14 @@ angular.module('phraseApp', [
     $rootScope.iosVersion = false;
     $rootScope.skin = $filter('slugFilter')(settings.get('Skin').name, '_');
 
+    // Is this the full version?
+    $rootScope.isFull = false;
+
     // App messages
     $rootScope.messages = {
       nadaInternet: 'Words? We don\'t need no stinking words!\n\nLooks like your internet is down Dobbs. Try one of our other categories, or get some internets.',
-      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.'
+      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.',
+      fullCategory: 'You\'ll need the full version of the app to use this category.'
     };
 
     // If we're on an ios7 device, set our iosVersion class for specific styles

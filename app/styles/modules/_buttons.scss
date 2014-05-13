@@ -29,6 +29,18 @@
     color: $c-header;
     line-height: 4rem;
   }
+
+  &.highlight {
+    background-color: $c-highlight;
+
+    &.ng-click-active,
+    &.invert {
+      border: .25rem solid $c-highlight;
+      background-color: $c-background;
+      color: $c-highlight;
+      line-height: 3.5rem;
+    }
+  }
 }
 
 .question {
