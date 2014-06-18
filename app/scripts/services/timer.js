@@ -85,6 +85,7 @@ angular.module('phraseApp')
       }
     };
 
+    // This forces the user to settings any time they leave the game
     Timer.prototype.kill = function() {
       this.done = true;
     };

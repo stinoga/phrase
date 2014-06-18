@@ -53,6 +53,8 @@ nav.active {
   white-space: nowrap;
   overflow: hidden;
   margin-right: -.5rem;
+  transition: all 0.3s ease-out;
+  top: 0;
 
   &:before {
     content: "";
@@ -69,10 +71,15 @@ nav.active {
     background: $c-text-subtle;
     box-shadow: 0 .75rem 0 0 $c-text-subtle, 0 1.5rem 0 0 $c-text-subtle;
   }
+
+  &.nav-hidden {
+    top: -200px;
+  }
 }
 
 // Main header
 
 .mainHeader {
   padding-top: 1.5rem;
+  position: relative;
 }

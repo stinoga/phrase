@@ -27,8 +27,8 @@
         </ul>
       </nav>
       <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
-        <ph-logo></ph-logo>
-        <ph-nav-icon></ph-nav-icon>
+        <ph-logo page="{{pageName}}" ng-class="{'logo-home': pageName === 'home'}"></ph-logo>
+        <ph-nav-icon ng-class="{'nav-hidden': pageName === 'home' || pageName === 'play'}"></ph-nav-icon>
       </header>
       <!-- Placeholder for views -->
       <div id="main" class="main view_{{pageName}} slide" ng-view></div>

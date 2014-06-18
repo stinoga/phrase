@@ -102,6 +102,18 @@ $c-highlight: #E44A2F;
       color: $c-background;
       line-height: 4rem;
     }
+
+    &.highlight {
+      background-color: $c-link;
+
+      &.ng-click-active,
+      &.invert {
+        border: .25rem solid $c-link;
+        background-color: $c-background;
+        color: $c-link;
+        line-height: 3.5rem;
+      }
+    }
   }
 
   .stats {

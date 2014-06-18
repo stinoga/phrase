@@ -7,11 +7,17 @@
 }
 
 @mixin heading-1 {
-  display: inline-block;
   margin: 0 .5rem 1rem 0;
-  position: relative;
-  float: left;
+  position: absolute;
+  left: 1.5rem;
   z-index: 999;
+  width: 8rem;
+  transition: all 0.3s ease-out;
+
+  &.logo-home {
+    left: 50%;
+    margin-left: -4rem;
+  }
 
   a {
     color: $c-header;
