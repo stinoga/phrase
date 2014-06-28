@@ -4,7 +4,7 @@ A Phonegap Catch Phrase game. Uses local word lists as well as remote APIs for u
 ## Setup
 ```Shell
 $ npm install -g yeoman generator-angular phonegap cordova ios-sim && gem install bundler
-$ phonegap create phrase --name Phrase --id com.stinogle.phrase
+$ phonegap create phrase --name Phrase --id com.stinogle.phrase2
 $/phrase npm install
 $/phrase npm install
 $/phrase bower install

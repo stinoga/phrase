@@ -2,7 +2,7 @@
 
 ```Shell
 [ ~/Sites ]
-➜ phonegap create phrase --name Phrase --id com.stinogle.phrase
+➜ phonegap create phrase --name Phrase --id com.stinogle.phrase2
 ➜ cd phrase/
 
 [ ~/Sites/phrase ]
