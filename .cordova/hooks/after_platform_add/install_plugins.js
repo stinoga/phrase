@@ -7,7 +7,8 @@ var pluginlist = [
   'https://github.com/Rickgbw/cordova-plugin-media.git',
   'https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git',
   'https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git',
-  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git'
+  'https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git',
+  'https://github.com/j3k0/PhoneGap-InAppPurchase-iOS.git'
 ];
 
 // no need to configure below
