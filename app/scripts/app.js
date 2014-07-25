@@ -39,6 +39,10 @@ angular.module('phraseApp', [
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/full-version', {
+        templateUrl: 'views/fullversion.html',
+        controller: 'FullversionCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -129,6 +133,7 @@ angular.module('phraseApp', [
         }
         else {
           console.log("In-App Purchases not available!", IAP);
+          console.dir(IAP);
         }
       };
     });

@@ -12,31 +12,6 @@
   }
 }
 
-// Main layout
-
-.main {
-  margin-top: 1rem;
-  padding-bottom: 1.5rem;
-  transition: all 0.3s ease-out;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transform-style: preserve-3d;
-}
-
-.container.active {
-  .main {
-    top: 9.5rem;
-  }
-}
-
-.content {
-  padding: 0 1.5rem 1.5rem;
-
-  @include breakpoint($bp-1650) {
-    padding: 0 5.5rem;
-  }
-}
-
 // alignment ===================================================================
 
 // Floats
@@ -66,6 +41,18 @@
 
 .l-no-margin-top {
   margin-top: 0;
+}
+
+.l-top-15 {
+  margin-top: 1.5rem;
+}
+
+.l-bottom-15 {
+  margin-bottom: 1.5rem;
+}
+
+.l-bottom-3 {
+  margin-bottom: 3rem;
 }
 
 .l-half {

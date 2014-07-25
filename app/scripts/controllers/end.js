@@ -5,7 +5,4 @@ angular.module('phraseApp')
     $rootScope.pageName = page.get();
 
     $scope.teams = localStorageService.get('last_game');
-
-    console.log($scope.teams);
-
   });

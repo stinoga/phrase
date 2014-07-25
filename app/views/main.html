@@ -1,7 +1,7 @@
 <div class="content">
   <section class="home">
     <a ng-click="newGame()" class="btn l-center-btn spacer">New Game</a>
-    <a ng-click="go('/settings')" ng-if="!isFull" class="btn l-center-btn spacer highlight">Full Version</a>
+    <a ng-click="go('/full-version')" ng-if="!isFull" class="btn l-center-btn spacer highlight">Full Version</a>
     <a ng-click="go('/play')" ng-if="continueGame" class="btn l-center-btn spacer invert">Continue Game</a>
     <a ng-click="go('/settings')" class="btn l-center-btn spacer invert">Settings</a>
     <a ng-click="go('/rules')" class="btn l-center-btn spacer invert">Rules</a>

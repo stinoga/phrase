@@ -2,7 +2,7 @@
 
 angular.module('phraseApp')
   .controller('LogoCtrl', function ($scope, $rootScope) {
-    $scope.logoText = 'Phrase';
+    $scope.logoText = 'Pop Phrase';
 
     function logoSetup () {
       $scope.logoLink = $rootScope.pageName === 'play' ? '/score' : '/';
