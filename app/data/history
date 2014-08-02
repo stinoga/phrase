@@ -48,186 +48,185 @@
   "Bill Clinton",
   "George W. Bush",
   "Barack Obama",
-  Aaron Burr
-  Alexander Hamilton
-  The Trail of Tears
-  War of 1812
-  Dred Scott Decision
-  The Underground Railroad
-  Anne Frank
-  The Third Reich
-  World War II
-  The Great War
-  D-Day
-  The Western Front
-  The Civil War
-  The White House
-  The Battle of Antietam
-  John Wilkes Booth
-  Lincoln Assasination
-  Watergate Scandal
-  Operation Paperclip
-  Apartheid
-  Nelson Mandela
-  The Zimmerman Telegraph
-  Franz Ferdinand
-  Black Tuesday
-  Prohibition
-  The 21st Amendment
-  Roaring Twenties
-  Pearl Harbor
-  A date which will live in infamy
-  Cuban trade embargo
-  The Cold War
-  Manhattan Project
-  Trinity Test
-  Robert Oppenheimer
-  Enola Gay
-  The Wreck of the Edmund Fitzgerald
-  Sinking of the Titanic
-  Bay of Pigs
-  Assasination of president Kennedy
-  I have a dream
-  Martin Luther King Assasination
-  Roe vs. Wade
-  Vietnam War
-  Agent Orange
-  Oklahoma City Bombing
-  9/11
-  The Twin Towers
-  Declaration of Independence
-  John Hancock
-  Boston Tea Party
-  Lewis and Clark
-  The Louisiana Purchase
-  Remember the Alamo
-  Emancipation Proclamation
-  Gettysburg Address
-  Hiroshima
-  Nagasaki
-  Uncle Sam
-  The Star Spangled Banner
-  Francis Scott Key
-  Fat Man
-  Little Boy
-  Wright Brothers
-  Model-T Ford
-  Panama Canal
-  The sun never sets on the British Empire
-  Queen Victoria
-  Hindenburg Disaster
-  Loose lips sink ships
-  Women's suffrage
-  Jim Crow laws
-  13 Colonies
-  American Revolutionary War
-  Marshall Plan
-  Civil Rights Act
-  Neil Armstrong
-  One small step for man
-  Apollo program
-  Buzz Aldrin
-  Yuri Gagarin
-  Fall of the Berlin Wall
-  Betsy Ross
-  Japan bombs Pearl Harbor
-  The Holocaust
-  Nazi Germany
-  Adolf Hitler
-  Concentration Camps
-  World War I
-  Brown vs. Board of Education
-  Polio vaccine
-  Jonas Salk
-  Alexander Fleming
-  Penicillin
-  Black Plague
-  Black Death
-  Constantinople
-  Medieval
-  Renaissance
-  Age of Discovery
-  Christopher Columbus
-  Byzantine Empire
-  The Crusades
-  Vikings
-  Marco Polo
-  Roman Empire
-  Alexander the Great
-  Vlad the Impaler
-  Order of the Dragon
-  Jesus
-  Einstein
-  Theory of Relativity
-  AIDS
-  Lindbergh flies Atlantic
-  Normandy
-  Soviet Union
-  Chernobyl Meltdown
-  Three Mile Island
-  Achilles
-  Julius Caesar
-  Eruption of Mount Vesuvius
-  Pompeii
-  Ides of March
-  Mark Antony
-  Great Army
-  Mayan Empire
-  Moors
-  Leif Ericson
-  The Vatican
-  Tower of London
-  University of Oxford
-  The Anarchy
-  Notre-Dame
-  Catholicism
-  Jerusalem
-  Shogun
-  Buddhism
-  merchant guild
-  Genghis Khan
-  Mongol Empire
-  Golden Horde
-  Ming Dynasty
-  Franciscan Order
-  Magna Carta
-  Islamic Golden Age
-  Holy Land
-  Roman Emperor
-  Gutenberg Press
-  Middle Ages
-  Dark Ages
-  William Wallace
-  Ottoman Empire
-  Knights Templar
-  The Crusades
-  Dante
-  Divine Comedy
-  William Shakespeare
-  Aztecs
-  Hundred Years War
-  Pope John Paul
-  English monarchy
-  Peace of Constance
-  Excommunication
-  The Canterbury Tales
-  Chaucer
-  Peasants Revolt
-  Union Army
-  Confederate Army
-  Robert E. Lee
-  General Grant
-  Custer's Last Stand
-  Protestant Reform
-  Joan of Arc
-  Maid of Orleans
-  Salem Witch Trials
-  Medici Family
-  War of the Roses
-  New World
-  Age of Discovery
-  Vasco da Gama
-  Michelangelo
-  Slavery
-
+  "Aaron Burr",
+  "Alexander Hamilton",
+  "The Trail of Tears",
+  "War of 1812",
+  "Dred Scott Decision",
+  "The Underground Railroad",
+  "Anne Frank",
+  "The Third Reich",
+  "World War II",
+  "The Great War",
+  "D-Day",
+  "The Western Front",
+  "The Civil War",
+  "The White House",
+  "The Battle of Antietam",
+  "John Wilkes Booth",
+  "Lincoln Assasination",
+  "Watergate Scandal",
+  "Operation Paperclip",
+  "Apartheid",
+  "Nelson Mandela",
+  "The Zimmerman Telegraph",
+  "Franz Ferdinand",
+  "Black Tuesday",
+  "Prohibition",
+  "The 21st Amendment",
+  "Roaring Twenties",
+  "Pearl Harbor",
+  "A date which will live in infamy",
+  "Cuban trade embargo",
+  "The Cold War",
+  "Manhattan Project",
+  "Trinity Test",
+  "Robert Oppenheimer",
+  "Enola Gay",
+  "The Wreck of the Edmund Fitzgerald",
+  "Sinking of the Titanic",
+  "Bay of Pigs",
+  "Assasination of president Kennedy",
+  "I have a dream",
+  "Martin Luther King Assasination",
+  "Roe vs. Wade",
+  "Vietnam War",
+  "Agent Orange",
+  "Oklahoma City Bombing",
+  "9/11",
+  "The Twin Towers",
+  "Declaration of Independence",
+  "John Hancock",
+  "Boston Tea Party",
+  "Lewis and Clark",
+  "The Louisiana Purchase",
+  "Remember the Alamo",
+  "Emancipation Proclamation",
+  "Gettysburg Address",
+  "Hiroshima",
+  "Nagasaki",
+  "Uncle Sam",
+  "The Star Spangled Banner",
+  "Francis Scott Key",
+  "Fat Man",
+  "Little Boy",
+  "Wright Brothers",
+  "Model-T Ford",
+  "Panama Canal",
+  "The sun never sets on the British Empire",
+  "Queen Victoria",
+  "Hindenburg Disaster",
+  "Loose lips sink ships",
+  "Women's suffrage",
+  "Jim Crow laws",
+  "13 Colonies",
+  "American Revolutionary War",
+  "Marshall Plan",
+  "Civil Rights Act",
+  "Neil Armstrong",
+  "One small step for man",
+  "Apollo program",
+  "Buzz Aldrin",
+  "Yuri Gagarin",
+  "Fall of the Berlin Wall",
+  "Betsy Ross",
+  "Japan bombs Pearl Harbor",
+  "The Holocaust",
+  "Nazi Germany",
+  "Adolf Hitler",
+  "Concentration Camps",
+  "World War I",
+  "Brown vs. Board of Education",
+  "Polio vaccine",
+  "Jonas Salk",
+  "Alexander Fleming",
+  "Penicillin",
+  "Black Plague",
+  "Black Death",
+  "Constantinople",
+  "Medieval",
+  "Renaissance",
+  "Age of Discovery",
+  "Christopher Columbus",
+  "Byzantine Empire",
+  "The Crusades",
+  "Vikings",
+  "Marco Polo",
+  "Roman Empire",
+  "Alexander the Great",
+  "Vlad the Impaler",
+  "Order of the Dragon",
+  "Jesus",
+  "Einstein",
+  "Theory of Relativity",
+  "AIDS",
+  "Lindbergh flies Atlantic",
+  "Normandy",
+  "Soviet Union",
+  "Chernobyl Meltdown",
+  "Three Mile Island",
+  "Achilles",
+  "Julius Caesar",
+  "Eruption of Mount Vesuvius",
+  "Pompeii",
+  "Ides of March",
+  "Mark Antony",
+  "Great Army",
+  "Mayan Empire",
+  "Moors",
+  "Leif Ericson",
+  "The Vatican",
+  "Tower of London",
+  "University of Oxford",
+  "The Anarchy",
+  "Notre-Dame",
+  "Catholicism",
+  "Jerusalem",
+  "Shogun",
+  "Buddhism",
+  "merchant guild",
+  "Genghis Khan",
+  "Mongol Empire",
+  "Golden Horde",
+  "Ming Dynasty",
+  "Franciscan Order",
+  "Magna Carta",
+  "Islamic Golden Age",
+  "Holy Land",
+  "Roman Emperor",
+  "Gutenberg Press",
+  "Middle Ages",
+  "Dark Ages",
+  "William Wallace",
+  "Ottoman Empire",
+  "Knights Templar",
+  "The Crusades",
+  "Dante",
+  "Divine Comedy",
+  "William Shakespeare",
+  "Aztecs",
+  "Hundred Years War",
+  "Pope John Paul",
+  "English monarchy",
+  "Peace of Constance",
+  "Excommunication",
+  "The Canterbury Tales",
+  "Chaucer",
+  "Peasants Revolt",
+  "Union Army",
+  "Confederate Army",
+  "Robert E. Lee",
+  "General Grant",
+  "Custer's Last Stand",
+  "Protestant Reform",
+  "Joan of Arc",
+  "Maid of Orleans",
+  "Salem Witch Trials",
+  "Medici Family",
+  "War of the Roses",
+  "New World",
+  "Age of Discovery",
+  "Vasco da Gama",
+  "Michelangelo",
+  "Slavery"
 ]
