@@ -1,26 +1,19 @@
 <div class="content">
   <div class="settings">
-    <section>
-      <label for="category">Category</label>
-      <div class="settings_select {{activeSetting === 'Category' ? 'active' : ''}}" style="{{activeSetting === 'Category' ? selectHeight(Categories.length) : ''}}">
-        <div id="category" class="settings_option" ng-repeat="Category in Categories | movefirst: onCategory.id" ng-class="{active: onCategory == Category}" ng-click="saveSetting('Category', Category, $index)">{{Category.name}}</div>
-      </div>
-    </section>
-    <section>
-      <label for="timer">Timer</label>
-      <div class="settings_select {{activeSetting === 'Timer' ? 'active' : ''}}" style="{{activeSetting === 'Timer' ? selectHeight(Timers.length) : ''}}">
-        <div id="timer" class="settings_option" ng-class="{active: onTimer == Timer}" ng-repeat="Timer in Timers | movefirst: onTimer.id" ng-click="saveSetting('Timer', Timer, $index)">{{Timer.name}}</div>
-      </div>
-    </section>
-    <section>
-      <label for="skin">Skin</label>
-      <div class="settings_select skin_settings {{activeSetting === 'Skin' ? 'active' : ''}}" style="{{activeSetting === 'Skin' ? selectHeight(Skins.length) : ''}}">
-        <div id="skin" class="settings_option" ng-class="{active: onSkin == Skin}" ng-repeat="Skin in Skins | movefirst: onSkin.id" ng-click="saveSetting('Skin', Skin, $index)">
-          <span>{{Skin.name}}</span>
-          <span ng-repeat="color in Skin.colors" class="skin_color" ng-style="{'background-color': color}"></span>
-        </div>
-      </div>
-    </section>
+    <ph-select
+      select-label="Category"
+      select-items="Categories"
+    ></ph-select>
+    <ph-select
+      select-label="Timer"
+      select-items="Timers"
+    ></ph-select>
+    <ph-select
+      select-label="Skin"
+      select-class="skin_settings"
+      select-items="Skins"
+      select-skins="true"
+    ></ph-select>
   </div>
   <a ng-click="go('/play')" class="btn spacer">Play</a>
 </div>

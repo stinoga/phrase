@@ -1,0 +1,9 @@
+<section>
+  <label for="{{selectLabel | lowercase}}">{{selectLabel}}</label>
+  <div class="settings_select {{selectClass}} {{activeSetting === selectLabel ? 'active' : ''}}" style="{{activeSetting === selectLabel ? selectHeight(selectItems.length) : ''}}">
+    <div ng-repeat="selectItem in selectItems | movefirst: selectedItem.id" id="{{selectLabel | lowercase}}" class="settings_option" ng-class="{active: selectedItem == selectItem}" ng-click="saveSetting(selectLabel, selectItem, $index)">
+      <span>{{selectItem.name}}</span>
+      <span ng-if="selectSkins" ng-repeat="color in selectItem.colors" class="skin_color" ng-style="{'background-color': color}"></span>
+    </div>
+  </div>
+</section>

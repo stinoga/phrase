@@ -105,7 +105,9 @@ angular.module('phraseApp', [
 
       // Once setup is done, load all product data.
       storekit.load(IAP.list, function (products, invalidIds) {
-        console.log('IAPs loading done:');
+        console.log('IAP list:', IAP.list);
+        console.log('products:', products);
+        console.log('invalidIds:', invalidIds);
 
         IAP.products = products;
         IAP.loaded = true;
