@@ -8,11 +8,11 @@ angular.module('PhoneGap').factory('FileReader', [
     return {
       onDeviceReady: function () {
         PhoneGap.ready().then(function () {
-          console.log('Device ready callback');
+          // console.log('Device ready callback');
           $window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 
           function gotFS (fileSystem) {
-            console.log(fileSystem);
+            // console.log(fileSystem);
             fileSystem.root.getFile('../data/words.json', null, gotFileEntry, fail);
           }
 
@@ -28,8 +28,8 @@ angular.module('PhoneGap').factory('FileReader', [
           function readDataUrl (file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
-              console.log('Read as data URL');
-              console.log(evt.target.result);
+              // console.log('Read as data URL');
+              // console.log(evt.target.result);
             };
             reader.readAsDataURL(file);
           }
@@ -37,15 +37,15 @@ angular.module('PhoneGap').factory('FileReader', [
           function readAsText (file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
-              console.log('Read as text');
-              console.log(evt.target.result);
+              // console.log('Read as text');
+              // console.log(evt.target.result);
             };
             reader.readAsText(file);
           }
 
           function fail (error) {
-            console.log('Houston, we have a problem.');
-            console.log(error);
+            // console.log('Houston, we have a problem.');
+            // console.log(error);
           }
         });
       }

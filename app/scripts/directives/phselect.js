@@ -9,6 +9,7 @@ angular.module('phraseApp')
       replace: true,
       scope: {
         selectLabel: '@',
+        selectLabelSpecial: '@',
         selectClass: '@',
         selectItems: '=',
         selectSkins: '@'

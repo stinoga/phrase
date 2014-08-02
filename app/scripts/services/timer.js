@@ -29,8 +29,6 @@ angular.module('phraseApp')
         urgency = 'hurry';
       }
 
-      // console.log(urgency);
-
       return urgency;
     }
 

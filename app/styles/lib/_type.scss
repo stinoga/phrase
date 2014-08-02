@@ -14,6 +14,10 @@
   width: 11.4rem;
   transition: all 0.3s ease-out;
 
+  @include breakpoint($bp-1650) {
+    left: 5.5rem;
+  }
+
   &.logo-home {
     left: 50%;
     margin-left: -5.8rem;

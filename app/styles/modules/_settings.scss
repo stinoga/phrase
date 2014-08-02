@@ -3,15 +3,15 @@
 .settings {
   margin-bottom: 2.65rem;
 
-  label {
-    font-size: 1.5rem;
-    margin-left: .5rem;
-  }
-
   select,
   option {
     font-family: $t-base;
   }
+}
+
+.settings_label {
+  font-size: 1.5rem;
+  margin-left: 1.2rem;
 }
 
 .settings_select {

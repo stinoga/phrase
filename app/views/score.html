@@ -6,6 +6,12 @@
       <div id="bar{{team.id}}" ng-click="saveScore(team.id)" style="width: {{(team.score / 7) * 100}}%" ng-bind-template="{{team.score}}" class="bar score{{team.score}}"></div>
     </div>
   </section>
+  <ph-select
+    class="l-bottom-25"
+    select-label="Category"
+    select-label-special="Select Category"
+    select-items="Categories"
+  ></ph-select>
   <a ng-click="go('/play')" class="btn page_score_btn spacer">Next Round</a>
   <section class="stats cf">
     <table class="stats_table">
