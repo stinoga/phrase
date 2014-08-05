@@ -4,8 +4,13 @@ angular.module('phraseApp')
   .controller('FullversionCtrl', function ($rootScope, $scope, $storekit, page) {
     $rootScope.pageName = page.get();
 
-    // Buy the full app
-    $scope.getFullVersion = function (argument) {
-      $storekit.purchase('full_version');
+    // Buy an in app purchase
+    $scope.getPurchase = function (iap) {
+      $storekit.purchase(iap);
+    }
+
+    // Restore in app purchases
+    $scope.restorePurchases = function () {
+      $storekit.restore(iap);
     }
   });
