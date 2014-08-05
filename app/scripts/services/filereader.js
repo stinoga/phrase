@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('PhoneGap').factory('FileReader', [
-  '$window',
-  'PhoneGap',
+angular.module('PhoneGap').factory('FileReader',
   function ($window, PhoneGap) {
 
     return {
@@ -51,5 +49,4 @@ angular.module('PhoneGap').factory('FileReader', [
       }
     };
 
-  }
-]);
+  });

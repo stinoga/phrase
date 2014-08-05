@@ -7,7 +7,8 @@ angular.module('phraseApp', [
   'PhoneGap',
   'LocalStorageModule',
   'ngTouch',
-  'ngAnimate'
+  'ngAnimate',
+  'ngStorekit'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -47,7 +48,7 @@ angular.module('phraseApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location, $window, $filter, settings, device, PhoneGap){
+  .run(function ($rootScope, $location, $window, $filter, $storekit, settings, device, PhoneGap){
     // Using this location function globally as ngTouch seems to stop
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
@@ -68,76 +69,19 @@ angular.module('phraseApp', [
       fullCategory: 'You\'ll need the full version of the app to use this category.'
     };
 
-    // Setup in app purchasing
-    var IAP = {
-      list: ["full_version"],
-      products: {}
-    };
-
-
-    IAP.load = function () {
-      // Check availability of the storekit plugin
-      if (!window.storekit) {
-        console.log("In-App Purchase Plugin not available");
-        return;
-      }
-
-      // Initialize
-      storekit.init({
-        debug:    true, // Enable IAP messages on the console
-        ready:    IAP.onReady,
-        purchase: IAP.onPurchase,
-        restore:  IAP.onRestore,
-        error:    IAP.onError
-      });
-    };
-
-    // StoreKit's callbacks (we'll talk about them later)
-    IAP.onPurchase = function () {};
-    IAP.onRestore = function () {};
-
-    IAP.onError = function () {
-      console.log('Error: ' + errorMessage);
-    };
-
-    IAP.onReady = function () {
-      console.log('READY');
-
-      // Once setup is done, load all product data.
-      storekit.load(IAP.list, function (products, invalidIds) {
-        console.log('IAP list:', IAP.list);
-        console.log('products:', products);
-        console.log('invalidIds:', invalidIds);
-
-        IAP.products = products;
-        IAP.loaded = true;
-        for (var i = 0; i < invalidIds.length; ++i) {
-          console.log("Error: could not load " + invalidIds[i]);
-        }
-      });
-      IAP.render();
-    };
-
     // If we're on an ios7 device, set our iosVersion class for specific styles
     PhoneGap.ready().then(function () {
       $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;
 
-      IAP.load();
-
-      IAP.render = function () {
-        if (IAP.loaded) {
-          var fullVersion  = IAP.products["full_version"];
-          for (var id in IAP.products) {
-            var prod = IAP.products[id];
-
-            console.log(prod.title, prod.description, prod.id, prod.price);
-          }
-        }
-        else {
-          console.log("In-App Purchases not available!", IAP);
-          console.dir(IAP);
-        }
-      };
+      $storekit
+        .setLogging(true)
+        .load(['full_version'])
+        .then(function (products) {
+          console.dir(products);
+        })
+        .catch(function () {
+          console.log('no products loaded');
+        });
     });
 
   });
