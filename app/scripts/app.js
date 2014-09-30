@@ -48,7 +48,7 @@ angular.module('phraseApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location, $window, $filter, $storekit, settings, device, PhoneGap){
+  .run(function ($rootScope, $location, $window, $filter, $storekit, settings, device, PhoneGap, localStorageService){
     // Using this location function globally as ngTouch seems to stop
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
@@ -60,13 +60,16 @@ angular.module('phraseApp', [
     $rootScope.skin = $filter('slugFilter')(settings.get('Skin').name, '_');
 
     // Is this the full version?
-    $rootScope.isFull = false;
+    if (localStorageService.get('full_version')){
+      $rootScope.isFull = true;
+    } else {
+      $rootScope.isFull = false;
+    }
 
     // App messages
     $rootScope.messages = {
       nadaInternet: 'Words? We don\'t need no stinking words!\n\nLooks like your internet is down Dobbs. Try one of our other categories, or get some internets.',
-      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.',
-      fullCategory: 'You\'ll need the full version of the app to use this category.'
+      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.'
     };
 
     // If we're on an ios7 device, set our iosVersion class for specific styles
@@ -77,7 +80,7 @@ angular.module('phraseApp', [
         .setLogging(true)
         .load(['full_version'])
         .then(function (products) {
-          console.dir(products);
+          // products loaded
         })
         .catch(function () {
           console.log('no products loaded');

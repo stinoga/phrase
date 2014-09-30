@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('MainCtrl', function ($rootScope, $scope, $location, settings, page, score) {
+  .controller('MainCtrl', function ($rootScope, $scope, $location, $storekit, settings, page, score) {
     $rootScope.pageName = page.get();
 
     $scope.teams = score.all();
