@@ -3,10 +3,18 @@
 angular.module('phraseApp')
   .controller('LogoCtrl', function ($scope, $rootScope) {
     $scope.logoText = 'Pop Phrase';
+    $scope.logoLink = '/';
 
-    function logoSetup () {
-      $scope.logoLink = $rootScope.pageName === 'play' ? '/score' : '/';
+    // Update the logo link based on whether we are in-game or not
+    $scope.$on('in-game', function (argument) {
+      $scope.logoLink = '/score';
+    });
+
+    $scope.$on('exit-game', function (argument) {
+      $scope.logoLink = '/';
+    });
+
+    $scope.logoPath = function () {
+      $rootScope.go($scope.logoLink);
     }
-
-    $rootScope.$watch('pageName', logoSetup);
   });

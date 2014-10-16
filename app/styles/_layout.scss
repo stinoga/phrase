@@ -132,6 +132,16 @@
     left: 0;
 }
 
+// This smoothes up the transition from a tall screen to a shorter one a bit
+.slide.view_score.ng-leave .content {
+    height: 1000px;
+}
+
+.slide.view_score.ng-leave-active .content {
+    height: 0;
+    overflow: hidden;
+}
+
 .slide.ng-leave-active {
     left: -100%;
     opacity: .5;
