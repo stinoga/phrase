@@ -7,10 +7,10 @@ var ncp = require('ncp').ncp,
     transfers = [
       {
         'source': './app/assets/iOS/icons',
-        'destination': './platforms/ios/Phrase/Resources/icons'
+        'destination': './platforms/ios/Pop Phrase/Resources/icons'
       },{
         'source': './app/assets/iOS/splash',
-        'destination': './platforms/ios/Phrase/Resources/splash'
+        'destination': './platforms/ios/Pop Phrase/Resources/splash'
       }
     ];
 
