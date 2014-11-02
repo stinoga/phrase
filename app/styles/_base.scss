@@ -110,5 +110,7 @@ table {
 
   @include breakpoint($bp-1650) {
     padding: 0 5.5rem;
+    max-width: 2000px;
+    margin: 0 auto;
   }
 }
