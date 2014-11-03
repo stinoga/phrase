@@ -44,6 +44,10 @@ angular.module('phraseApp', [
         templateUrl: 'views/fullversion.html',
         controller: 'FullversionCtrl'
       })
+      .when('/thanks', {
+        templateUrl: 'views/thanks.html',
+        controller: 'ThanksCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -53,6 +57,7 @@ angular.module('phraseApp', [
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
       $location.path( path );
+      smoothScroll.animateScroll( null, '#container' );
     };
 
     // Set our ios version and skin on load
@@ -87,4 +92,6 @@ angular.module('phraseApp', [
         });
     });
 
+    // Initialize smooth scroll
+    smoothScroll.init();
   });

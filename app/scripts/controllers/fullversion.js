@@ -28,6 +28,9 @@ angular.module('phraseApp')
 
             // Enable the full version features
             $rootScope.isFull = true;
+
+            // Open the thanks page
+            $rootScope.go('/thanks');
           }
         });
   });

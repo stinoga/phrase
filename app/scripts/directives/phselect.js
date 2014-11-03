@@ -29,6 +29,7 @@ angular.module('phraseApp')
             // Only set the setting if this is either the full version, or a free settting
             if (!$rootScope.isFull && !value.free) {
               $location.path('/full-version');
+              smoothScroll.animateScroll( null, '#container' );
 
               return false;
             }

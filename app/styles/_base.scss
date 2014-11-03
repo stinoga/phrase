@@ -66,6 +66,12 @@ a {
   }
 }
 
+p,
+ul.default,
+ol {
+  font-family: $t-skinny;
+}
+
 ul,
 ol {
   margin: 0;

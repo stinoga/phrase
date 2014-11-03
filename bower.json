@@ -11,7 +11,8 @@
     "angular-resource": "~1.2.6",
     "angular-touch": "~1.2.11",
     "angular-animate": "~1.2.14",
-    "ng-storekit": "~0.0.3"
+    "ng-storekit": "~0.0.3",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git"
   },
   "devDependencies": {
     "angular-mocks": "1.2.5",
