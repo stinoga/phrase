@@ -45,21 +45,16 @@ angular.module('phraseApp')
             },
             {
               'id': 7,
-              'name': 'The 90s',
+              'name': 'The 80s/90s',
               'live': false
             },
             {
               'id': 8,
-              'name': 'The 80s',
-              'live': false
-            },
-            {
-              'id': 9,
               'name': 'Music',
               'live': false
             },
             {
-              'id': 10,
+              'id': 9,
               'name': 'History',
               'live': false
             }
