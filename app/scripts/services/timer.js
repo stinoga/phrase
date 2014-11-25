@@ -1,10 +1,14 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('timer', function ( $timeout, $window, settings, sound ) {
+  .factory('timer', function ( $timeout, $filter, $window, settings, sound ) {
 
     function timerSetting() {
       return settings.get('Timer').name;
+    }
+
+    function timerLength() {
+      return $filter('seconds')(settings.get('TimerLength').name);
     }
 
     // TODO: Store these constants in a config like our other factories
@@ -90,7 +94,7 @@ angular.module('phraseApp')
 
     return function( opts ) {
       // TODO: in the future, we may want duration as a global option
-      var duration = (opts && opts.duration) || DEFAULT_DURATION,
+      var duration = (opts && opts.duration) || timerLength() || DEFAULT_DURATION,
           onDone = (opts && opts.done) || NOOP,
           onUpdate = (opts && opts.update) || NOOP;
 

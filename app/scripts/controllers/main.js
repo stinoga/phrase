@@ -27,4 +27,5 @@ angular.module('phraseApp')
     // haven't been stored in localStorage yet
     $scope.Category = settings.get('Category').id;
     $scope.Timer = settings.get('Timer').id;
+    $scope.TimerLength = settings.get('TimerLength').id;
   });

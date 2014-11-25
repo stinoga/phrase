@@ -6,5 +6,6 @@ angular.module('phraseApp')
 
     $scope.Categories = settings.options('Category');
     $scope.Timers = settings.options('Timer');
+    $scope.TimerLengths = settings.options('TimerLength');
     $scope.Skins = settings.options('Skin');
   });

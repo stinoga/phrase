@@ -68,7 +68,7 @@ angular.module('phraseApp', [
     if (localStorageService.get('full_version')){
       $rootScope.isFull = true;
     } else {
-      $rootScope.isFull = false;
+      $rootScope.isFull = true;
     }
 
     // App messages

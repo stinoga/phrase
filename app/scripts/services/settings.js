@@ -78,6 +78,35 @@ angular.module('phraseApp')
             }
           ]
         },
+        'TimerLength': {
+          'options': [
+            {
+              'id': 0,
+              'name': ':45',
+              'free': true
+            },
+            {
+              'id': 1,
+              'name': ':50'
+            },
+            {
+              'id': 2,
+              'name': '1:00'
+            },
+            {
+              'id': 3,
+              'name': '1:30'
+            },
+            {
+              'id': 4,
+              'name': '2:00'
+            },
+            {
+              'id': 5,
+              'name': '5:00'
+            }
+          ]
+        },
         'Skin': {
           'options': [
             {
