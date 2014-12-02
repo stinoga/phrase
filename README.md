@@ -1,5 +1,8 @@
 # Phrase
-A Phonegap Catch Phrase game. Uses local word lists as well as remote APIs for unique, new word lists.
+A Phrase guessing iOS game. Uses local word lists as well as remote APIs for unique, new word lists that update daily.
+
+## The Stack
+Phonegap, AngularJS, Bower, SASS, Yeoman
 
 ## Setup
 ```Shell
