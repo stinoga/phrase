@@ -16,7 +16,7 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="NavCtrl" ng-class="{ios7: iosVersion}" class="page_{{pageName}} {{skin}}">
-
+    <ph-tutorial ng-if="tutorial" class="tutorial"></ph-tutorial>
     <div id="container" class="container">
       <nav role="navigation" ng-class="active" class="mainNav">
         <ul class="content cf">
@@ -27,7 +27,7 @@
         </ul>
       </nav>
       <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
-        <ph-logo page="{{pageName}}" ng-class="{'logo-home': pageName === 'home'}"></ph-logo>
+        <ph-logo page="{{pageName}}" ng-class="{'logo-home': pageName === 'home', 'tutorial-active': tutorial}"></ph-logo>
         <ph-nav-icon ng-class="{'nav-hidden': pageName === 'home' || pageName === 'play'}"></ph-nav-icon>
       </header>
       <!-- Placeholder for views -->
@@ -85,6 +85,7 @@
         <script src="scripts/services/inapppurchase.js"></script>
         <script src="scripts/controllers/thanks.js"></script>
         <script src="scripts/filters/seconds.js"></script>
+        <script src="scripts/directives/phtutorial.js"></script>
         <!-- endbuild -->
 </body>
 </html>

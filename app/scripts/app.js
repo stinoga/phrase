@@ -52,13 +52,26 @@ angular.module('phraseApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location, $window, $filter, $storekit, settings, device, PhoneGap, localStorageService){
+  .run(function ($rootScope, $location, $window, $filter, $timeout, $storekit, settings, device, PhoneGap, localStorageService){
     // Using this location function globally as ngTouch seems to stop
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
+      // Only go to the link if it isn't the currently active page
+      if ($rootScope.pageName === 'home' && path === '/') {
+        return false;
+      }
+
+      if ($rootScope.pageName == path.substr(1)) {
+        return false;
+      }
+
       $location.path( path );
       smoothScroll.animateScroll( null, '#container' );
     };
+
+    // $timeout(function () {
+    //   $rootScope.tutorial = true;
+    // }, 700);
 
     // Set our ios version and skin on load
     $rootScope.iosVersion = false;
