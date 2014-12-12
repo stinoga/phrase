@@ -69,9 +69,9 @@ angular.module('phraseApp', [
       smoothScroll.animateScroll( null, '#container' );
     };
 
-    // $timeout(function () {
-    //   $rootScope.tutorial = true;
-    // }, 700);
+    $timeout(function () {
+      $rootScope.tutorial = true;
+    }, 700);
 
     // Set our ios version and skin on load
     $rootScope.iosVersion = false;

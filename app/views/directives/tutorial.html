@@ -1,8 +1,22 @@
 <div>
-  <h2>How to Play</h2>
-  <ol ng-if="pageName == 'home'">
-    <li>Find some friends.</li>
-    <li>Split into two teams.</li>
-    <li>Circle up, alternating teams.</li>
-  </ol>
+  <div ng-if="pageName === 'home'">
+    <h2>First time? Here's how to play:</h2>
+    <ol>
+      <li>Find some friends.</li>
+      <li>Split into two teams.</li>
+      <li>Aternate players in a circle.</li>
+    </ol>
+  </div>
+  <div ng-if="pageName === 'play'">
+    <p>One the game starts, the player holding the game describes the phrase to their teammates.</p>
+    <p>This player can do anything to describe phrase, <i>except:</i></p>
+    <ol>
+      <li>Say the phrase, or any part of it.</li>
+      <li>Say a word that rymes with the phrase.</li>
+      <li>Give any letters in the phrase.</li>
+    </ol>
+    <p>Ony the team guesses the phrase, the game is handed to the next player. They press next and describe the next phrase.</p>
+    <p>Once the time is up, the team not holding the game wins the round.</p>
+  </div>
+  <div ng-if="pageName === 'score'"></div>
 </div>
