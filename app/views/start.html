@@ -1,0 +1,16 @@
+<div class="content">
+  <section class="start l-bottom-25">
+    <input id="team1" type="text" maxlength="30" ng-model="startTeams[0]" placeholder="Team 1" focus="{{focusForm}}" />
+    <div class="input_border"></div>
+    <input id="team2" type="text" maxlength="30" ng-model="startTeams[1]" placeholder="Team 2" />
+    <div class="input_border"></div>
+  </section>
+  <ph-select
+    class="l-bottom-25"
+    select-label="Category"
+    select-label-special="Select Category"
+    select-items="Categories"
+    active-setting="active"
+  ></ph-select>
+  <a ng-click="goPlay()" class="btn page_score_btn spacer">Play!</a>
+</div>

@@ -16,6 +16,10 @@ angular.module('phraseApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/start', {
+        templateUrl: 'views/start.html',
+        controller: 'StartCtrl'
+      })
       .when('/play', {
         templateUrl: 'views/play.html',
         controller: 'PlayCtrl'
@@ -70,10 +74,10 @@ angular.module('phraseApp', [
     };
 
     $timeout(function () {
-      $rootScope.tutorial = true;
+      $rootScope.tutorial = false;
     }, 700);
 
-    // Set our ios version and skin on load
+    // Set our ios version, skin, and previous game status on load
     $rootScope.iosVersion = false;
     $rootScope.skin = $filter('slugFilter')(settings.get('Skin').name, '_');
 

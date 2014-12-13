@@ -11,7 +11,7 @@ angular.module('phraseApp')
       geturl.get(url, rootUrl);
     };
 
-    $scope.saveScore = function( key, direction ) {
+    $scope.saveScore = function(key, direction) {
       score.set(key, direction);
     };
 

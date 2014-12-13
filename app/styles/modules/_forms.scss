@@ -1,0 +1,36 @@
+// FOOTER ======================================================================
+
+input {
+  font-size: 1.5rem;
+  padding: 1.2rem 1.2rem .3rem;
+  border: none;
+  width: 100%;
+  outline: 0;
+
+  &:focus {
+    + .input_border:after {
+      width: 100%;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $c-header-dark;
+}
+
+.input_border {
+  width: 100%;
+  height: .35rem;
+  background: $c-text-subtlest;
+  position: relative;
+  margin-bottom: 1rem;
+
+  &:after {
+    position: absolute;
+    width: 0;
+    height: inherit;
+    content: '';
+    background: $c-link;
+    transition: width .3s ease-out;
+  }
+}

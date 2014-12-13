@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('score', function ( localStorageService, $timeout, $location ) {
+  .factory('score', function (localStorageService, $timeout, $location) {
 
     // Grab the localStorage value for each score
     // If its null, set it to zero
-    function getScore( item, nullValue ) {
+    function getScore(item, nullValue) {
       var lsItem = localStorageService.get(item);
       if (!lsItem){
         return nullValue;
@@ -18,11 +18,13 @@ angular.module('phraseApp')
     var CONFIG = [
           {
             'id': 1,
+            'name': getScore('ls_team1name', ''),
             'score': getScore('ls_score1', 0),
             'winner': 0
           },
           {
             'id': 2,
+            'name': getScore('ls_team2name', ''),
             'score': getScore('ls_score2', 0),
             'winner': 0
           }
@@ -30,17 +32,28 @@ angular.module('phraseApp')
         SCORE_MAX = 7,
         SCORE_MIN = 0;
 
-    function clearScore() {
+    function clearScore(teamNames) {
       // clear out local storage keys for all scores
       // reset scores in config
       angular.forEach(CONFIG, function( key ) {
         CONFIG[0].score = 0;
         CONFIG[1].score = 0;
+        CONFIG[0].winner = 0;
+        CONFIG[1].winner = 0;
+
+        // Clear team names if needed
+        if (teamNames) {
+          CONFIG[0].name = '';
+          CONFIG[1].name = '';
+          setTeam(1, '');
+          setTeam(2, '');
+        }
+
         localStorageService.remove('ls_score' + key.id);
       });
     }
 
-    function setScore( key, direction ) {
+    function setScore(key, direction) {
       var teamId = CONFIG[key - 1];
 
       // Let's only set the score if we're below the max
@@ -72,6 +85,14 @@ angular.module('phraseApp')
       }
     }
 
+    function setTeam (key, value) {
+      var teamId = CONFIG[key - 1];
+
+      teamId.name = value;
+
+      localStorageService.add('ls_team' + key + 'name', value);
+    }
+
     function getAll() {
       return CONFIG;
     }
@@ -80,6 +101,7 @@ angular.module('phraseApp')
     return {
       get: getScore,
       set: setScore,
+      setTeam: setTeam,
       all: getAll,
       clear: clearScore
     };

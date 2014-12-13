@@ -140,7 +140,7 @@ angular.module('phraseApp')
         }
       };
 
-    function getSetting( key ) {
+    function getSetting(key) {
       // If no setting is stored yet ...
       if (localStorageService.get(key) === null) {
         // Store the first item in localStorage
@@ -152,11 +152,11 @@ angular.module('phraseApp')
       }
     }
 
-    function getCache ( cacheKey ) {
+    function getCache (cacheKey) {
       return localStorageService.get(cacheKey);
     }
 
-    function setCache ( cacheKey ) {
+    function setCache (cacheKey) {
       // Current date, date in milliseconds, one day in milliseconds, cache key
       // Grab data from local storage and parse into integer. If no date is
       // stored yet, default it to zero so we store it.
@@ -173,7 +173,7 @@ angular.module('phraseApp')
       }
     }
 
-    function setSetting( key, value ) {
+    function setSetting(key, value) {
       // Save our setting into localstorage
       localStorageService.add(key, value);
 
@@ -186,7 +186,7 @@ angular.module('phraseApp')
       }
     }
 
-    function getOptions( key ) {
+    function getOptions(key) {
       return CONFIG[key].options;
     }
 

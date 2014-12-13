@@ -1,25 +1,29 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('MainCtrl', function ($rootScope, $scope, $location, $storekit, settings, page, score) {
+  .controller('MainCtrl', function ($rootScope, $scope, $location, settings, page, score) {
     $rootScope.pageName = page.get();
 
     $scope.teams = score.all();
-    $scope.continueGame = false;
+    $rootScope.continueGame = false;
 
     $scope.newGame = function() {
-      score.clear();
-      $location.path('/play');
+      // Clear current scores and team info for a brand new game
+      score.clear(true);
+
+      $location.path('/start');
     };
 
-    // Watch for score changes
-    // If our score is above zero, let's show the continue game button
+    // Watch for scope changes
+    // If our score is above zero or the user has created a team name, let's show the continue game button
     $scope.$watch(function () {
-      var totalScore = parseInt($scope.teams[0].score) + parseInt($scope.teams[1].score);
-      if (totalScore > 0) {
-        $scope.continueGame = true;
+      var totalScore = parseInt($scope.teams[0].score) + parseInt($scope.teams[1].score),
+          hasTeamNames = $scope.teams[0].name && $scope.teams[1].name;
+
+      if (totalScore > 0 || hasTeamNames !== '') {
+        $rootScope.continueGame = true;
       } else {
-        $scope.continueGame = false;
+        $rootScope.continueGame = false;
       }
     });
 

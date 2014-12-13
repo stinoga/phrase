@@ -5,13 +5,11 @@
     padding-left: 1.4rem;
     font-size: 2rem;
     line-height: 1.9rem;
-
-    @include breakpoint($bp-500) {
-      padding-left: 1rem;
-      line-height: 5.9rem;
-      float: left;
-      width: 15%;
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: .35rem;
+    margin-bottom: 0;
   }
 }
 
@@ -24,12 +22,6 @@
 .bar_wrap {
   background-color: $c-header;
   margin: .5rem 0 1.5rem;
-
-  @include breakpoint($bp-500) {
-    float: right;
-    width: 85%;
-    margin-top: 1.5rem;
-  }
 }
 
 .bar {

@@ -5,8 +5,10 @@
 // Colors
 $c-text: #333;
 $c-header: #f3f3f3;
+$c-header-dark: darken($c-header, 20%);;
 $c-text-subtle: lighten($c-text, 10%);
 $c-text-subtler: lighten($c-text, 30%);
+$c-text-subtlest: lighten($c-text, 50%);
 
 $c-link: #3CF;
 $c-link-hover: lighten($c-link, 10%);

@@ -24,7 +24,12 @@
     opacity: .8;
   }
 
-  h2 {
+  h2,
+  h3 {
     color: $c-background;
+  }
+
+  h2 {
+    margin-bottom: 3.4rem;
   }
 }
