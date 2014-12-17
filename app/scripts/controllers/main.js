@@ -11,7 +11,7 @@ angular.module('phraseApp')
       // Clear current scores and team info for a brand new game
       score.clear(true);
 
-      $location.path('/start');
+      $rootScope.go('/start');
     };
 
     // Watch for scope changes

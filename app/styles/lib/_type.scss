@@ -23,64 +23,38 @@
     margin-left: -5.8rem;
   }
 
-  &.tutorial-active {
-    z-index: 1000;
-
-    a {
-      transition: all 0.3s ease-out;
-      color: $c-text;
-      background: $c-background;
-
-      &:before {
-        border-top-color: $c-background;
-      }
-
-      &.ng-click-active {
-        border: none;
-        background-color: $c-background;
-        color: $c-text;
-        padding: 0 1.5rem;
-        line-height: 3.9rem;
-      }
-    }
-  }
-
-  a {
-    color: $c-header;
-    background: $c-text;
+  a.bubble {
     padding: 0 1.5rem;
     font-size: 1.5rem;
     line-height: 3.9rem;
-    text-align: center;
-    vertical-align: top;
-    border-radius: 3rem;
     display: block;
 
     &:before,
     &:after {
-      border: .5rem solid transparent;
-      width: 0;
-      height: 0;
+      border-width: .5rem;
       left: 2rem;
-      content: '';
-      position: absolute;
-    }
-
-    &:before {
-      border-top-color: $c-text;
-      top: 3.84rem;
     }
 
     &:after {
-      top: 3.5rem;
+      top: 100%;
+      margin-top: -.13rem;
     }
 
     &.ng-click-active {
       border: .25rem solid $c-text;
       background-color: $c-background;
       color: $c-text;
-      line-height: 3.45rem;
+      line-height: 3.4rem;
       padding: 0 1.25rem;
+
+      &:before,
+      &:after {
+        left: 1.75rem;
+      }
+
+      &:before {
+        margin-top: .27rem;
+      }
 
       &:after {
         border-top-color: $c-background;

@@ -15,9 +15,6 @@ angular.module('phraseApp')
     });
 
     $scope.logoPath = function () {
-      // Only link the log if the tutorial is disabled
-      if (!$rootScope.tutorial) {
-        $rootScope.go($scope.logoLink);
-      }
+      $rootScope.go($scope.logoLink);
     }
   });

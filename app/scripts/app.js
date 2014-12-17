@@ -52,6 +52,22 @@ angular.module('phraseApp', [
         templateUrl: 'views/thanks.html',
         controller: 'ThanksCtrl'
       })
+      .when('/tutorial/1', {
+        templateUrl: 'views/tutorial-1.html',
+        controller: 'TutorialCtrl'
+      })
+      .when('/tutorial/2', {
+        templateUrl: 'views/tutorial-2.html',
+        controller: 'TutorialCtrl'
+      })
+      .when('/tutorial/3', {
+        templateUrl: 'views/tutorial-3.html',
+        controller: 'TutorialCtrl'
+      })
+      .when('/tutorial/4', {
+        templateUrl: 'views/tutorial-4.html',
+        controller: 'TutorialCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -73,9 +89,11 @@ angular.module('phraseApp', [
       smoothScroll.animateScroll( null, '#container' );
     };
 
-    $timeout(function () {
-      $rootScope.tutorial = false;
-    }, 700);
+    $rootScope.tutorial = true;
+
+    if ($rootScope.tutorial) {
+      // $rootScope.go('/tutorial/1');
+    }
 
     // Set our ios version, skin, and previous game status on load
     $rootScope.iosVersion = false;

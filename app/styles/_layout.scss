@@ -47,12 +47,20 @@
   margin-top: 1.5rem;
 }
 
-.l-bottom-1 {
-  margin-bottom: 1rem;
-}
-
 .l-top-15 {
   margin-top: 1.5rem;
+}
+
+.l-top-25 {
+  margin-top: 2.5rem;
+}
+
+.l-top-3 {
+  margin-top: 3rem;
+}
+
+.l-bottom-1 {
+  margin-bottom: 1rem;
 }
 
 .l-bottom-15 {
@@ -75,6 +83,20 @@
 .l-center-btn {
   margin: 0 auto 1.5rem;
   max-width: 23rem;
+}
+
+// Color =======================================================================
+
+.l-text-light {
+  color: $c-text-subtle;
+}
+
+.l-text-lighter {
+  color: $c-text-subtler;
+}
+
+.l-text-lightest {
+  color: $c-text-subtlest;
 }
 
 // state =======================================================================

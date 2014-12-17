@@ -27,7 +27,7 @@ angular.module('phraseApp')
 
         // Set a default team name if null
         if (!/\S/.test(teamName)) {
-          finalName = 'Team ' + key;
+          finalName = 'Team ' + (key + 1);
         }
 
         score.setTeam(key + 1, finalName);

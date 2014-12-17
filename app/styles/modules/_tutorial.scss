@@ -1,35 +1,66 @@
-.tutorial {
-  position: absolute;
-  background: transparentize($c-text, .2);
-  color: $c-background;
-  z-index: 1000;
+.tutorial h2 {
   text-align: center;
-  padding-top: 7.2rem;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
+  margin: 2rem 0;
+}
 
-  &.ng-enter {
-    opacity: 0;
-    transition: all .3s ease-out;
+.circle-container {
+  margin: 0 auto;
+  top: -6rem;
+  @include putOnCircle(6, 24rem, 5rem);
+
+  text {
+    fill: $c-link;
   }
 
-  &.ng-enter-active {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: .8;
+  li:nth-child(2n+2) text {
+    fill: $c-highlight;
+  }
+}
+
+.tutorial-directions {
+  font-weight: bold;
+  list-style: disc;
+
+  > li {
+    margin-bottom: 1rem;
+  }
+}
+
+.step1-directions {
+  position: relative;
+  top: 10.8rem;
+  left: 1rem;
+  margin: 0 auto;
+  width: 13rem;
+}
+
+.step2-directions {
+  width: 50%;
+  padding-left: 1.2rem;
+  float: left;
+  padding-right: 1rem;
+}
+
+.step2-face {
+  width: 50%;
+  float: right;
+  position: relative;
+
+  > .bubble {
+    position: absolute;
+    top: -4rem;
+    left: 32%;
   }
 
-  h2,
-  h3 {
-    color: $c-background;
-  }
+  > svg {
+    width: 36%;
+    position: relative;
+    top: -3rem;
+    max-height: 6rem;
+    margin-left: 10%;
 
-  h2 {
-    margin-bottom: 3.4rem;
+    &:nth-child(2) {
+      margin-left: 0;
+    }
   }
 }

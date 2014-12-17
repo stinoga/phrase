@@ -4,8 +4,9 @@
 // Normalize the default browser styles
 @import "lib/normalize";
 
-// Site Variables
-@import "lib/variables";
+// Site Variables and mixins
+@import "lib/variables",
+        "lib/mixins";
 
 // Setup our custom awesome type
 @import "lib/type";
@@ -19,6 +20,8 @@
 // Module styles are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
 @import "modules/buttons",
         "modules/forms",
+        "modules/svg",
+        "modules/bubble",
         "modules/header",
         "modules/play",
         "modules/score",
