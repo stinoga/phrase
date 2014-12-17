@@ -1,0 +1,32 @@
+.bubble {
+  color: $c-header;
+  background: $c-text;
+  padding: 0 1.1rem;
+  font-size: .8rem;
+  line-height: 2.7rem;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 3rem;
+  display: inline-block;
+  position: relative;
+
+  &:before,
+  &:after {
+    border: .3rem solid transparent;
+    width: 0;
+    height: 0;
+    left: 1.5rem;
+    content: '';
+    position: absolute;
+  }
+
+  &:before {
+    border-top-color: $c-text;
+    top: 100%;
+  }
+
+  &:after {
+    top: 100%;
+    margin-top: -.34rem;
+  }
+}

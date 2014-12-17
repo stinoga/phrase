@@ -1,0 +1,25 @@
+.svg {
+  font-size: 2.8rem;
+
+  @include breakpoint($bp-600) {
+    font-size: 1.6rem;
+  }
+
+  text {
+    fill: lighten($c-text, 30%);
+  }
+
+  g {
+    fill: $c-text;
+  }
+}
+
+.svg--white {
+  text {
+    fill: darken($c-background, 30%);
+  }
+
+  g {
+    fill: $c-background;
+  }
+}
