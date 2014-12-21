@@ -16,7 +16,7 @@ angular.module('phraseApp')
 
     $timeout(function() {
       $scope.focusForm = !$rootScope.continueGame;
-    }, 500);
+    }, 600);
 
     // Get current categories so we can change between rounds
     $scope.Categories = settings.options('Category');

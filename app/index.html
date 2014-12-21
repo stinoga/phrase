@@ -31,6 +31,7 @@
       </header>
       <!-- Placeholder for views -->
       <div id="main" class="main view_{{pageName}} slide" ng-view></div>
+      <ph-tutorial-button ng-class="{'tutorial_next_container--on': pageName === 'tutorial'}"></ph-tutorial-button>
     </div>
 
     <script src="phonegap.js"></script>
@@ -88,6 +89,7 @@
         <script src="scripts/directives/focus.js"></script>
         <script src="scripts/directives/face.js"></script>
         <script src="scripts/controllers/tutorial.js"></script>
+        <script src="scripts/directives/phtutorialbutton.js"></script>
         <!-- endbuild -->
 </body>
 </html>

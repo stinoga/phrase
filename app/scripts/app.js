@@ -52,20 +52,8 @@ angular.module('phraseApp', [
         templateUrl: 'views/thanks.html',
         controller: 'ThanksCtrl'
       })
-      .when('/tutorial/1', {
-        templateUrl: 'views/tutorial-1.html',
-        controller: 'TutorialCtrl'
-      })
-      .when('/tutorial/2', {
-        templateUrl: 'views/tutorial-2.html',
-        controller: 'TutorialCtrl'
-      })
-      .when('/tutorial/3', {
-        templateUrl: 'views/tutorial-3.html',
-        controller: 'TutorialCtrl'
-      })
-      .when('/tutorial/4', {
-        templateUrl: 'views/tutorial-4.html',
+      .when('/tutorial/:page', {
+        templateUrl: 'views/tutorial.html',
         controller: 'TutorialCtrl'
       })
       .otherwise({

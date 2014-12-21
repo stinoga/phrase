@@ -30,3 +30,11 @@
     margin-top: -.34rem;
   }
 }
+
+.bubble--left {
+  &:before,
+  &:after {
+    right: 1.5rem;
+    left: auto;
+  }
+}

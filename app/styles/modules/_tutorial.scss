@@ -1,66 +1,169 @@
-.tutorial h2 {
+.tutorial {
   text-align: center;
+}
+
+.tutorial h2 {
   margin: 2rem 0;
 }
 
 .circle-container {
   margin: 0 auto;
-  top: -6rem;
-  @include putOnCircle(6, 24rem, 5rem);
-
-  text {
-    fill: $c-link;
-  }
-
-  li:nth-child(2n+2) text {
-    fill: $c-highlight;
-  }
+  @include putOnCircle(6, 12rem, 5rem);
 }
 
 .tutorial-directions {
   font-weight: bold;
   list-style: disc;
+  width: 50%;
+  padding-left: 1.2rem;
+  float: left;
+  padding-right: 1rem;
 
   > li {
     margin-bottom: 1rem;
   }
 }
 
-.step1-directions {
-  position: relative;
-  top: 10.8rem;
-  left: 1rem;
-  margin: 0 auto;
-  width: 13rem;
-}
+.step1-face {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
 
-.step2-directions {
-  width: 50%;
-  padding-left: 1.2rem;
-  float: left;
-  padding-right: 1rem;
+  li {
+    float: left;
+    width: 16.666666667%;
+  }
 }
 
 .step2-face {
-  width: 50%;
-  float: right;
+  margin: 2rem 0 5rem;
+}
+
+.step3-face {
+  margin: 0 auto;
   position: relative;
+
+  > svg {
+    width: 24%;
+  }
 
   > .bubble {
     position: absolute;
-    top: -4rem;
-    left: 32%;
+    top: 0;
+    left: 54%;
   }
+}
+
+.tutorial-4 {
+  > .word {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.step4-face {
+  margin: 0 auto;
+  position: relative;
 
   > svg {
-    width: 36%;
-    position: relative;
-    top: -3rem;
-    max-height: 6rem;
-    margin-left: 10%;
+    width: 24%;
+  }
+
+  > .bubble {
+    position: absolute;
+  }
+
+  > .bubble1 {
+    top: 2rem;
+    left: 62%;
+  }
+
+  > .bubble2 {
+    top: -2rem;
+    left: 44%;
+  }
+
+  > .bubble3 {
+    top: 2rem;
+    right: 62%;
+  }
+}
+
+.step5-face {
+  margin: 1rem 0 2rem;
+
+  > svg {
+    width: 24%;
 
     &:nth-child(2) {
-      margin-left: 0;
+      margin-left: 2rem;
     }
   }
+}
+
+.step6-face {
+  margin: 1rem 0 2rem;
+
+  > svg {
+    width: 24%;
+
+    &:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+
+  > .bubble {
+    position: absolute;
+    top: 1rem;
+  }
+
+  > .bubble1 {
+    left: 70%;
+  }
+
+  > .bubble2 {
+    left: 43%;
+  }
+}
+
+.step7-face {
+  margin: 0 auto;
+  position: relative;
+
+  > svg {
+    width: 24%;
+
+    &:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+
+  > span {
+    position: absolute;
+    font-size: 2rem;
+    right: 19%;
+    color: $c-link;
+  }
+}
+
+.step8-face {
+  margin: 0 auto;
+  position: relative;
+
+  > svg {
+    width: 24%;
+  }
+}
+
+.tutorial_next_container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1.5rem;
+  transform: translateY(100%);
+  transition: all .3s ease-out;
+}
+
+.tutorial_next_container--on {
+  transform: translateY(0);
 }

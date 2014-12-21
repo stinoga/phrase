@@ -1,0 +1,78 @@
+<div class="content" ng-switch on="page">
+  <section ng-switch-when="1" class="tutorial tutorial-{{page}} cf">
+    <h2>First time?</h2>
+    <ul class="step1-face cf">
+      <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+      <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+      <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+      <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+      <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+      <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+    </ul>
+    <p>Find some friends and split into two teams.</p>
+  </section>
+  <section ng-switch-when="2" class="tutorial tutorial-{{page}} cf">
+    <div class="step2-face">
+      <ul class="circle-container">
+        <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+        <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+        <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+        <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+        <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
+        <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
+      </ul>
+    </div>
+    <p>Alternate players in a circle.</p>
+  </section>
+  <section ng-switch-when="3" class="tutorial tutorial-{{page}} cf">
+    <div class="word">Rickroll</div>
+    <div class="step3-face">
+      <face class="svg" face-type="playerFace" face-text="1"></face>
+      <div class="bubble">Musician Astley...</div>
+    </div>
+    <p>Describe the phrase to your team.</p>
+  </section>
+  <section ng-switch-when="4" class="tutorial tutorial-{{page}} cf">
+    <div class="word">Rickroll</div>
+    <div class="step4-face">
+      <face class="svg" face-type="sadFace" face-text="1"></face>
+      <div class="bubble bubble1">Rick Astley</div>
+      <div class="bubble bubble2">Name rhymes with stick</div>
+      <div class="bubble bubble--left bubble3">First letter is...</div>
+    </div>
+    <p>Say any of these and you lose the round.</p>
+  </section>
+  <section ng-switch-when="5" class="tutorial tutorial-{{page}} cf">
+    <div class="step5-face">
+      <face class="svg" face-type="happyFace" face-text="1"></face>
+      <face class="svg" face-type="playerFace" face-text="2"></face>
+    </div>
+    <p>If your team guesses right, pass the game.</p>
+  </section>
+  <section ng-switch-when="6" class="tutorial tutorial-{{page}} cf">
+    <div class="step6-face">
+      <face class="svg" face-type="happyFace" face-text="1"></face>
+      <face class="svg" face-type="playerFace" face-text="2"></face>
+      <div class="bubble bubble1">Ninja Turtles</div>
+      <div class="bubble bubble2">Shredder</div>
+    </div>
+    <p>Don't know a phrase?</p>
+    <p>Skip it, but now you have to describe two.</p>
+  </section>
+  <section ng-switch-when="7" class="tutorial tutorial-{{page}} cf">
+    <div class="timer terrify">0</div>
+    <div class="step7-face">
+      <face class="svg" face-type="sadFace" face-text="2"></face>
+      <face class="svg" face-type="happyFace" face-text="1"></face>
+      <span>+1</span>
+    </div>
+    <p>When time runs out, the team without the game scores.</p>
+  </section>
+  <section ng-switch-when="8" class="tutorial tutorial-{{page}} cf">
+    <div class="step8-face">
+      <face class="svg" face-type="winFace" face-text="1"></face>
+    </div>
+    <p>First to seven wins!</p>
+    <p>These are the basic rules. Head to the <a ng-click="go('/rules')">rules page</a> for full rules and game variations.</p>
+  </section>
+</div>

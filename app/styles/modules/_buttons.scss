@@ -7,6 +7,8 @@
   display: block;
   color: $c-header;
   margin-bottom: 1.5rem;
+  overflow: hidden;
+  height: 4rem;
 
   &.question_inner {
     font-size: .75rem;
@@ -41,6 +43,19 @@
       line-height: 3.5rem;
     }
   }
+}
+
+.btn_text {
+  transition: transform .25s ease-out;
+  transform: translateY(0);
+}
+
+.btn_text--bottom {
+  transform: translateY(100%);
+}
+
+.btn_text--top {
+  transform: translateY(-100%);
 }
 
 .question {
