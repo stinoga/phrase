@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('MainCtrl', function ($rootScope, $scope, $location, settings, page, score) {
+  .controller('MainCtrl', function ($rootScope, $scope, $location, settings, page, score, localStorageService) {
     $rootScope.pageName = page.get();
 
     $scope.teams = score.all();
@@ -10,6 +10,7 @@ angular.module('phraseApp')
     $scope.newGame = function() {
       // Clear current scores and team info for a brand new game
       score.clear(true);
+      localStorageService.remove('superlatives');
 
       $rootScope.go('/start');
     };

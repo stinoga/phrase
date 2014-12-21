@@ -7,8 +7,6 @@
   display: block;
   color: $c-header;
   margin-bottom: 1.5rem;
-  overflow: hidden;
-  height: 4rem;
 
   &.question_inner {
     font-size: .75rem;
@@ -43,6 +41,11 @@
       line-height: 3.5rem;
     }
   }
+}
+
+.btn--no-overflow {
+  overflow: hidden;
+  height: 4rem;
 }
 
 .btn_text {

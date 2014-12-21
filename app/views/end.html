@@ -5,5 +5,16 @@
       <span ng-repeat="team in teams | orderBy:'winner':true" class="win_score">{{team.score}}{{$index === 0 ? ' - ' : ''}}</span>
     </h3>
   </div>
-  <a ng-click="go('/start')" class="btn spacer">Another Round?</a>
+  <div ng-repeat="(key, superlative) in superlatives" class="stats_wrapper">
+    <h3 class="stats_header">{{key | sentencecase}} word</h3>
+    <div class="stats_content">
+      <table>
+        <tr>
+          <td class="stats_table_name">{{superlative.name}}</td>
+          <td class="l-text-right stats_table_time">{{superlative.time}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <a ng-click="newGame()" class="btn spacer">Another Round?</a>
 </div>

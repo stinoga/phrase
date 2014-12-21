@@ -15,8 +15,27 @@
 
 .win_score {
   font-size: 8rem;
+  margin-bottom: 1rem;
 
   @include breakpoint($bp-600) {
     font-size: 4rem;
   }
+}
+
+.stats_wrapper {
+  margin: 0 -1.5rem 2rem;
+}
+
+.content div.stats_wrapper:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.stats_header {
+  padding-left: 2.25rem;
+}
+
+.stats_content {
+  background-color: $c-header;
+  width: 100%;
+  padding: 1.5rem 2.25rem;
 }

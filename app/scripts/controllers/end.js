@@ -5,4 +5,13 @@ angular.module('phraseApp')
     $rootScope.pageName = page.get();
 
     $scope.teams = localStorageService.get('last_game');
+    $scope.superlatives = localStorageService.get('superlatives');
+
+    $scope.newGame = function() {
+      // Clear current scores and team info for a brand new game
+      score.clear();
+      localStorageService.remove('superlatives');
+
+      $rootScope.go('/start');
+    };
   });
