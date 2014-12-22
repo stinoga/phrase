@@ -23,3 +23,15 @@
     fill: $c-background;
   }
 }
+
+.svg_chrome{
+  fill: darken($c-background, 20%);
+}
+
+.svg_device{
+  fill: $c-text;
+}
+
+.svg_button{
+  fill: $c-link;
+}
