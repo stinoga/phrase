@@ -1,6 +1,7 @@
 <div class="content">
   <div ng-hide="timer.audible == 'Audible'" ng-class="timer.urgency" ng-bind-template="{{timer.seconds}}" class="timer"></div>
-  <div class="word">{{word}}</div>
+  <div class="word word--previous" ng-class="{'word--fade': wordShow}">{{previousWord}}</div>
+  <div class="word" ng-class="{'word--transition': wordTransition, 'word--on': wordShow}">{{word}}</div>
   <div class="next_container">
     <a ng-click="next()" class="next btn">Next</a>
   </div>

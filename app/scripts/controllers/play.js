@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('PlayCtrl', function ($rootScope, $scope, $location, words, timer, page) {
+  .controller('PlayCtrl', function ($rootScope, $scope, $location, $timeout, words, timer, page) {
     $rootScope.pageName = page.get();
+
+    var nextCount = 0;
 
     $rootScope.$broadcast('in-game');
 
@@ -26,8 +28,25 @@ angular.module('phraseApp')
     $scope.reset();
 
     $scope.next = function() {
+      $scope.wordShow = false;
+
+      // Only transition in a word if it's not the first one
+      if (nextCount !== 0) {
+        $scope.wordTransition = true;
+      }
+
+      $scope.previousWord = $scope.word;
+
+      nextCount++;
+
       words.get(function( word ) {
         $scope.word = word;
+
+        // Animate in words on a short timeout to avoid stepping on the
+        // toes of the wordTransition var
+        $timeout(function() {
+          $scope.wordShow = true;
+        }, 10);
       });
     };
 

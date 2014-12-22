@@ -68,8 +68,8 @@ nav.active {
   }
 
   &.ng-click-active:before {
-    background: $c-text-subtle;
-    box-shadow: 0 .75rem 0 0 $c-text-subtle, 0 1.5rem 0 0 $c-text-subtle;
+    background: $c-link;
+    box-shadow: 0 .75rem 0 0 $c-link, 0 1.5rem 0 0 $c-link;
   }
 
   &.nav-hidden {

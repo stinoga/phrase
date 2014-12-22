@@ -47,6 +47,10 @@
   font-size: 3rem;
   cursor: pointer;
   padding: .1rem 1.1rem .2rem 1rem;
+
+  &.ng-click-active {
+    color: $c-link;
+  }
 }
 
 .page_score_btn {

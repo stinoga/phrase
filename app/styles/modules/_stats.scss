@@ -17,17 +17,27 @@
   }
 }
 
+.stats_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
 .stats_table_name_header {
   padding-left: 2.25rem;
 }
 
 .stats_table_name {
-  width: 100%;
+  width: 81%;
+
+  .btn.question_inner {
+    margin: 0;
+  }
 }
 
 .stats_table_time,
 .stats_table_time_header {
   padding-right: 2.25rem;
+  width: 19%;
 }
 
 .stats_table_time_header a {
@@ -39,6 +49,10 @@
   display: inline-block;
   padding: 1rem 1rem 1rem 2.25rem;
   color: $c-text;
+  max-width: 89%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .glyph_icon {

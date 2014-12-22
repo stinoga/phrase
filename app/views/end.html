@@ -8,10 +8,10 @@
   <div ng-repeat="(key, superlative) in superlatives" class="stats_wrapper">
     <h3 class="stats_header">{{key | sentencecase}} word</h3>
     <div class="stats_content">
-      <table>
+      <table class="stats_table">
         <tr>
           <td class="stats_table_name">{{superlative.name}}</td>
-          <td class="l-text-right stats_table_time">{{superlative.time}}</td>
+          <td class="l-text-right stats_table_time">{{superlative.time}}s</td>
         </tr>
       </table>
     </div>

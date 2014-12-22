@@ -161,9 +161,11 @@
   width: 100%;
   padding: 0 1.5rem;
   transform: translateY(100%);
-  transition: all .3s ease-out;
+  transition: transform .3s ease-out;
+  visibility: hidden;
 }
 
 .tutorial_next_container--on {
   transform: translateY(0);
+  visibility: visible;
 }
