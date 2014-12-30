@@ -1,0 +1,33 @@
+.slide.view_rules1,
+.slide.view_rules2 {
+  top: 8.5rem;
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+}
+
+.container.active {
+  .slide.view_rules1,
+  .slide.view_rules2 {
+    top: 12rem;
+  }
+}
+
+.rules_nav {
+  margin-top: .6rem;
+  transform: translateX(100%);
+  transition: transform .3s ease-out;
+
+  a {
+    margin-right: .5rem;
+
+    &:first-child {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.rules_nav--on {
+  transform: translateX(0);
+}

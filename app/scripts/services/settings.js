@@ -57,6 +57,16 @@ angular.module('phraseApp')
               'id': 9,
               'name': 'History',
               'live': false
+            },
+            {
+              'id': 10,
+              'name': 'Food',
+              'live': false
+            },
+            {
+              'id': 11,
+              'name': 'General',
+              'live': false
             }
           ]
         },

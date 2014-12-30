@@ -1,12 +1,11 @@
-<div class="content">
-  <section class="rules">
-    <a ng-click="go('/tutorial/1')">Tutorial</a>
-    <h2>Basic Rules</h2>
+<div class="content" ng-switch on="page">
+  <section ng-switch-when="1" class="rules">
     <p>The game is played in two teams. The goal for each player is to get their team to say the word or phrase displayed. One member of a team starts the timer and tries to get his or her team to guess the displayed word or phrase.</p>
     <p>A clue-giver can make any physical gesture and give almost any verbal clue, but may not say a word that rhymes with any of the words, give the first letter of a word, say the number of syllables, or say part of any word in the clue (e.g., "worry" for "worry wart"). The one exception is when a team guesses one word in the phrase. In the above example, if the team guessed that the first word was worry, then the clue-giver can now use that word in the clue.</p>
     <p>If a player decides a phrase is too hard, they may skip it, however they must now act out two words for their team to guess before handing the device. This continues if they skip more (e.g. two skips means three words to act out).</p>
     <p>When the team guesses correctly, the other team takes its turn. The clue giver passes the device on to the next person. Play continues until the timer runs out. The team not holding the disc when time runs out scores a point. The first team to score 7 points wins.</p>
-    <h2>Variations</h2>
+  </section>
+  <section ng-switch-when="2" class="rules">
     <h3>Family Feud</h3>
     <p>Once the round is over, The team not holding the disc has one chance to guess the word or phrase, with team members allowed to confer; a correct answer earns a bonus point, giving that team a total of two points for the round.</p>
     <h3>Weakest Link</h3>
