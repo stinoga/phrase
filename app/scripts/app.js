@@ -24,7 +24,7 @@ angular.module('phraseApp', [
         templateUrl: 'views/play.html',
         controller: 'PlayCtrl'
       })
-      .when('/rules', {
+      .when('/rules/:page', {
         templateUrl: 'views/rules.html',
         controller: 'RulesCtrl'
       })

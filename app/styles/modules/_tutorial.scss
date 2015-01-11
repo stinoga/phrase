@@ -43,14 +43,19 @@
   margin: 0 auto;
   position: relative;
 
-  > svg {
+  > .svg {
     width: 24%;
   }
 
   > .bubble {
     position: absolute;
-    top: 0;
-    left: 54%;
+    top: -.5rem;
+    left: 56%;
+  }
+
+  > .device {
+    width: 7%;
+    transform: rotate(-17deg);
   }
 }
 
@@ -83,8 +88,8 @@
   }
 
   > .bubble3 {
-    top: 2rem;
-    right: 62%;
+    top: 1rem;
+    right: 60%;
   }
 }
 
@@ -93,10 +98,13 @@
 
   > svg {
     width: 24%;
+  }
 
-    &:nth-child(2) {
-      margin-left: 2rem;
-    }
+  > .device {
+    width: 7%;
+    transform: rotate(17deg);
+    position: relative;
+    left: -5%;
   }
 }
 
@@ -105,10 +113,6 @@
 
   > svg {
     width: 24%;
-
-    &:nth-child(2) {
-      margin-left: 2rem;
-    }
   }
 
   > .bubble {
@@ -131,10 +135,13 @@
 
   > svg {
     width: 24%;
+  }
 
-    &:nth-child(2) {
-      margin-left: 2rem;
-    }
+  > .device {
+    width: 7%;
+    transform: rotate(17deg);
+    position: relative;
+    left: -5%;
   }
 
   > span {

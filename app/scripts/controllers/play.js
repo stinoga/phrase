@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .controller('PlayCtrl', function ($rootScope, $scope, $location, $timeout, words, timer, page) {
+  .controller('PlayCtrl', function ($rootScope, $scope, $location, $timeout, words, timer, page, sound) {
     $rootScope.pageName = page.get();
 
     var nextCount = 0;
@@ -28,6 +28,8 @@ angular.module('phraseApp')
     $scope.reset();
 
     $scope.next = function() {
+      sound.play('whoosh');
+
       $scope.wordShow = false;
 
       // Only transition in a word if it's not the first one

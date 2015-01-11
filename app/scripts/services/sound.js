@@ -17,7 +17,7 @@ angular.module('PhoneGap')
         // let's load new media using PhoneGap
         if (myMedia === null || srcCache !== src) {
           // Create Media object from src
-          myMedia = new Media(decodeURI(mediaPath + src + '.mp3'), onSuccess, onError);
+          myMedia = new Media(decodeURI(mediaPath + src + '.aac'), onSuccess, onError);
         }
 
         // Cache our file so we don't call for media again
