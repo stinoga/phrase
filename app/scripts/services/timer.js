@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('phraseApp')
-  .factory('timer', function ( $timeout, $filter, $window, settings, sound ) {
+  .factory('timer', function ( $timeout, $filter, $window, settings, sound, lowLatencyAudio ) {
 
     function timerSetting() {
       return settings.get('Timer').name;
@@ -83,7 +83,7 @@ angular.module('phraseApp')
 
       if ((this.audible !== 'Visual') && shouldBeep(this.progress, this._lastBeep, millisecondsSince)) {
         this._lastBeep = millisecondsSince;
-        sound.play('beep');
+        lowLatencyAudio.play('beep');
       }
     };
 
@@ -111,7 +111,7 @@ angular.module('phraseApp')
           if (timer.audible !== 'Visual') {
             // Stop any sound currently running, it's buzzer time
             sound.stop();
-            sound.play('buzzer');
+            lowLatencyAudio.play('buzzer');
           }
 
         } else {

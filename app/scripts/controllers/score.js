@@ -47,8 +47,6 @@ angular.module('phraseApp')
         if (word.time === 999) {
           finalWordTime = $scope.gameTime - totalWordTime;
 
-          console.log(finalWordTime);
-
           if (finalWordTime > $scope.superlatives.slowest.time) {
             $scope.superlatives.slowest.time = finalWordTime;
             $scope.superlatives.slowest.name = word.name;
