@@ -12,8 +12,10 @@ angular.module('phraseApp')
 
       // If we're on the play page, toggle the nav state to off
       $rootScope.$watch('pageName', function () {
-        if ($rootScope.pageName === 'play' && opened === false) {
-          toggle();
+        if ($rootScope.pageName === 'play' || $rootScope.pageName === 'tutorial'  && opened === false) {
+          navigation.className = 'mainNav ng-scope closed';
+          header.className = 'container';
+          opened = true;
         }
       });
 

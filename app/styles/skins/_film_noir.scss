@@ -90,17 +90,15 @@ $c-highlight: #E44A2F;
 
     &.ng-click-active,
     &.invert {
-      border: .25rem solid $c-text;
+      border-color: $c-text;
       background-color: $c-background;
       color: $c-text;
-      line-height: 3.5rem;
     }
 
     &.invert.ng-click-active {
       border: none;
       background-color: $c-text;
       color: $c-background;
-      line-height: 4rem;
     }
 
     &.highlight {
@@ -108,10 +106,9 @@ $c-highlight: #E44A2F;
 
       &.ng-click-active,
       &.invert {
-        border: .25rem solid $c-link;
+        border-color: $c-link;
         background-color: $c-background;
         color: $c-link;
-        line-height: 3.5rem;
       }
     }
   }
@@ -131,5 +128,21 @@ $c-highlight: #E44A2F;
         background-color: $c-link-hover;
       }
     }
+  }
+  
+  .input_border:after {
+    background: $c-text;
+  }
+
+  .svg_button {
+    fill: $c-text;
+  }
+
+  .step7-face > span {
+    color: $c-text;
+  }
+
+  .plus.ng-click-active {
+    color: $c-link-hover;
   }
 }
