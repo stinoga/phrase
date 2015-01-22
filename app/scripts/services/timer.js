@@ -3,6 +3,8 @@
 angular.module('phraseApp')
   .factory('timer', function ( $timeout, $filter, $window, settings, sound, lowLatencyAudio ) {
 
+    lowLatencyAudio.preloadFX('beep');
+
     function timerSetting() {
       return settings.get('Timer').name;
     }
@@ -84,6 +86,7 @@ angular.module('phraseApp')
       if ((this.audible !== 'Visual') && shouldBeep(this.progress, this._lastBeep, millisecondsSince)) {
         this._lastBeep = millisecondsSince;
         lowLatencyAudio.play('beep');
+        // sound.play('beep');
       }
     };
 

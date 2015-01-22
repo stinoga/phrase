@@ -9,7 +9,7 @@ var pluginlist = [
   'https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git',
   'https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git',
   'https://github.com/j3k0/PhoneGap-InAppPurchase-iOS.git',
-  'https://github.com/triceam/LowLatencyAudio'
+  'https://github.com/CloudKidStudio/LowLatencyAudio'
 ];
 
 // no need to configure below

@@ -7,30 +7,38 @@ angular.module('PhoneGap')
     var myMedia = null,
         srcCache,
         systemPath = $window.location.pathname,
-        mediaPath = systemPath.substr( systemPath, systemPath.length - 10 ) + 'audio/';
+        mediaPath = 'audio/';
 
     // Preload effects
     // The preloadFX function loads an audio file into memory.  These are lower-level audio methods and have minimal overhead.
     // These assets should be short (less than 5 seconds). These assets are fully concurrent and polyphonic.
     function preloadFX(src) {
-      PGLowLatencyAudio.preloadFX(src, decodeURI(mediaPath + src + '.aac'));
+      LowLatencyAudio.preloadFX(src, decodeURI(mediaPath + src + '.aac'), function () {
+        console.log('PRELOAD FX SUCCESS');
+      }, function () {
+        console.log('FAAAAAAAAIL');
+      });
     }
 
     // Preload audio
     // These have more overhead than assets laoded via preloadFX, and can be looped/stopped.
     function preloadAudio(src) {
-      PGLowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'));
+      LowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'));
     }
 
     // Stop audio
     function stopAudio() {
-      PGLowLatencyAudio.stop(src);
+      LowLatencyAudio.stop(src);
     }
 
     // Play audio
     function playAudio( src ) {
       // Play audio
-      PGLowLatencyAudio.play(src);
+      LowLatencyAudio.play(src, function (int) {
+        console.log('PLAY SUCCESS', int);
+      }, function () {
+        console.log('PLAY FAAAAAAAAIL');
+      });
     }
 
     return {

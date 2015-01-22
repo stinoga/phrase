@@ -60,7 +60,7 @@ angular.module('phraseApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location, $window, $filter, $timeout, $storekit, settings, device, PhoneGap, localStorageService, lowLatencyAudio){
+  .run(function ($rootScope, $location, $window, $filter, $timeout, $storekit, settings, device, PhoneGap, localStorageService, lowLatencyAudio, sound) {
     // Using this location function globally as ngTouch seems to stop
     // href calls from working. We'll call this with ng-click.
     $rootScope.go = function ( path ) {
@@ -104,9 +104,12 @@ angular.module('phraseApp', [
     PhoneGap.ready().then(function () {
       $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;
 
-      lowLatencyAudio.preloadFX('beep');
-      lowLatencyAudio.preloadFX('buzzer');
-
+      // lowLatencyAudio.preloadFX('buzzer');
+      // LowLatencyAudio.setVolume('beep', -1, 9);
+      // $timeout(function () {
+        // lowLatencyAudio.play('beep');
+        // sound.play('beep');
+      // }, 1000);
       $storekit
         .setLogging(true)
         .load(['full_version'])
