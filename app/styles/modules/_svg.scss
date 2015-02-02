@@ -14,6 +14,10 @@
   }
 }
 
+.svg--gray {
+  fill: lighten($c-text, 50%);
+}
+
 .svg--white {
   text {
     fill: darken($c-background, 30%);

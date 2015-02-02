@@ -55,6 +55,11 @@
 .settings_option {
   padding: 0 1.25rem;
   cursor: pointer;
+  position: relative;
+
+  &:first-child > .lock:not(.skin_lock) {
+    right: 3rem;
+  }
 
   &:nth-child(2n + 2) {
     background-color: darken($c-header, 2%);
@@ -76,5 +81,16 @@
 
   &:nth-child(2) {
     margin-right: 0;
+  }
+}
+
+.lock {
+  position: absolute;
+  top: .6rem;
+  right: 1rem;
+  width: 1.5rem;
+
+  &.skin_lock {
+    right: 6.5rem;
   }
 }
