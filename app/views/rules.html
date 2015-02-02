@@ -1,5 +1,5 @@
-<div class="content">
-  <section class="rules">
+<div class="content" ng-switch on="page">
+  <section ng-switch-when="1" class="rules">
     <h2>Basic Rules</h2>
     <p>The game is played in two teams. The goal is for each player to get his or her team to say the word or phrase displayed in the allotted time.</p>
     <p>A clue-giver can make any physical gesture and give almost any verbal clue, but may not say a word that rhymes with any of the words, give the first letter of a word, say the number of syllables, or say part of any word in the clue (e.g., "worry" for "worry wart"). The one exception is after a team has guessed one word in a phrase. In the above example, if the team guessed that the first word was worry, then the clue-giver can now use that word in the clue.</p>
@@ -8,7 +8,8 @@
     <p>A correct answer will count if it has started before the buzzer but ends after it sounds (buzzer beaters).</p>
     <p>If the buzzer sounds during a pass, neither team scores a point. A pass occurs between the time one team guesses a correct phrase to the time the next team begins giving a clue.</p>
     <p>The first team to score seven points wins.</p>
-    <h2>Variations</h2>
+  </section>
+  <section ng-switch-when="2" class="rules">
     <h3>Family Feud</h3>
     <p>Once the round is over, the team not holding the device has one chance to guess the word or phrase, with team members allowed to confer. A correct answer earns a bonus point, giving that team a total of two points for the round.</p>
     <h3>Weakest Link</h3>
