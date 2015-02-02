@@ -91,7 +91,7 @@ angular.module('phraseApp', [
     if (localStorageService.get('full_version')){
       $rootScope.isFull = true;
     } else {
-      $rootScope.isFull = true;
+      $rootScope.isFull = false;
     }
 
     // App messages
@@ -104,12 +104,11 @@ angular.module('phraseApp', [
     PhoneGap.ready().then(function () {
       $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;
 
-      // lowLatencyAudio.preloadFX('buzzer');
-      // LowLatencyAudio.setVolume('beep', -1, 9);
-      // $timeout(function () {
-        // lowLatencyAudio.play('beep');
-        // sound.play('beep');
-      // }, 1000);
+      // Preload audio
+      lowLatencyAudio.preloadFX('beep');
+      lowLatencyAudio.preloadFX('buzzer');
+      lowLatencyAudio.preloadAudio('whoosh');
+
       $storekit
         .setLogging(true)
         .load(['full_version'])

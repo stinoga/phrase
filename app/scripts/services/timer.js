@@ -3,8 +3,6 @@
 angular.module('phraseApp')
   .factory('timer', function ( $timeout, $filter, $window, settings, sound, lowLatencyAudio ) {
 
-    lowLatencyAudio.preloadFX('beep');
-
     function timerSetting() {
       return settings.get('Timer').name;
     }
@@ -113,7 +111,7 @@ angular.module('phraseApp')
 
           if (timer.audible !== 'Visual') {
             // Stop any sound currently running, it's buzzer time
-            sound.stop();
+            // sound.stop();
             lowLatencyAudio.play('buzzer');
           }
 
