@@ -105,8 +105,8 @@ angular.module('phraseApp', [
       $rootScope.iosVersion = (parseFloat($window.device.version) >= 7 && $window.device.platform === 'iOS') ? true : false;
 
       // Preload audio
-      lowLatencyAudio.preloadFX('beep');
-      lowLatencyAudio.preloadFX('buzzer');
+      lowLatencyAudio.preloadAudio('beep');
+      lowLatencyAudio.preloadAudio('buzzer');
       lowLatencyAudio.preloadAudio('whoosh');
 
       $storekit

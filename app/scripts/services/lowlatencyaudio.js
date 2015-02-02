@@ -23,7 +23,7 @@ angular.module('PhoneGap')
     // Preload audio
     // These have more overhead than assets laoded via preloadFX, and can be looped/stopped.
     function preloadAudio(src) {
-      LowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'));
+      LowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'), 1);
     }
 
     // Stop audio
