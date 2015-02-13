@@ -7,7 +7,7 @@ angular.module('phraseApp')
 
     // Update the logo link based on whether we are in-game or not
     $scope.$on('in-game', function (argument) {
-      $scope.logoLink = '/score';
+      $scope.logoLink = '/play';
     });
 
     $scope.$on('exit-game', function (argument) {

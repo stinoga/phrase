@@ -28,6 +28,27 @@
     margin-left: 0;
   }
 
+  &.logo-play a.bubble.ng-click-active {
+    border: none;
+    background-color: $c-text;
+    color: $c-background;
+    padding: 0 1.5rem;
+    line-height: 3.9rem;
+
+    &:before,
+    &:after {
+      left: 2rem;
+    }
+
+    &:before {
+      margin-top: 0;
+    }
+
+    &:after {
+      border: 0;
+    }
+  }
+
   a.bubble {
     padding: 0 1.5rem;
     font-size: 1.5rem;

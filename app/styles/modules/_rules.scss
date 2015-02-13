@@ -16,8 +16,10 @@
 
 .rules_nav {
   margin-top: .6rem;
-  transform: translateX(0);
-  transition: transform .3s ease-out;
+  width: 100%;;
+  position: absolute;
+  left: 0;
+  transition: all .3s ease-out;
 
   a {
     margin-right: .5rem;
@@ -29,17 +31,17 @@
 }
 
 .rules_nav.ng-enter {
-  transform: translateX(100%);
+  left: 100%;
 }
 
 .rules_nav.ng-enter-active {
-  transform: translateX(0);
+  left: 0;
 }
 
 .rules_nav.ng-leave {
-  transform: translateX(0);
+  left: 0;
 }
 
 .rules_nav.ng-leave-active {
-  transform: translateX(-100%);
+  left: -100%;
 }

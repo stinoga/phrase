@@ -94,13 +94,14 @@ angular.module('phraseApp', [
     if (localStorageService.get('full_version')){
       $rootScope.isFull = true;
     } else {
-      $rootScope.isFull = true;
+      $rootScope.isFull = false;
     }
 
     // App messages
     $rootScope.messages = {
       nadaInternet: 'Words? We don\'t need no stinking words!\n\nLooks like your internet is down Dobbs. Try one of our other categories, or get some internets.',
-      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.'
+      nadaSound: 'You talkin\' to me?\n\n Looks like your sound is muted. Might want to turn that on.',
+      purchaseError: 'Oops! Looks like we lost communication with Apple.\n\nTry again.'
     };
 
     // If we're on an ios7 device, set our iosVersion class for specific styles

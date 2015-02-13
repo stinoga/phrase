@@ -26,7 +26,7 @@
         </ul>
       </nav>
       <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
-        <ph-logo page="{{pageName}}" ng-class="{'logo-not-home': pageName !== 'home'}"></ph-logo>
+        <ph-logo page="{{pageName}}" ng-class="{'logo-not-home': pageName !== 'home', 'logo-play': pageName === 'play' || pageName === 'home'}"></ph-logo>
         <ph-nav-icon ng-class="{'nav-hidden': pageName === 'home' || pageName === 'play' || pageName === 'tutorial'}"></ph-nav-icon>
       </header>
       <header class="rules_nav" ng-if="pageName === 'rules1' || pageName === 'rules2'">

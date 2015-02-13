@@ -21,6 +21,7 @@ angular.module('phraseApp')
           // Not currently used
         }, function (error) {
           // An error occured. Show a message to the user
+          alert($rootScope.messages.purchaseError);
         }, function (purchase) {
           if (purchase.productId === 'full_version') {
             // You've got the full version, so we'll store it for later
