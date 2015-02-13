@@ -122,6 +122,7 @@ angular.module('phraseApp')
             {
               'id': 0,
               'name': 'Phrase',
+              'free': true,
               'colors': [
                 '#3CF',
                 '#FFF',
