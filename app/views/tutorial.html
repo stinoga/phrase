@@ -1,6 +1,5 @@
 <div class="content" ng-switch on="page">
   <section ng-switch-when="1" class="tutorial tutorial-{{page}} cf">
-    <h2>First time?</h2>
     <ul class="step1-face cf">
       <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
       <li><face class="svg" face-type="happyFace" face-text="1"></face></li>
@@ -9,6 +8,7 @@
       <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
       <li><face class="svg" face-type="happyFace" face-text="2"></face></li>
     </ul>
+    <h2>First time?</h2>
     <p>Find some friends and split into two teams.</p>
   </section>
   <section ng-switch-when="2" class="tutorial tutorial-{{page}} cf">
@@ -25,50 +25,49 @@
     <p>Alternate players in a circle.</p>
   </section>
   <section ng-switch-when="3" class="tutorial tutorial-{{page}} cf">
-    <div class="word">Rickroll</div>
     <div class="step3-face">
-      <device class="svg device" device-text="Rickroll"></device>
+      <device class="svg device" device-text="Jimmy" device-text-2="Fallon"></device>
       <face class="svg" face-type="playerFace" face-text="1"></face>
-      <div class="bubble">Musician Astley...</div>
+      <div class="bubble">Tonight Show host</div>
     </div>
+    <h2>Jimmy Fallon</h2>
     <p>Describe the phrase to your team.</p>
   </section>
   <section ng-switch-when="4" class="tutorial tutorial-{{page}} cf">
-    <div class="word">Rickroll</div>
     <div class="step4-face">
       <face class="svg" face-type="sadFace" face-text="1"></face>
-      <div class="bubble bubble1">Rick Astley</div>
-      <div class="bubble bubble2">Name rhymes with stick</div>
+      <div class="bubble bubble1">Jimmy</div>
+      <div class="bubble bubble2">Name rhymes with talon</div>
       <div class="bubble bubble--left bubble3">First letter is...</div>
     </div>
+    <h2>Jimmy Fallon</h2>
     <p>Say any of these and you lose the round.</p>
   </section>
   <section ng-switch-when="5" class="tutorial tutorial-{{page}} cf">
     <div class="step5-face">
       <face class="svg" face-type="happyFace" face-text="1"></face>
-      <device class="svg device" device-text="Rickroll"></device>
+      <device class="svg device" device-text="Jimmy" device-text-2="Fallon"></device>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
       <face class="svg" face-type="playerFace" face-text="2"></face>
     </div>
     <p>If your team guesses right, pass the game.</p>
   </section>
   <section ng-switch-when="6" class="tutorial tutorial-{{page}} cf">
     <div class="step6-face">
-      <device class="svg device" device-text="Renaissance"></device>
-      <!-- <face class="svg" face-type="happyFace" face-text="1"></face>
-      <face class="svg" face-type="playerFace" face-text="2"></face> -->
-      <!-- <div class="bubble bubble1">Ninja Turtles</div>
-      <div class="bubble bubble2">Shredder</div> -->
+      <device class="svg device" device-text="??????"></device>
     </div>
-    <p>Don't know a phrase?</p>
+    <h2>Don't know a phrase?</h2>
     <p>Skip it, but now you have to describe two.</p>
   </section>
   <section ng-switch-when="7" class="tutorial tutorial-{{page}} cf">
-    <div class="timer terrify">0</div>
+    <div class="timer terrify">{{timeLeft}}</div>
     <div class="step7-face">
       <face class="svg" face-type="sadFace" face-text="2"></face>
-      <device class="svg device" device-text=":P"></device>
+      <device class="svg device" device-text="poop"></device>
       <face class="svg" face-type="happyFace" face-text="1"></face>
-      <span>+1</span>
+      <span class="plus-one">+1</span>
     </div>
     <p>When time runs out, the team without the game scores.</p>
   </section>
@@ -76,7 +75,7 @@
     <div class="step8-face">
       <face class="svg" face-type="winFace" face-text="1"></face>
     </div>
-    <p>First to seven wins!</p>
+    <h2>First to seven wins!</h2>
     <p>These are the basic rules. Head to the <a ng-click="go('/rules/1')">rules page</a> for full rules and game variations.</p>
   </section>
 </div>

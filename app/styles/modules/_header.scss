@@ -55,6 +55,11 @@ nav.active {
   margin-right: -.5rem;
   transition: all 0.3s ease-out;
   top: 0;
+  opacity: 0;
+  animation: fadeIn ease-out 1;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
 
   &:before {
     content: "";

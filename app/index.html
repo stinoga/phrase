@@ -20,16 +20,16 @@
       <nav role="navigation" ng-class="active" class="mainNav">
         <ul class="content cf">
           <li><a ng-click="go('/settings')" ng-class="navClass('settings')" class="mainNav_link">Settings</a></li>
-          <li><a ng-click="go('/rules/1')" ng-class="navClass('rules')" class="mainNav_link">Rules</a></li>
+          <li><a ng-click="go('/rules/1')" ng-class="{'active': pageName === 'rules1' || pageName === 'rules2'}" class="mainNav_link">Rules</a></li>
           <li><a ng-click="go('/about')" ng-class="navClass('about')" class="mainNav_link">About</a></li>
           <li class="score_link"><score></score></li>
         </ul>
       </nav>
       <header id="mainHeader" ng-controller="LogoCtrl" class="mainHeader content cf">
-        <ph-logo page="{{pageName}}" ng-class="{'logo-home': pageName === 'home'}"></ph-logo>
+        <ph-logo page="{{pageName}}" ng-class="{'logo-not-home': pageName !== 'home'}"></ph-logo>
         <ph-nav-icon ng-class="{'nav-hidden': pageName === 'home' || pageName === 'play' || pageName === 'tutorial'}"></ph-nav-icon>
       </header>
-      <header class="rules_nav" ng-class="{'rules_nav--on': pageName === 'rules1' || pageName === 'rules2'}">
+      <header class="rules_nav" ng-if="pageName === 'rules1' || pageName === 'rules2'">
         <a class="btn small" ng-class="{'invert': pageName === 'rules1'}" ng-click="go('/rules/1')">Rules</a>
         <a class="btn small" ng-class="{'invert': pageName === 'rules2'}" ng-click="go('/rules/2')">Variations</a>
         <a class="btn small" ng-click="go('/tutorial/1')">Tutorial</a>

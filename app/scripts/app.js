@@ -69,7 +69,7 @@ angular.module('phraseApp', [
         return false;
       }
 
-      if ($rootScope.pageName == path.substr(1)) {
+      if ($rootScope.pageName == path.substr(1).replace('/', '')) {
         return false;
       }
 
@@ -77,10 +77,13 @@ angular.module('phraseApp', [
       smoothScroll.animateScroll( null, '#container' );
     };
 
-    $rootScope.tutorial = true;
+    $rootScope.tutorial = localStorageService.get('tutorial');
 
-    if ($rootScope.tutorial) {
-      // $rootScope.go('/tutorial/1');
+    console.log($rootScope.tutorial);
+
+    if (!$rootScope.tutorial) {
+      localStorageService.add('tutorial', true)
+      $rootScope.go('/tutorial/1');
     }
 
     // Set our ios version, skin, and previous game status on load
@@ -91,7 +94,7 @@ angular.module('phraseApp', [
     if (localStorageService.get('full_version')){
       $rootScope.isFull = true;
     } else {
-      $rootScope.isFull = false;
+      $rootScope.isFull = true;
     }
 
     // App messages

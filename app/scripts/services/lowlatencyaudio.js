@@ -33,7 +33,6 @@ angular.module('PhoneGap')
 
     // Play audio
     function playAudio( src ) {
-      // Play audio
       LowLatencyAudio.play(src, function (int) {
         console.log('PLAY SUCCESS', int);
       }, function () {

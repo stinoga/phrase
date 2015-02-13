@@ -1,6 +1,6 @@
 .slide.view_rules1,
 .slide.view_rules2 {
-  top: 8.5rem;
+  margin-top: 4.5rem;
 
   h3 {
     margin-top: 1.5rem;
@@ -16,10 +16,8 @@
 
 .rules_nav {
   margin-top: .6rem;
-  transform: translateX(100%);
+  transform: translateX(0);
   transition: transform .3s ease-out;
-  width: 0;
-  overflow: hidden;
 
   a {
     margin-right: .5rem;
@@ -30,7 +28,18 @@
   }
 }
 
-.rules_nav--on {
+.rules_nav.ng-enter {
+  transform: translateX(100%);
+}
+
+.rules_nav.ng-enter-active {
   transform: translateX(0);
-  width: auto;
+}
+
+.rules_nav.ng-leave {
+  transform: translateX(0);
+}
+
+.rules_nav.ng-leave-active {
+  transform: translateX(-100%);
 }

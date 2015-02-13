@@ -8,6 +8,7 @@
     <p>A correct answer will count if it has started before the buzzer but ends after it sounds (buzzer beaters).</p>
     <p>If the buzzer sounds during a pass, neither team scores a point. A pass occurs between the time one team guesses a correct phrase to the time the next team begins giving a clue.</p>
     <p>The first team to score seven points wins.</p>
+    <a ng-click="go(continueGame ? '/score' : '/start')" class="btn spacer">{{continueGame ? 'Continue' : 'New' }} Game</a>
   </section>
   <section ng-switch-when="2" class="rules">
     <h3>Family Feud</h3>
@@ -20,6 +21,6 @@
     <p>When a team scores a certain amount of points they are eliminated from play and play continues until only one team is left. The amount of points required to eliminate a team from play can vary depending on the size of the group. For instance, larger groups may find that the game moves faster if they play single elimination.</p>
     <h3>Charades</h3>
     <p>This type of play is fairly self-explanatory. Players cannot use any words to describe the phrases and must act out the clues instead. Mental telepathy is allowed!</p>
-    <a ng-click="go('/start')" class="btn spacer">Play</a>
+    <a ng-click="go(continueGame ? '/score' : '/start')" class="btn spacer">{{continueGame ? 'Continue' : 'New'}} Game</a>
   </section>
 </div>

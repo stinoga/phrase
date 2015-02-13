@@ -7,20 +7,25 @@
 }
 
 @mixin heading-1 {
-  margin: 0 .5rem 1rem 0;
+  left: 50%;
+  margin: 0 .5rem 1rem -5.8rem;
   position: absolute;
-  left: 1.5rem;
   z-index: 999;
   width: 11.4rem;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
+  animation: slideInDoubleDown ease-out 1;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  animation-delay: .3s;
+  transform: translateY(-200%);
 
   @include breakpoint($bp-1650) {
     left: 5.5rem;
   }
 
-  &.logo-home {
-    left: 50%;
-    margin-left: -5.8rem;
+  &.logo-not-home {
+    left: 1.5rem;
+    margin-left: 0;
   }
 
   a.bubble {

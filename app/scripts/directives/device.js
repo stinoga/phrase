@@ -7,7 +7,8 @@ angular.module('phraseApp')
       restrict: 'E',
       replace: true,
       scope: {
-        deviceText: '@'
+        deviceText: '@',
+        deviceText2: '@'
       }
     };
   });

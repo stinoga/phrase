@@ -1,14 +1,28 @@
 .tutorial {
   text-align: center;
+
+  @include breakpoint($bp-3x4) {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
 
 .tutorial h2 {
   margin: 2rem 0;
+
+  @include breakpoint($bp-3x4) {
+    margin: .5rem 0;
+    font-style: 1.8rem;
+  }
 }
 
 .circle-container {
   margin: 0 auto;
   @include putOnCircle(6, 12rem, 5rem);
+
+  @include breakpoint($bp-3x4) {
+    @include putOnCircle(6, 6rem, 2.5rem);
+  }
 }
 
 .tutorial-directions {
@@ -29,6 +43,10 @@
   padding: 0 1rem;
   margin-bottom: 3rem;
 
+  @include breakpoint($bp-3x4) {
+    margin-bottom: 1rem;
+  }
+
   li {
     float: left;
     width: 16.666666667%;
@@ -37,11 +55,19 @@
 
 .step2-face {
   margin: 2rem 0 5rem;
+
+  @include breakpoint($bp-3x4) {
+    margin: 1rem 0 2rem;
+  }
 }
 
 .step3-face {
-  margin: 0 auto;
+  margin: 2rem auto 0;
   position: relative;
+
+  @include breakpoint($bp-3x4) {
+    margin: .5rem auto 0;
+  }
 
   > .svg {
     width: 24%;
@@ -56,18 +82,18 @@
   > .device {
     width: 7%;
     transform: rotate(-17deg);
-  }
-}
-
-.tutorial-4 {
-  > .word {
-    margin-bottom: 3.5rem;
+    position: relative;
+    left: 5%;
   }
 }
 
 .step4-face {
-  margin: 0 auto;
+  margin: 3.1rem auto 0;
   position: relative;
+
+  @include breakpoint($bp-3x4) {
+    margin: .5rem auto 0;
+  }
 
   > svg {
     width: 24%;
@@ -94,7 +120,7 @@
 }
 
 .step5-face {
-  margin: 1rem 0 2rem;
+  margin: 0 0 2rem;
 
   > svg {
     width: 24%;
@@ -106,13 +132,50 @@
     position: relative;
     left: -5%;
   }
+
+  .arrow {
+    border: .5rem solid transparent;
+    border-left-color: $c-header-dark;
+    display: inline-block;
+    position: relative;
+    top: -2.5rem;
+
+    @include breakpoint($bp-3x4) {
+      border-width: .3rem;
+      top: -1.5rem;
+    }
+
+    &:nth-of-type(1) {
+      margin-left: -1rem;
+
+      @include breakpoint($bp-3x4) {
+        margin-left: -.6rem;
+      }
+    }
+
+    &:nth-of-type(3) {
+      margin-right: -1rem;
+
+      @include breakpoint($bp-3x4) {
+        margin-right: -.6rem;
+      }
+    }
+  }
 }
 
 .step6-face {
   margin: 1rem 0 2rem;
 
+  @include breakpoint($bp-3x4) {
+    margin: -2rem 0 0;
+  }
+
   > svg {
     width: 24%;
+
+    @include breakpoint($bp-3x4) {
+      width: 19%;
+    }
   }
 
   > .bubble {
@@ -149,12 +212,26 @@
     font-size: 2rem;
     right: 19%;
     color: $c-link;
+    opacity: 0;
+    animation: fadeInUp ease-out 1;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+    @include breakpoint($bp-3x4) {
+      right: 18%;
+      top: -1rem;
+    }
   }
 }
 
 .step8-face {
   margin: 0 auto;
   position: relative;
+
+  @include breakpoint($bp-3x4) {
+    margin: -2rem auto 0;
+  }
 
   > svg {
     width: 24%;
