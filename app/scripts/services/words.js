@@ -124,15 +124,17 @@ angular.module('phraseApp')
         // Store our word data for later
         var roundWord = {
           'name': word,
-          'time': 999
+          'time': 999,
+          'finished': false
         };
 
         roundWords.push(roundWord);
 
         // If we aren't on the first word,
-        // then set the time the last word took
+        // then set the time the last word took, and mark it as finished
         if (roundWords[wordCount - 1]) {
           roundWords[wordCount - 1].time = timeDifference();
+          roundWords[wordCount - 1].finished = true;
         }
 
         usedWords[word] = 1;
@@ -150,10 +152,16 @@ angular.module('phraseApp')
       wordCount++;
     }
 
+    function setLastWordTime() {
+      roundWords[roundWords.length - 1].time = timeDifference();
+      localStorageService.add('roundWords', roundWords);
+    }
+
     return {
       all: ensureFetched(allWords),
       unused: ensureFetched(unusedWords),
       get: ensureFetched(getWord),
-      resetWords: resetRoundWords
+      resetWords: resetRoundWords,
+      setLastWordTime: setLastWordTime
     };
   });

@@ -5,7 +5,7 @@ angular.module('phraseApp')
     $rootScope.pageName = page.get();
 
     $scope.teams = localStorageService.get('last_game');
-    $scope.superlatives = localStorageService.get('superlatives');
+    $scope.superlatives = localStorageService.get('last_superlatives');
 
     $scope.newGame = function() {
       // Clear current scores and team info for a brand new game

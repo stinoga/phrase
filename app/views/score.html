@@ -22,8 +22,9 @@
       </tr>
       <tr ng-repeat="roundWord in roundWords | orderBy:order:reverse">
         <td class="stats_table_name"><a class="stats_link" ng-click="openUrl('https://www.google.com/#q={{roundWord.name | slugFilter:'+':true}}')">{{roundWord.name | limitTo:35}}</a><a class="question" ng-click="openUrl('https://www.google.com/#q={{roundWord.name | slugFilter:'+':true}}')"><span class="btn question_inner">?</span></a></td>
-        <td class="l-text-right stats_table_time">{{roundWord.time === 999 ? 'DNF' : roundWord.time + 's'}}</td>
+        <td class="l-text-right stats_table_time">{{wordTimeDisplay(roundWord.time)}}<sup class="l-text-red stats_asterisk" ng-if="roundWord.finished === false">*</sup></td>
       </tr>
     </table>
   </section>
+  <section class="stats-addundum"><sup class="l-text-red">*</sup>Did not finish word</section>
 </div>

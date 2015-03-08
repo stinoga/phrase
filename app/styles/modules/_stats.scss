@@ -1,6 +1,6 @@
 .stats {
   // padding: .5rem 2.5rem .5rem 1.5rem;
-  margin: 1.5rem -1.5rem -1.5rem;
+  margin: 1.5rem -1.5rem;
   background-color: $c-header;
   background-image: linear-gradient(to bottom,$c-background 50%, $c-header 50%);
   background-repeat: repeat-x;
@@ -41,7 +41,7 @@
 }
 
 .stats_table_time_header a {
-  width: 4.5rem;
+  // width: 4.5rem;
   display: block;
 }
 
@@ -53,6 +53,15 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.stats-addundum {
+  margin-left: .4rem;
+  font-family: $t-skinny;
+}
+
+.stats_asterisk {
+  margin-right: -.4rem;
 }
 
 .glyph_icon {

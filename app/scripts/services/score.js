@@ -50,6 +50,7 @@ angular.module('phraseApp')
         }
 
         localStorageService.remove('ls_score' + key.id);
+        localStorageService.remove('superlatives');
       });
     }
 
@@ -75,6 +76,7 @@ angular.module('phraseApp')
 
             // Store the game data
             localStorageService.add('last_game', CONFIG);
+            localStorageService.add('last_superlatives', localStorageService.get('superlatives'));
 
             // Clear scores
             clearScore();

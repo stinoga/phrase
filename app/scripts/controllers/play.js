@@ -28,7 +28,9 @@ angular.module('phraseApp')
     $scope.reset();
 
     $scope.next = function() {
-      lowLatencyAudio.play('whoosh');
+      if ($rootScope.iosVersion) {
+        lowLatencyAudio.play('whoosh');
+      }
 
       $scope.wordShow = false;
 
@@ -55,7 +57,10 @@ angular.module('phraseApp')
     $scope.next();
 
     function roundOver() {
-      $location.path('/score');
+      words.setLastWordTime();
+      $timeout(function() {
+        $location.path('/score');
+      }, 10);
     }
 
     $scope.timer = timer({ done: roundOver });

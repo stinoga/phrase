@@ -31,29 +31,19 @@ angular.module('phraseApp')
       }
     };
 
-    angular.forEach($scope.roundWords, function (word) {
-      // Calculate the total word time, minus the final word, who's time is set to 999
-      if (word.time !== 999) {
-        totalWordTime = totalWordTime + word.time;
-      };
+    $scope.wordTimeDisplay = function(wordTime) {
+      var roundedNumber = $filter('number')(wordTime, 2) + 's';
 
-      if (word.time < $scope.superlatives.fastest.time) {
+      return roundedNumber;
+    };
+
+    angular.forEach($scope.roundWords, function (word) {
+      if (word.time < $scope.superlatives.fastest.time && word.finished === true) {
         $scope.superlatives.fastest = word;
       }
 
       if (word.time > $scope.superlatives.slowest.time) {
-        // If it's the last word, set the correct time to makes sure it's not the slowest.
-        // The last word can't be the fastest, as it was never finished.
-        if (word.time === 999) {
-          finalWordTime = $scope.gameTime - totalWordTime;
-
-          if (finalWordTime > $scope.superlatives.slowest.time) {
-            $scope.superlatives.slowest.time = finalWordTime;
-            $scope.superlatives.slowest.name = word.name;
-          }
-        } else {
-          $scope.superlatives.slowest = word;
-        }
+        $scope.superlatives.slowest = word;
       }
     });
 

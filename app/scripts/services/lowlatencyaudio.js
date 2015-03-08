@@ -14,16 +14,20 @@ angular.module('PhoneGap')
     // These assets should be short (less than 5 seconds). These assets are fully concurrent and polyphonic.
     function preloadFX(src) {
       LowLatencyAudio.preloadFX(src, decodeURI(mediaPath + src + '.aac'), function () {
-        console.log('PRELOAD FX SUCCESS');
+        // console.log('PRELOAD FX SUCCESS');
       }, function () {
-        console.log('FAAAAAAAAIL');
+        // console.log('FAAAAAAAAIL');
       });
     }
 
     // Preload audio
     // These have more overhead than assets laoded via preloadFX, and can be looped/stopped.
     function preloadAudio(src) {
-      LowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'), 1);
+      LowLatencyAudio.preloadAudio(src, decodeURI(mediaPath + src + '.aac'), 1, function () {
+        // console.log('PRELOAD AUDIO SUCCESS');
+      }, function () {
+        // console.log('PRELOAD AUDIO FAAAAAAAAIL');
+      });
     }
 
     // Stop audio
@@ -34,9 +38,9 @@ angular.module('PhoneGap')
     // Play audio
     function playAudio( src ) {
       LowLatencyAudio.play(src, function (int) {
-        console.log('PLAY SUCCESS', int);
+        // console.log('PLAY SUCCESS', int);
       }, function () {
-        console.log('PLAY FAAAAAAAAIL');
+        // console.log('PLAY FAAAAAAAAIL');
       });
     }
 
